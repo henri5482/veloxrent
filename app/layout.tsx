@@ -12,9 +12,9 @@ const font = Plus_Jakarta_Sans({
 
 // Datos de la empresa para reutilizar
 const companyInfo = {
-  name: "Casagrande Geotecnia",
+  name: "veloxrent",
   description:
-  "Consultora en ingeniería civil y geotecnia. Estudios geotécnicos, geología y laboratorio de suelos con certificaciones ISO 9001, 14001 y 37001.",
+  "alquiler de carros y autos en ayacucho ",
   url: "https://www.casagrandegeotecnia.com.pe/",
   logo: "https://www.casagrandegeotecnia.com.pe/logo.png",
   phone: "+51 962 835 652", // Reemplaza con tu teléfono real
@@ -96,8 +96,8 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: {
     default:
-      "Casagrande Geotecnia | Consultores en Ingeniería y Geotecnia en Perú",
-    template: "%s | Casagrande Geotecnia",
+      "veloxrent | alquiler de autos y carros",
+    template: "%s | veloxrent",
   },
   description: companyInfo.description,
   keywords: [
