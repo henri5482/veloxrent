@@ -1,6 +1,5 @@
 "use client";
 
-
 // --- Rutas de Iconos (Ajustar si es necesario) ---
 const ICON_PATHS = {
   education: '/cita.png',
@@ -77,7 +76,7 @@ const planesData = [
     buttonText: "Suscríbete a Plan Master",
     buttonClass: "bg-[#28a745] text-white hover:bg-[#218838]",
     isRecommended: true,
-    borderColor: "border-red-500"
+    borderColor: "border-[#1100FF]"
   },
   {
     name: "Plan Expert",
@@ -98,7 +97,7 @@ const planesData = [
     ],
     buttonText: "Suscríbete a Plan Expert",
     buttonClass: "bg-[#28a745] text-white hover:bg-[#218838]",
-    borderColor: "border-red-500"
+    borderColor: "border-[#1100FF]"
   },
 ];
 
@@ -111,6 +110,9 @@ const PlanesPrecios = () => {
   const XIcon = ({ className = "w-5 h-5 text-red-500" }) => (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   );
+
+  // 📱 Número de WhatsApp (Cámbialo por el tuyo)
+  const whatsappNumber = "51987654321";
 
   return (
     <section className="py-20 relative z-10">
@@ -126,20 +128,20 @@ const PlanesPrecios = () => {
               className={`flex flex-col rounded-xl p-6 shadow-2xl bg-white border-2 transition duration-300 relative ${plan.borderColor || 'border-gray-200'} ${plan.isRecommended ? 'scale-105 shadow-3xl' : ''}`}
               style={{
                 boxShadow: plan.isRecommended
-                  ? '0 10px 15px -3px rgba(255, 0, 0, 0.2), 0 4px 6px -2px rgba(255, 0, 0, 0.1)'
-                  : '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                  ? '0 10px 15px -3px rgba(17, 0, 255, 0.2), 0 4px 6px -2px rgba(17, 0, 255, 0.1)'
+                  : '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1)',
               }}
             >
               {plan.savings && (
                 <div className="absolute top-0 inset-x-0 -mt-4 flex justify-center">
-                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-white bg-red-500 rounded-full shadow-md">
+                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-white bg-[#1100FF] rounded-full shadow-md">
                     {plan.savings}
                   </span>
                 </div>
               )}
 
               <div className="text-center pb-6 border-b border-gray-200">
-                <h3 className={`text-xl font-bold uppercase ${plan.borderColor ? 'text-red-500' : 'text-gray-900'}`}>{plan.name}</h3>
+                <h3 className={`text-xl font-bold uppercase ${plan.borderColor ? 'text-[#1100FF]' : 'text-gray-900'}`}>{plan.name}</h3>
                 <p className="text-sm text-gray-500 mt-1">{plan.duration}</p>
 
                 <div className="mt-4">
@@ -171,7 +173,18 @@ const PlanesPrecios = () => {
                 </div>
               )}
 
-              <button className={`mt-8 w-full py-3 rounded-lg font-bold transition duration-150 shadow-md ${plan.buttonClass}`}>
+              {/* 🔗 Botón con enlace directo a WhatsApp */}
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      `Hola, estoy interesado en el ${plan.name} (${plan.duration}) de S/${plan.price}.`
+                    )}`,
+                    "_blank"
+                  )
+                }
+                className={`cursor-pointer mt-8 w-full py-3 rounded-lg font-bold transition duration-150 shadow-md ${plan.buttonClass}`}
+              >
                 {plan.buttonText}
               </button>
             </div>
@@ -233,11 +246,9 @@ const AlquilerYPlanes = () => {
       className="relative "
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover', // Evita cortes
+        backgroundSize: 'cover',
         backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat', // Elimina líneas negras
-        backgroundAttachment: '', // Efecto parallax limpio
-        minHeight: '',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <ProcesoAlquiler />
