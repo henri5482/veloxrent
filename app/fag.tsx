@@ -2,21 +2,21 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { StarIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Numeros from "./numeros";
@@ -96,16 +96,17 @@ const testimonials: TestimonialItem[] = [
   },
 ];
 
-const sectionHeaderVariants = {
+// ✅ Variants corregidos con easing compatible
+const sectionHeaderVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.42, 0, 0.58, 1] },
+    transition: { duration: 0.7, ease: "easeInOut" },
   },
 };
 
-const carouselItemVariants = {
+const carouselItemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.9, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
@@ -114,8 +115,8 @@ const carouselItemVariants = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: "easeOut",
-      type: "spring",
+      ease: "easeOut", // ✅ ahora es string, no array
+      type: "spring", // ✅ type correcto según framer-motion 10+
       stiffness: 100,
       damping: 10,
     },
@@ -145,21 +146,16 @@ export default function SuccessStoriesCarousel() {
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-gray-50 overflow-hidden relative">
-      {/* Imagen de fondo */}
+      {/* Fondo */}
       <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/fondocomentario.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "",
-          filter: "",
         }}
       ></div>
 
-
-
-      {/* Contenido principal */}
       <div className="relative z-10">
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <motion.h2
@@ -169,7 +165,7 @@ export default function SuccessStoriesCarousel() {
             viewport={{ once: true, amount: 0.5 }}
             variants={sectionHeaderVariants}
           >
-           Nuestros clientes{' '}
+            Nuestros clientes{" "}
             <span className="inline-block text-[#1100FF] font-extrabold drop-shadow-md">
               hablan por nosotros
             </span>
@@ -231,7 +227,7 @@ export default function SuccessStoriesCarousel() {
                           <div className="flex items-center gap-0.5 mt-1 sm:mt-2">
                             {[...Array(5)].map((_, i) => (
                               <StarIcon
-                                key={i}
+                                key={`star-${testimonial.id}-${i}`} // ✅ corregido key
                                 className={`w-4 h-4 sm:w-5 sm:h-5 ${
                                   i < testimonial.rating
                                     ? "fill-yellow-500 text-yellow-500"
