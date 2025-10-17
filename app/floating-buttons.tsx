@@ -78,10 +78,10 @@ const FloatingButtons: React.FC = () => {
   const moreOptionsData: MoreOption[] = [
     { text: "Inicio", href: "/", icon: <FaArrowRight /> },
     { text: "Nosotros", href: "/nosotros", icon: <FaArrowRight /> },
-    { text: "Servicios", href: "/servicios", icon: <FaArrowRight /> },
-    { text: "Proyectos", href: "/proyectos", icon: <FaArrowRight /> },
-    { text: "Blog", href: "/blog", icon: <FaArrowRight /> },
-    { text: "Contacto", href: "/contacto", icon: <FaArrowRight /> },
+    { text: "Ofertas", href: "/servicios", icon: <FaArrowRight /> },
+    { text: "Vehiculos", href: "/", icon: <FaArrowRight /> },
+    // { text: "Blog", href: "/blog", icon: <FaArrowRight /> },
+    // { text: "Contacto", href: "/contacto", icon: <FaArrowRight /> },
     // { text: "Trabaja con nosotros", href: "/profesor", icon: <FaArrowRight /> },
   ];
 
@@ -124,14 +124,14 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaFacebookF />}
           label="Facebook"
-          href="https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA" // REMEMBER TO REPLACE!
+          href="" // REMEMBER TO REPLACE!
           bgColor="bg-blue-600"
           hoverBgColor="hover:bg-blue-700"
         />
         <SocialFloatingButton
           icon={<HiOutlineMail />}
           label="Correo"
-          href="https://mail.google.com/mail/?view=cm&to=comercial@casagrandegeotecnia.com.pe"
+          href=""
           bgColor="bg-red-500"
           hoverBgColor="hover:bg-red-600"
         />

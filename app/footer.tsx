@@ -126,7 +126,7 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
                 <Image
-                  src="/logocasagrande.svg"
+                  src="/logofooter.png"
                   alt="logo de casagrande geotecnia"
                   fill
                   sizes="100vw"

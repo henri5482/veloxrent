@@ -48,34 +48,34 @@ const navLinks: NavLink[] = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/servicios", label: "Ofertas y planes" },
-  { href: "/proyectos", label: "Vehiculos" },
+  { href: "#", label: "Vehiculos" },
   // { href: "/blog", label: "Blog" },
   // { href: "/contacto", label: "Contacto" },
 ];
 
 const socialLinks: SocialLink[] = [
   {
-    href: "https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA",
+    href: "https://facebook.com",
     label: "Facebook",
     Icon: FaFacebook,
   },
   {
-    href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
+    href: "https://facebook.com",
     label: "LinkedIn",
     Icon: FaLinkedin,
   },
   {
-    href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
+    href: "https://facebook.com",
     label: "YouTube",
     Icon: FaYoutube,
   },
   {
-    href: "https://www.instagram.com/casagrandegeotecnia/",
+    href: "https://facebook.com",
     label: "Instagram",
     Icon: FaInstagram,
   },
   {
-    href: "https://www.tiktok.com/@casagrandegeotecnia?lang=es-419",
+    href: "https://facebook.com",
     label: "TikTok",
     Icon: FaTiktok,
   },
@@ -116,7 +116,7 @@ const SocialLinks = ({ className = "text-white" }: { className?: string }) => (
   <div className="flex items-center gap-4 ">
     {socialLinks.map(({ href, label, Icon }) => (
       <a
-        key={href}
+        key={label}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
