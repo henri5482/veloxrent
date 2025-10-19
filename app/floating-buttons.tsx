@@ -79,7 +79,7 @@ const FloatingButtons: React.FC = () => {
     { text: "Inicio", href: "/", icon: <FaArrowRight /> },
     { text: "Nosotros", href: "/nosotros", icon: <FaArrowRight /> },
     { text: "Ofertas", href: "/servicios", icon: <FaArrowRight /> },
-    { text: "Vehiculos", href: "/", icon: <FaArrowRight /> },
+    { text: "Vehiculos", href: "/vehiculos", icon: <FaArrowRight /> },
     // { text: "Blog", href: "/blog", icon: <FaArrowRight /> },
     // { text: "Contacto", href: "/contacto", icon: <FaArrowRight /> },
     // { text: "Trabaja con nosotros", href: "/profesor", icon: <FaArrowRight /> },
@@ -117,21 +117,21 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="Necesitas Asesoría?"
-          href="https://wa.me/51945513323?text=Quiero%20mayor%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51925285403?text=Quiero%20mayor%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
         />
         <SocialFloatingButton
           icon={<FaFacebookF />}
           label="Facebook"
-          href="" // REMEMBER TO REPLACE!
+          href="https://www.facebook.com/profile.php?id=61572796175320" // REMEMBER TO REPLACE!
           bgColor="bg-blue-600"
           hoverBgColor="hover:bg-blue-700"
         />
         <SocialFloatingButton
           icon={<HiOutlineMail />}
           label="Correo"
-          href=""
+          href="https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com"
           bgColor="bg-red-500"
           hoverBgColor="hover:bg-red-600"
         />
@@ -184,7 +184,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaFacebookF />}
           label="Facebook"
-          href="https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA" // REMEMBER TO REPLACE!
+          href="https://www.facebook.com/profile.php?id=61572796175320" // REMEMBER TO REPLACE!
           bgColor="bg-blue-600"
           hoverBgColor="hover:bg-blue-700"
           className="w-10 h-10 text-lg"
@@ -192,7 +192,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<HiOutlineMail />}
           label="Correo"
-          href="https://mail.google.com/mail/?view=cm&to=comercial@casagrandegeotecnia.com.pe"
+          href="https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com"
           bgColor="bg-red-500"
           hoverBgColor="hover:bg-red-600"
         />

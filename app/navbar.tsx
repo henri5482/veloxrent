@@ -19,7 +19,6 @@ import { useEffect, useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaTiktok,
   FaWhatsapp,
   FaYoutube,
@@ -48,34 +47,34 @@ const navLinks: NavLink[] = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/servicios", label: "Ofertas y planes" },
-  { href: "#", label: "Vehiculos" },
+  { href: "/vehiculos", label: "Vehiculos" },
   // { href: "/blog", label: "Blog" },
   // { href: "/contacto", label: "Contacto" },
 ];
 
 const socialLinks: SocialLink[] = [
   {
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/profile.php?id=61572796175320",
     label: "Facebook",
     Icon: FaFacebook,
   },
+  // {
+  //   href: "https://facebook.com",
+  //   label: "LinkedIn",
+  //   Icon: FaLinkedin,
+  // },
   {
-    href: "https://facebook.com",
-    label: "LinkedIn",
-    Icon: FaLinkedin,
-  },
-  {
-    href: "https://facebook.com",
+    href: "https://www.youtube.com/@Veloxrent",
     label: "YouTube",
     Icon: FaYoutube,
   },
   {
-    href: "https://facebook.com",
+    href: "https://www.instagram.com/velox__rent/",
     label: "Instagram",
     Icon: FaInstagram,
   },
   {
-    href: "https://facebook.com",
+    href: "https://www.tiktok.com/@veloxrent",
     label: "TikTok",
     Icon: FaTiktok,
   },
@@ -83,18 +82,18 @@ const socialLinks: SocialLink[] = [
 
 const contactInfo: ContactInfoItemProps[] = [
   {
-    text: "veloxrent.com.pe",
-    href: "https://mail.google.com/mail/?view=cm&to=comercial@casagrandegeotecnia.com.pe",
+    text: "veloxrent.gestioncliente@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com",
     Icon: MdOutgoingMail,
   },
   {
-    text: "(+51) 945 513 323",
-    href: "https://wa.me/51945513323?text=Quiero%20mayor%20información",
+    text: "925 285 403 ",
+    href: "https://wa.me/51925285403 ?text=Quiero%20mayor%20información",
     Icon: FaWhatsapp,
   },
   {
-    text: "Jirón Quinua 570, Ayacucho 05003",
-    href: "https://maps.app.goo.gl/87csZHznG2rnQQgV9",
+    text: "NAZARENAS, Ayacucho 05001",
+    href: "https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
     Icon: LuMapPin,
   },
 ];

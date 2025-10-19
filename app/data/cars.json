@@ -6,9 +6,8 @@
     "modelo": "Hilux 4x2",
     "año": 2013,
     "precio": 250.00,
-    "imagen": "/carros.png",
     "tipo": "Camioneta",
-    "descripcion": "Toyota Hilux 4x2 2013 en perfecto estado, ideal para trabajo y aventuras.",
+    "descripcion": "Toyota Hilux 4x2 2013 en perfecto estado, ideal para trabajo y aventuras. Confiable y lista para cualquier desafío.",
     "caracteristicas": [
       "4x2 Tracción",
       "Motor 2.7L",
@@ -20,139 +19,16 @@
     "especificaciones": {
       "combustible": "Gasolina",
       "transmision": "Manual",
-      "puertas": 4,
       "pasajeros": 5,
-      "maletero": "Grande"
-    }
-  },
-  {
-    "id": 2,
-    "slug": "nissan-frontier-2022",
-    "marca": "Nissan",
-    "modelo": "Frontier",
-    "año": 2022,
-    "precio": 300.00,
-    "imagen": "/images/nissan-frontier.jpg",
-    "tipo": "Camioneta",
-    "descripcion": "Nissan Frontier 2022, moderna y eficiente para tus necesidades.",
-    "caracteristicas": [
-      "4x4 Tracción",
-      "Motor 3.8L V6",
-      "Transmisión Automática",
-      "Aire Acondicionado Digital",
-      "Pantalla Táctil 8\"",
-      "Asientos de cuero"
-    ],
-    "especificaciones": {
-      "combustible": "Gasolina",
-      "transmision": "Automática",
-      "puertas": 4,
-      "pasajeros": 5,
-      "maletero": "Extra Grande"
-    }
-  },
-  {
-    "id": 3,
-    "slug": "hyundai-tucson-2023",
-    "marca": "Hyundai",
-    "modelo": "Tucson",
-    "año": 2023,
-    "precio": 280.00,
-    "imagen": "/images/hyundai-tucson.jpg",
-    "tipo": "SUV",
-    "descripcion": "Hyundai Tucson 2023, comfort y tecnología en un solo vehículo.",
-    "caracteristicas": [
-      "Tracción Delantera",
-      "Motor 2.5L",
-      "Transmisión Automática",
-      "Sistema de Infoentretenimiento",
-      "Cámara de Retroceso",
-      "Control Crucero"
-    ],
-    "especificaciones": {
-      "combustible": "Gasolina",
-      "transmision": "Automática",
-      "puertas": 5,
-      "pasajeros": 5,
-      "maletero": "Mediano"
-    }
-  },
-  {
-    "id": 4,
-    "slug": "kia-sportage-2021",
-    "marca": "Kia",
-    "modelo": "Sportage",
-    "año": 2021,
-    "precio": 270.00,
-    "imagen": "/images/kia-sportage.jpg",
-    "tipo": "SUV",
-    "descripcion": "Kia Sportage 2021, diseño elegante y gran rendimiento.",
-    "caracteristicas": [
-      "Tracción 4x2",
-      "Motor 2.4L",
-      "Transmisión Automática",
-      "Techo Panorámico",
-      "Sistema de Sonido Premium",
-      "Asientos Calefaccionados"
-    ],
-    "especificaciones": {
-      "combustible": "Gasolina",
-      "transmision": "Automática",
-      "puertas": 5,
-      "pasajeros": 5,
-      "maletero": "Mediano"
-    }
-  },
-  {
-    "id": 5,
-    "slug": "honda-crv-2020",
-    "marca": "Honda",
-    "modelo": "CR-V",
-    "año": 2020,
-    "precio": 260.00,
-    "imagen": "/images/honda-crv.jpg",
-    "tipo": "SUV",
-    "descripcion": "Honda CR-V 2020, confiable y espacioso para la familia.",
-    "caracteristicas": [
-      "Tracción Delantera",
-      "Motor 1.5L Turbo",
-      "Transmisión CVT",
-      "Sistema Honda Sensing",
-      "Apple CarPlay/Android Auto",
-      "Control de Crucero Adaptativo"
-    ],
-    "especificaciones": {
-      "combustible": "Gasolina",
-      "transmision": "CVT",
-      "puertas": 5,
-      "pasajeros": 5,
-      "maletero": "Grande"
-    }
-  },
-  {
-    "id": 6,
-    "slug": "mazda-cx5-2022",
-    "marca": "Mazda",
-    "modelo": "CX-5",
-    "año": 2022,
-    "precio": 290.00,
-    "imagen": "/images/mazda-cx5.jpg",
-    "tipo": "SUV",
-    "descripcion": "Mazda CX-5 2022, lujo y desempeño excepcional.",
-    "caracteristicas": [
-      "Tracción 4x2",
-      "Motor 2.5L",
-      "Transmisión Automática",
-      "Asientos de Cuero",
-      "Sistema Mazda Connect",
-      "Sistema de Sonido Bose"
-    ],
-    "especificaciones": {
-      "combustible": "Gasolina",
-      "transmision": "Automática",
-      "puertas": 5,
-      "pasajeros": 5,
-      "maletero": "Mediano"
-    }
+      "licencia": "A-II",
+      "garantia": "1 año",
+      "puertas": 4
+    },
+    "imagenes": [
+      "/carros.png",
+      "/interior.png",
+      "/frontal.png"
+    ]
   }
+
 ]

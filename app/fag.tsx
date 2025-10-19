@@ -30,73 +30,74 @@ interface TestimonialItem {
   rating: number;
 }
 
+// 🟢 Testimonios actualizados — relacionados con alquiler de autos
 const testimonials: TestimonialItem[] = [
   {
     id: 1,
     name: "Luis Quispe",
-    role: "🇵🇪",
-    avatar: "/coment1.webp",
+    role: "Cliente — Lima, Perú",
+    avatar: "/comentario01.jpg",
     comment:
-      "Gracias al curso de ingeniería de sistemas, logré obtener mi primer empleo como soporte técnico en una empresa de tecnología. La formación fue muy completa y práctica.",
+      "Alquilé una camioneta en VeloxRent para un viaje familiar y el servicio fue impecable. Vehículo nuevo, limpio y la atención muy amable. 100% recomendado.",
     rating: 5,
   },
   {
     id: 2,
     name: "Fiorella Huamán",
-    role: "🇵🇪",
-    avatar: "/avatar04.webp",
+    role: "Cliente — Ayacucho, Perú",
+    avatar: "/comentario02.jpg",
     comment:
-      "Estudié ingeniería civil y el curso de estructuras me ayudó bastante. Gracias a esto ahora trabajo en una consultora que diseña obras públicas en Cusco.",
-    rating: 5,
+      "Reservé un auto para mi viaje de trabajo y la entrega fue súper rápida. Todo el proceso fue digital y sin complicaciones. Excelente experiencia.",
+    rating: 4,
   },
   {
     id: 3,
     name: "Renzo Paredes",
-    role: "🇵🇪",
-    avatar: "/avatar05.webp",
+    role: "Cliente — Cusco, Perú",
+    avatar: "/comentario03.jpg",
     comment:
-      "El curso de hidráulica aplicada fue excelente. Aprendí a usar herramientas que ahora aplico en mi trabajo como ingeniero agrícola en Cajamarca.",
-    rating: 4,
+      "VeloxRent me salvó el fin de semana. Pude alquilar un carro a último momento y todo salió perfecto. Los precios son justos y los autos están en excelente estado.",
+    rating: 5,
   },
   {
     id: 4,
     name: "Camila Vargas",
-    role: "🇵🇪",
-    avatar: "/alumno01.webp",
+    role: "Cliente — Arequipa, Perú",
+    avatar: "/comentario04.jpg",
     comment:
-      "El programa de hidrología fue clave para mi puesto actual en una ONG ambiental. Muy bien estructurado y con casos reales del Perú.",
+      "Muy buena atención. Me entregaron el auto directamente en el aeropuerto y la devolución fue rápida. Definitivamente volveré a alquilar con ellos.",
     rating: 5,
   },
   {
     id: 5,
     name: "Jorge Alvarado",
-    role: "🇵🇪",
-    avatar: "/alumno04.webp",
+    role: "Cliente — Huancayo, Perú",
+    avatar: "/comentario05.jpg",
     comment:
-      "Me capacité en ingeniería geológica y minera. Actualmente trabajo en una empresa de exploración en Apurímac gracias al respaldo del curso y la certificación.",
-    rating: 5,
+      "El vehículo estaba impecable y en perfecto estado mecánico. El servicio al cliente fue excelente, resolvieron mis dudas en minutos por WhatsApp.",
+    rating: 4,
   },
   {
     id: 6,
     name: "Natalie Yupanqui",
-    role: "🇵🇪",
-    avatar: "/alumno02.webp",
+    role: "Cliente — Trujillo, Perú",
+    avatar: "/comentario06.jpg",
     comment:
-      "Tomé el curso de ingeniería eléctrica y fue muy completo. Me ayudó a validar conocimientos que ahora aplico en proyectos de electrificación rural.",
+      "Alquilé un auto para mi boda y todo salió increíble. El vehículo estaba decorado y listo a tiempo. Agradezco el trato personalizado de VeloxRent.",
     rating: 5,
   },
   {
     id: 7,
     name: "Carlos Mejía",
-    role: "🇵🇪",
+    role: "Cliente — Piura, Perú",
     avatar: "/alumno05.webp",
     comment:
-      "Gracias al curso en gestión ambiental para ingenieros, hoy trabajo en una minera donde aplico directamente lo aprendido. ¡Recomendado!",
-    rating: 5,
+      "He alquilado varias veces con VeloxRent y siempre cumplen. Los autos son modernos, seguros y el servicio al cliente es de primera.",
+    rating: 3,
   },
 ];
 
-// ✅ Variants corregidos con easing compatible
+// ✅ Variantes de animación
 const sectionHeaderVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -115,8 +116,8 @@ const carouselItemVariants: Variants = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: "easeOut", // ✅ ahora es string, no array
-      type: "spring", // ✅ type correcto según framer-motion 10+
+      ease: "easeOut",
+      type: "spring",
       stiffness: 100,
       damping: 10,
     },
@@ -150,13 +151,14 @@ export default function SuccessStoriesCarousel() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/fondocomentario.png')",
+          backgroundImage: "url('/fondocomentario.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       ></div>
 
       <div className="relative z-10">
+        {/* Encabezado */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <motion.h2
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-[#0c0280] leading-tight drop-shadow-lg"
@@ -165,9 +167,9 @@ export default function SuccessStoriesCarousel() {
             viewport={{ once: true, amount: 0.5 }}
             variants={sectionHeaderVariants}
           >
-            Nuestros clientes{" "}
+            Nuestros{" "}
             <span className="inline-block text-[#1100FF] font-extrabold drop-shadow-md">
-              hablan por nosotros
+              clientes felices
             </span>
           </motion.h2>
           <motion.p
@@ -177,11 +179,13 @@ export default function SuccessStoriesCarousel() {
             viewport={{ once: true, amount: 0.5 }}
             variants={sectionHeaderVariants}
           >
-            Así como ellos, tú también puedes alcanzar tus metas y transformar tu
-            futuro. Únete a nuestra comunidad.
+            Conoce las experiencias reales de quienes confiaron en{" "}
+            <strong>VeloxRent</strong> para sus viajes, vacaciones y necesidades
+            de transporte.
           </motion.p>
         </div>
 
+        {/* Carrusel */}
         <div className="max-w-7xl mx-auto relative px-4">
           <Carousel
             plugins={[autoplay.current]}
@@ -211,14 +215,14 @@ export default function SuccessStoriesCarousel() {
                   >
                     <Card className="p-4 sm:p-6 lg:p-8 bg-white/90 text-gray-800 border border-[#ddd] rounded-xl h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden">
                       <CardHeader className="flex flex-row items-start gap-3 p-0 pb-4 sm:gap-4 sm:pb-5">
-                        <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-red-600 flex-shrink-0 shadow-md">
+                        <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-blue-600 flex-shrink-0 shadow-md">
                           <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                          <AvatarFallback className="bg-red-100 text-red-600 font-bold text-lg sm:text-xl">
+                          <AvatarFallback className="bg-blue-100 text-blue-600 font-bold text-lg sm:text-xl">
                             {testimonial.name.charAt(0)}
                           </AvatarFallback>
                         </Avatar>
                         <div className="flex-1">
-                          <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-red-600 mb-0 sm:mb-1">
+                          <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 mb-0 sm:mb-1">
                             {testimonial.name}
                           </CardTitle>
                           <CardDescription className="text-sm sm:text-base text-gray-600">
@@ -227,7 +231,7 @@ export default function SuccessStoriesCarousel() {
                           <div className="flex items-center gap-0.5 mt-1 sm:mt-2">
                             {[...Array(5)].map((_, i) => (
                               <StarIcon
-                                key={`star-${testimonial.id}-${i}`} // ✅ corregido key
+                                key={`star-${testimonial.id}-${i}`}
                                 className={`w-4 h-4 sm:w-5 sm:h-5 ${
                                   i < testimonial.rating
                                     ? "fill-yellow-500 text-yellow-500"
@@ -239,7 +243,7 @@ export default function SuccessStoriesCarousel() {
                         </div>
                       </CardHeader>
                       <CardContent className="p-0 text-sm sm:text-base leading-relaxed flex-grow overflow-hidden pt-3">
-                        <blockquote className="italic text-gray-700 pl-3 border-l-4 border-red-500">
+                        <blockquote className="italic text-gray-700 pl-3 border-l-4 border-blue-500">
                           &quot;{testimonial.comment}&quot;
                         </blockquote>
                       </CardContent>
@@ -249,9 +253,10 @@ export default function SuccessStoriesCarousel() {
               ))}
             </CarouselContent>
 
+            {/* Botones */}
             <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 justify-between px-2 sm:px-4 pointer-events-none z-20 hidden md:flex">
-              <CarouselPrevious className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-red-600 text-white hover:bg-red-700 rounded-full shadow-lg transition-colors duration-200" />
-              <CarouselNext className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-red-600 text-white hover:bg-red-700 rounded-full shadow-lg transition-colors duration-200" />
+              <CarouselPrevious className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-blue-600 text-white hover:bg-blue-700 rounded-full shadow-lg transition-colors duration-200" />
+              <CarouselNext className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-blue-600 text-white hover:bg-blue-700 rounded-full shadow-lg transition-colors duration-200" />
             </div>
           </Carousel>
         </div>

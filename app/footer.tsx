@@ -7,9 +7,8 @@ import { FaChevronUp } from "react-icons/fa";
 import {
   PiFacebookLogo,
   PiInstagramLogo,
-  PiLinkedinLogo,
   PiTiktokLogo,
-  PiYoutubeLogo,
+  PiYoutubeLogo
 } from "react-icons/pi";
 
 const Footer = () => {
@@ -21,14 +20,14 @@ const Footer = () => {
     {
       title: "Soporte al cliente",
       links: [
-        { name: "(+51) 945 513 323", href: "tel:+51945513323" },
+        { name: "925 285 403 | 997 187 495 ", href: "tel:+51925285403" },
         {
-          name: "veloxrent.com.pe",
-          href: "https://mail.google.com/mail/?view=cm&to=comercial@casagrandegeotecnia.com.pe",
+          name: "veloxrent.gestioncliente@gmail.com",
+          href: "https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com",
         },
         {
           name: "Redes sociales",
-          href: "https://wa.me/51927545815?text=Hola%20quiero%hacerme%20vip",
+          href: "https://www.facebook.com/profile.php?id=61572796175320",
         },
       ],
     },
@@ -36,10 +35,10 @@ const Footer = () => {
 
   // Data for "Nuestros productos" section links
   const productLinks = [
-    { name: "Nosotros", href: "#" },
+    { name: "Nosotros", href: "/nosotros" },
     { name: "Marca", href: "#" },
-    { name: "Blog", href: "/blog" },
-    { name: "Libros", href: "#" },
+    { name: "mapa", href: "/https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" },
+    { name: "Carros", href: "/vehiculos" },
   ];
 
   // Data for social media links
@@ -47,27 +46,27 @@ const Footer = () => {
     {
       icon: PiFacebookLogo,
       name: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA",
+      href: "https://www.facebook.com/profile.php?id=61572796175320",
     },
     {
       icon: PiInstagramLogo,
       name: "Instagram",
-      href: "https://www.instagram.com/casagrandegeotecnia/",
+      href: "https://www.instagram.com/velox__rent/",
     },
     {
       icon: PiTiktokLogo,
       name: "TikTok",
-      href: "https://www.tiktok.com/@casagrandegeotecnia?lang=es-419",
+      href: "https://www.tiktok.com/@veloxrent",
     },
-    {
-      icon: PiLinkedinLogo,
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
-    },
+    // {
+    //   icon: PiLinkedinLogo,
+    //   name: "LinkedIn",
+    //   href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
+    // },
     {
       icon: PiYoutubeLogo,
       name: "YouTube",
-      href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
+      href: "https://www.youtube.com/@Veloxrent",
     },
   ];
 
@@ -104,7 +103,7 @@ const Footer = () => {
           </Link>
           <button
             onClick={scrollToTop}
-            className="flex items-center text-sm font-medium text-white hover:text-emerald-200 transition-colors group cursor-pointer"
+            className="flex items-center text-sm font-medium text-white hover:text-red-600 transition-colors group cursor-pointer"
             aria-label="Volver arriba"
           >
             Volver arriba
@@ -162,9 +161,7 @@ const Footer = () => {
           </div>
 
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-white">
-              Conecta con Nosotros
-            </h2>
+            
             <nav className="space-y-4 sm:space-y-6">
               {connectLinks.map((section) => (
                 <div key={section.title}>
@@ -231,7 +228,7 @@ const Footer = () => {
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="text-white hover:text-[#0d70af] transition-colors p-2 rounded-full hover:scale-110 transform"
+                  className="text-white hover:text-red-600 transition-colors p-2 rounded-full hover:scale-110 transform"
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
