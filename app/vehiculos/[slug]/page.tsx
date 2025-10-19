@@ -19,7 +19,7 @@ export default async function VehiculoDetalle({ params }: PageProps) {
 
   return (
     <div className="py-40">
-      <ClientVehicleDetails vehiculo={vehiculo} />
+      <ClientVehicleDetails />
     </div>
   );
 }
