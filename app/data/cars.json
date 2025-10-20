@@ -7,28 +7,36 @@
     "año": 2013,
     "precio": 250.00,
     "tipo": "Camioneta",
-    "descripcion": "Toyota Hilux 4x2 2013 en perfecto estado, ideal para trabajo y aventuras. Confiable y lista para cualquier desafío.",
-    "caracteristicas": [
-      "4x2 Tracción",
-      "Motor 2.7L",
-      "Transmisión Manual",
-      "Aire Acondicionado",
-      "Radio Bluetooth",
-      "Asientos de tela"
-    ],
+    "descripcion": "Toyota Hilux 4x2 en excelente estado. Ideal para trabajo y viajes largos. Con aire acondicionado y gran capacidad de carga.",
+    "caracteristicas": ["Motor 2.7L", "Aire Acondicionado", "Bluetooth", "ABS", "Tracción 4x2"],
     "especificaciones": {
       "combustible": "Gasolina",
       "transmision": "Manual",
       "pasajeros": 5,
       "licencia": "A-II",
-      "garantia": "1 año",
+      "garantia": "S/400",
       "puertas": 4
     },
-    "imagenes": [
-      "/carros.png",
-      "/interior.png",
-      "/frontal.png"
-    ]
+    "imagenes": ["/carros.png", "/interior.png", "/frontal.png"]
+  },
+  {
+    "id": 2,
+    "slug": "hyundai-tucson-2020",
+    "marca": "Hyundai",
+    "modelo": "Tucson 2020",
+    "año": 2020,
+    "precio": 320.00,
+    "tipo": "SUV",
+    "descripcion": "Hyundai Tucson moderna, cómoda y segura. Perfecta para viajes familiares o turismo urbano.",
+    "caracteristicas": ["Motor 2.0L", "Pantalla táctil", "Bluetooth", "Aire acondicionado", "Frenos ABS"],
+    "especificaciones": {
+      "combustible": "Gasolina",
+      "transmision": "Automática",
+      "pasajeros": 6,
+      "licencia": "A-I",
+      "garantia": "S/600",
+      "puertas": 5
+    },
+    "imagenes": ["/carros.png", "/tucson2.png", "/tucson3.png"]
   }
-
 ]

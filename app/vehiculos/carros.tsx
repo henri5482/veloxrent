@@ -6,8 +6,8 @@ import {
   FaCar,
   FaCheckCircle,
   FaCogs,
+  FaDoorClosed,
   FaGasPump,
-  FaIdCard,
   FaShieldAlt,
   FaUserFriends
 } from "react-icons/fa";
@@ -41,7 +41,7 @@ const Carros = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50 py-16 md:pt-56">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -84,11 +84,10 @@ const Carros = () => {
               key={vehiculo.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }} // animación de aparición rápida
-              whileHover={{ scale: 1.02, y: -8, transition: { duration: 0.15 } }} // hover rápido
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              whileHover={{ scale: 1.02, y: -8, transition: { duration: 0.15 } }}
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200"
             >
-
               {/* Header */}
               <div className={`relative h-12 bg-gradient-to-r ${getBrandGradient(vehiculo.marca)} flex items-center justify-between px-6`}>
                 <span className={`font-bold text-sm tracking-wider ${getBrandColor(vehiculo.marca)}`}>
@@ -130,7 +129,7 @@ const Carros = () => {
                   {vehiculo.descripcion}
                 </p>
 
-                {/* Grid de especificaciones */}
+                {/* Especificaciones */}
                 <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
                   <div className="flex items-center gap-2">
                     <FaUserFriends className={`${getBrandColor(vehiculo.marca)} text-sm`} />
@@ -145,27 +144,22 @@ const Carros = () => {
                     <span>{vehiculo.especificaciones.combustible}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaIdCard className={`${getBrandColor(vehiculo.marca)} text-sm`} />
-                    <span>{vehiculo.especificaciones.licencia}</span>
+                    <FaDoorClosed className={`${getBrandColor(vehiculo.marca)} text-sm`} />
+                    <span>{vehiculo.especificaciones.puertas} Puertas</span>
                   </div>
                 </div>
 
                 {/* Garantía */}
-                {/* Garantía de dinero */}
                 <div className="flex items-center justify-between mb-4 p-3 bg-green-50 rounded-xl border border-green-100 text-xs">
                   <div className="flex items-center gap-2">
                     <FaShieldAlt className="text-green-500 text-sm" />
                     <div>
                       <div className="text-green-800 font-semibold">Garantía</div>
-                      <div className="text-green-600">S/500</div>
+                      <div className="text-green-600">{vehiculo.especificaciones.garantia}</div>
                     </div>
                   </div>
                   <FaCheckCircle className="text-green-500 text-lg" />
                 </div>
-
-
-                {/* Características destacadas (solo 3) */}
-
 
                 {/* Botón */}
                 <Link

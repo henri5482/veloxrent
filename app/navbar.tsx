@@ -46,7 +46,7 @@ interface ContactInfoItemProps {
 const navLinks: NavLink[] = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
-  { href: "/servicios", label: "Ofertas y planes" },
+  // { href: "/servicios", label: "Ofertas y planes" },
   { href: "/vehiculos", label: "Vehiculos" },
   // { href: "/blog", label: "Blog" },
   // { href: "/contacto", label: "Contacto" },

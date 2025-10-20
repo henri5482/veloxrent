@@ -78,7 +78,7 @@ const FloatingButtons: React.FC = () => {
   const moreOptionsData: MoreOption[] = [
     { text: "Inicio", href: "/", icon: <FaArrowRight /> },
     { text: "Nosotros", href: "/nosotros", icon: <FaArrowRight /> },
-    { text: "Ofertas", href: "/servicios", icon: <FaArrowRight /> },
+    // { text: "Ofertas", href: "/servicios", icon: <FaArrowRight /> },
     { text: "Vehiculos", href: "/vehiculos", icon: <FaArrowRight /> },
     // { text: "Blog", href: "/blog", icon: <FaArrowRight /> },
     // { text: "Contacto", href: "/contacto", icon: <FaArrowRight /> },
