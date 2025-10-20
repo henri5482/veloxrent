@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { FaCar } from "react-icons/fa";
 import carrosData from "../data/cars.json";
 import Footer from "../footer";
 import Navbar from "../navbar";
 
-export default function Buscar() {
+function BuscarContent() {
   const params = useSearchParams();
 
   const precio = params.get("precio");
@@ -27,16 +28,12 @@ export default function Buscar() {
     const coincideAsientos = asientos
       ? carro.especificaciones.pasajeros === Number(asientos)
       : true;
-    const coincidePrecio = precio
-      ? carro.precio <= Number(precio)
-      : true;
+    const coincidePrecio = precio ? carro.precio <= Number(precio) : true;
 
     return coincideModelo && coincideTipo && coincideAsientos && coincidePrecio;
   });
 
   return (
-    <>
-    <Navbar/>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 md:py-56">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-slate-800 mb-10 text-center">
@@ -91,7 +88,18 @@ export default function Buscar() {
         )}
       </div>
     </div>
-    <Footer/>
+  );
+}
+
+export default function Buscar() {
+  return (
+    <>
+      <Navbar />
+      {/* 👇 Suspense envuelve el componente que usa useSearchParams */}
+      <Suspense fallback={<div className="text-center py-20">Cargando...</div>}>
+        <BuscarContent />
+      </Suspense>
+      <Footer />
     </>
   );
 }
