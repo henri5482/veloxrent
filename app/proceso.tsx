@@ -12,7 +12,7 @@ const ICON_PATHS = {
 const beneficiosData = [
   {
     title: "PLANEA",
-    description: "Elige tu destino, fechas y vehículo",
+    description: "Elige tu vehículo, precio y más",
     imagePath: ICON_PATHS.education,
     alt: "Icono de Calendario (Planear)"
   },
@@ -30,7 +30,7 @@ const beneficiosData = [
   },
   {
     title: "DISFRUTA",
-    description: "Evaluamos, aprobamos, pagas y recoges tu vehículo listo",
+    description: "Evaluamos y aprobamos tu solicitud",
     imagePath: ICON_PATHS.support,
     alt: "Icono de Cara Feliz (Disfrutar)"
   },
@@ -118,7 +118,7 @@ const PlanesPrecios = () => {
     <section className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1100FF] text-center mb-16">
-          Nuestros Planes de Suscripción
+          Conoce nuestros planes
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
@@ -200,7 +200,7 @@ const ProcesoAlquiler = () => (
   <section className="py-10 relative z-10">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl sm:text-5xl font-black text-[#1100FF] text-center mb-16">
-        ¿Cuál es el proceso de alquiler?
+        ¿Cómo funciona el procedimiento?
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

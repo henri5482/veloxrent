@@ -16,16 +16,16 @@ interface InputFieldProps {
   title?: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ 
-  label, 
-  name, 
-  type, 
-  value, 
-  onChange, 
-  disabled, 
+const InputField: React.FC<InputFieldProps> = ({
+  label,
+  name,
+  type,
+  value,
+  onChange,
+  disabled,
   maxLength,
   pattern,
-  title 
+  title
 }) => (
   <div className="flex flex-col mb-6">
     <label
@@ -96,7 +96,7 @@ const Formulario = () => {
   const backgroundImageURL = "/fondoformulario.webp";
 
   const titleStyle = {
-    backgroundImage: "linear-gradient(90deg, #4F46E5, #3B82F6)",
+    backgroundImage: "background-color: #ff000",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     textShadow: "0 4px 6px rgba(0, 0, 0, 0.25)",
@@ -104,7 +104,7 @@ const Formulario = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    
+
     // Validaciones en tiempo real
     if (name === "numero") {
       // Solo números y máximo 9 caracteres para teléfono
@@ -135,7 +135,7 @@ const Formulario = () => {
         [name]: value
       }));
     }
-    
+
     // Limpiar mensajes de error cuando el usuario empiece a escribir
     if (message) {
       setMessage("");
@@ -145,7 +145,7 @@ const Formulario = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validaciones antes de enviar
     if (!agreed) {
       setMessage("Debes aceptar el tratamiento de datos personales");
@@ -203,7 +203,7 @@ const Formulario = () => {
       // Éxito
       setMessage('¡Gracias! Tu mensaje ha sido enviado correctamente.');
       setIsError(false);
-      
+
       // Resetear formulario
       setFormData({
         nombre: "",
@@ -249,10 +249,9 @@ const Formulario = () => {
           {/* 👇 Título con imagen al costado */}
           <motion.h1
             className="flex flex-col gap-3 text-6xl md:text-7xl font-extrabold mb-4 leading-tight"
-            style={titleStyle}
             variants={itemVariants}
           >
-            <span>Hola</span>
+            <span className="text-[#1100FF]">Hola</span>
             <Image
               src="/letrahome.png"
               alt="Letra decorativa"
@@ -262,6 +261,7 @@ const Formulario = () => {
               priority
             />
           </motion.h1>
+
 
           <motion.p
             className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed max-w-md"
@@ -279,29 +279,29 @@ const Formulario = () => {
           onSubmit={handleSubmit}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-            <InputField 
-              label="Nombre" 
-              name="nombre" 
-              type="text" 
+            <InputField
+              label="Nombre"
+              name="nombre"
+              type="text"
               value={formData.nombre}
               onChange={handleChange}
               disabled={isSubmitting}
               maxLength={50}
             />
-            <InputField 
-              label="Email" 
-              name="email" 
-              type="email" 
+            <InputField
+              label="Email"
+              name="email"
+              type="email"
               value={formData.email}
               onChange={handleChange}
               disabled={isSubmitting}
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title="Por favor ingresa un email válido (ejemplo: usuario@correo.com)"
             />
-            <InputField 
-              label="Número" 
-              name="numero" 
-              type="tel" 
+            <InputField
+              label="Número"
+              name="numero"
+              type="tel"
               value={formData.numero}
               onChange={handleChange}
               disabled={isSubmitting}
@@ -309,10 +309,10 @@ const Formulario = () => {
               pattern="[0-9]{9}"
               title="Ingresa 9 dígitos sin espacios (ejemplo: 912345678)"
             />
-            <InputField 
-              label="DNI o CDE" 
-              name="dniCde" 
-              type="text" 
+            <InputField
+              label="DNI o CDE"
+              name="dniCde"
+              type="text"
               value={formData.dniCde}
               onChange={handleChange}
               disabled={isSubmitting}
@@ -322,28 +322,27 @@ const Formulario = () => {
             />
           </div>
 
-          <InputField 
-            label="Mensaje" 
-            name="mensaje" 
-            type="textarea" 
+          <InputField
+            label="Mensaje"
+            name="mensaje"
+            type="textarea"
             value={formData.mensaje}
             onChange={handleChange}
             disabled={isSubmitting}
             maxLength={500}
           />
 
-          
+
 
           {/* Mensaje de estado */}
           {message && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`p-4 rounded-lg mb-4 ${
-                isError 
-                  ? "bg-red-100 border border-red-400 text-red-700" 
+              className={`p-4 rounded-lg mb-4 ${isError
+                  ? "bg-red-100 border border-red-400 text-red-700"
                   : "bg-green-100 border border-green-400 text-green-700"
-              }`}
+                }`}
             >
               {message}
             </motion.div>
@@ -371,10 +370,9 @@ const Formulario = () => {
               type="submit"
               disabled={!agreed || isSubmitting}
               className={`px-8 py-3 text-lg font-bold rounded-lg transition-all duration-300 shadow-md flex items-center justify-center gap-2
-                ${
-                  agreed && !isSubmitting
-                    ? "bg-blue-600 hover:bg-blue-700 text-white transform hover:-translate-y-0.5 cursor-pointer"
-                    : "bg-gray-300 text-gray-600 cursor-not-allowed"
+                ${agreed && !isSubmitting
+                  ? "bg-blue-600 hover:bg-red-600 text-white transform hover:-translate-y-0.5 cursor-pointer"
+                  : "bg-gray-300 text-gray-600 cursor-not-allowed"
                 }`}
               whileHover={agreed && !isSubmitting ? { scale: 1.02 } : {}}
               whileTap={agreed && !isSubmitting ? { scale: 0.98 } : {}}

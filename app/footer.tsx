@@ -25,10 +25,7 @@ const Footer = () => {
           name: "veloxrent.gestioncliente@gmail.com",
           href: "https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com",
         },
-        {
-          name: "Redes sociales",
-          href: "https://www.facebook.com/profile.php?id=61572796175320",
-        },
+       
       ],
     },
   ];
@@ -36,7 +33,6 @@ const Footer = () => {
   // Data for "Nuestros productos" section links
   const productLinks = [
     { name: "Nosotros", href: "/nosotros" },
-    { name: "Marca", href: "#" },
     { name: "mapa", href: "/https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" },
     { name: "Carros", href: "/vehiculos" },
   ];
@@ -94,7 +90,7 @@ const Footer = () => {
                 src="/logofooter.png"
                 alt="Logo de casagrande geotecnia"
                 fill
-                
+
                 sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                 className="object-contain object-left transition-transform group-hover:scale-105"
                 priority
@@ -141,10 +137,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-y-10 lg:gap-x-12 mb-8 sm:mb-12">
           <div className="py-8 flex flex-col md:items-start items-center">
             <h2 className="text-sm  font-semibold mb-6 text-white text-center">
-              Aviso legal 
+              Aviso legal
             </h2>
             <h2 className="text-sm  font-semibold mb-6 text-white text-center">
-              Libro de reclamaciones 
+              Libro de reclamaciones
             </h2>
             <h2 className="text-sm  font-semibold mb-6 text-white text-center">
               Veloxrent RUC:1073092393939
@@ -161,7 +157,7 @@ const Footer = () => {
           </div>
 
           <div className="py-2">
-            
+
             <nav className="space-y-4 sm:space-y-6">
               {connectLinks.map((section) => (
                 <div key={section.title}>
@@ -197,7 +193,7 @@ const Footer = () => {
           {/* Section: Nuestros productos */}
           <div className="py-2">
             <h2 className="text-lg font-bold mb-4 text-white">
-              Nuestros productos
+              Secciones
             </h2>
             <nav>
               <ul className="space-y-2 sm:space-y-3">
@@ -221,8 +217,7 @@ const Footer = () => {
           {/* About description and Social Media (Desktop Only) */}
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-white mb-4 sm:mb-6 text-sm leading-relaxed">
-              Más de 20 años  dan servicos de autos a nuestro clientes 
-            </p>
+              Pioneros alquilando vehiculos sin conductor en Ayacucho            </p>
             <div className="flex gap-3 mt-auto">
               {socialLinks.map((social) => (
                 <Link

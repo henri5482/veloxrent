@@ -161,19 +161,19 @@ export default function SuccessStoriesCarousel() {
         {/* Encabezado */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <motion.h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-[#0c0280] leading-tight drop-shadow-lg"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-[#1100FF] leading-tight drop-shadow-lg"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={sectionHeaderVariants}
           >
-            Nuestros{" "}
+            Nuestros {" "}
             <span className="inline-block text-[#1100FF] font-extrabold drop-shadow-md">
-              clientes felices
+              clientes hablan por nosotros
             </span>
           </motion.h2>
           <motion.p
-            className="text-[#0c0280] text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-[#1100FF] text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

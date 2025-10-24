@@ -38,12 +38,12 @@ const Hero: React.FC = () => {
 
   const [form, setForm] = useState({
     precio: "",
-    modelo: "",
+    transmision: "",
+    ruta: "",
     vehiculo: "",
-    asientos: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -119,69 +119,91 @@ const Hero: React.FC = () => {
       {/* Formulario */}
       <motion.form
         onSubmit={handleSubmit}
-        className="max-w-7xl mx-auto z-30 bg-[#1100FF] shadow-2xl py-6 px-4 sm:px-6 md:px-8 mt-10"
+        className="max-w-7xl mx-auto z-30 bg-[#1100FF] shadow-2xl py-6 px-4 sm:px-6 md:px-8 mt-10 rounded-xl"
         variants={carAndFormVariants}
         initial="hidden"
         animate="visible"
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
           <div className="text-xs sm:text-sm text-white text-center md:text-left font-medium md:w-[220px] leading-snug px-2">
-            Filtra vehículos por precio, modelo o tipo
+            Filtra el vehículo ideal para ti 
           </div>
 
-          {/* Inputs */}
+          {/* Selects */}
           <div className="flex flex-col sm:flex-row flex-grow gap-3 sm:gap-4 w-full md:w-auto">
+
+            {/* Precio */}
             <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
               <label className="font-medium">Precio (S/)</label>
-              <input
+              <select
                 name="precio"
-                type="number"
                 value={form.precio}
                 onChange={handleChange}
-                placeholder="Ej: 200"
                 className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              />
+              >
+                <option value="">Seleccionar</option>
+                {[120, 150, 180, 200, 250, 300].map((p) => (
+                  <option key={p} value={p}>{p}</option>
+                ))}
+              </select>
             </div>
 
+            {/* Transmisión */}
             <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Modelo</label>
-              <input
-                name="modelo"
-                value={form.modelo}
+              <label className="font-medium">Transmisión</label>
+              <select
+                name="transmision"
+                value={form.transmision}
                 onChange={handleChange}
-                placeholder="Ej: Hilux"
                 className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              />
+              >
+                <option value="">Seleccionar</option>
+                <option value="Mecánico">Mecánico</option>
+                <option value="Automático">Automático</option>
+              </select>
             </div>
 
+            {/* Ruta */}
+            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
+              <label className="font-medium">Ruta</label>
+              <select
+                name="ruta"
+                value={form.ruta}
+                onChange={handleChange}
+                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
+              >
+                <option value="">Seleccionar</option>
+                <option value="Asfaltado">Asfaltado</option>
+                <option value="Agreste">Agreste</option>
+              </select>
+            </div>
+
+            {/* Vehículo */}
             <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
               <label className="font-medium">Vehículo</label>
-              <input
+              <select
                 name="vehiculo"
                 value={form.vehiculo}
                 onChange={handleChange}
-                placeholder="Ej: Camioneta"
                 className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              />
-            </div>
-
-            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Asientos</label>
-              <input
-                name="asientos"
-                type="number"
-                value={form.asientos}
-                onChange={handleChange}
-                placeholder="Ej: 5"
-                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              />
+              >
+                <option value="">Seleccionar</option>
+                <option value="Chery Q22 / 08 asientos">Chery Q22 / 08 asientos</option>
+                <option value="Hyundai Verna / 05 asientos">Hyundai Verna / 05 asientos</option>
+                <option value="Hyundai Accent / 05 asientos">Hyundai Accent / 05 asientos</option>
+                <option value="Mahindra Pick Up / 05 asientos">Mahindra Pick Up / 05 asientos</option>
+                <option value="Daihatsu Terios / 08 asientos">Daihatsu Terios / 08 asientos</option>
+                <option value="Toyota Hilux / 05 asientos">Toyota Hilux / 05 asientos</option>
+                <option value="Hyundai Santa Fe / 08 asientos">Hyundai Santa Fe / 08 asientos</option>
+                <option value="Hyundai H1 / 12 asientos">Hyundai H1 / 12 asientos</option>
+              </select>
             </div>
           </div>
 
           {/* Botón */}
           <button
             type="submit"
-            className="w-full md:w-auto px-10 py-3 bg-[#2800FF] hover:bg-[#1f00b9] text-white font-semibold rounded-md shadow-lg transition-all duration-300"
+            className="w-full md:w-auto px-10 py-3 bg-blue-900 hover:bg-red-600 cursor-pointer text-white font-semibold rounded-md shadow-lg transition-all duration-300"
           >
             Buscar
           </button>

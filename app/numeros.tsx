@@ -69,7 +69,7 @@ const Numeros = () => {
     <section className="py-20 sm:py-28 px-6 relative overflow-hidden  text-white flex flex-col items-center justify-center text-center">
       {/* Título centrado */}
       <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 text-center leading-tight text-[#0c0280]"
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 text-center leading-tight text-[#1100FF]"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

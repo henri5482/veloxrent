@@ -9,28 +9,48 @@ import carrosData from "../data/cars.json";
 import Footer from "../footer";
 import Navbar from "../navbar";
 
+
+
 function BuscarContent() {
   const params = useSearchParams();
 
+  // Parámetros desde el formulario
   const precio = params.get("precio");
-  const modelo = params.get("modelo")?.toLowerCase() || "";
+  const transmision = params.get("transmision")?.toLowerCase() || "";
+  const ruta = params.get("ruta")?.toLowerCase() || "";
   const vehiculo = params.get("vehiculo")?.toLowerCase() || "";
-  const asientos = params.get("asientos");
 
-  // Filtro principal
+  // Filtro principal con lógica real
   const resultados = carrosData.filter((carro) => {
-    const coincideModelo = modelo
-      ? carro.modelo.toLowerCase().includes(modelo)
-      : true;
-    const coincideTipo = vehiculo
-      ? carro.tipo.toLowerCase().includes(vehiculo)
-      : true;
-    const coincideAsientos = asientos
-      ? carro.especificaciones.pasajeros === Number(asientos)
-      : true;
     const coincidePrecio = precio ? carro.precio <= Number(precio) : true;
 
-    return coincideModelo && coincideTipo && coincideAsientos && coincidePrecio;
+    const coincideTransmision = transmision
+      ? carro.especificaciones.transmision.toLowerCase().includes(transmision)
+      : true;
+
+    // 🔧 Ruta (solo simularemos su lógica)
+    // "Asfaltado" = vehículos con transmisión automática o SUV
+    // "Agreste" = camionetas o transmisión manual
+    const coincideRuta = ruta
+      ? ruta === "asfaltado"
+        ? carro.especificaciones.transmision.toLowerCase() === "automática" ||
+          carro.tipo.toLowerCase().includes("suv")
+        : carro.tipo.toLowerCase().includes("camioneta") ||
+          carro.especificaciones.transmision.toLowerCase() === "manual"
+      : true;
+
+    // Vehículo (nombre)
+    const coincideVehiculo = vehiculo
+      ? carro.modelo.toLowerCase().includes(vehiculo) ||
+        carro.marca.toLowerCase().includes(vehiculo)
+      : true;
+
+    return (
+      coincidePrecio &&
+      coincideTransmision &&
+      coincideRuta &&
+      coincideVehiculo
+    );
   });
 
   return (
@@ -95,7 +115,6 @@ export default function Buscar() {
   return (
     <>
       <Navbar />
-      {/* 👇 Suspense envuelve el componente que usa useSearchParams */}
       <Suspense fallback={<div className="text-center py-20">Cargando...</div>}>
         <BuscarContent />
       </Suspense>

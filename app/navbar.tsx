@@ -44,10 +44,10 @@ interface ContactInfoItemProps {
 }
 
 const navLinks: NavLink[] = [
-  { href: "/", label: "Inicio" },
-  { href: "/nosotros", label: "Nosotros" },
-  // { href: "/servicios", label: "Ofertas y planes" },
-  { href: "/vehiculos", label: "Vehiculos" },
+  { href: "/", label: "INICIO" },
+  { href: "/vehiculos", label: "VEHICULOS" },
+  { href: "/nosotros", label: "NOSOTROS " },
+  // { href: "/servicios", label: "PLANES Y MAS " },
   // { href: "/blog", label: "Blog" },
   // { href: "/contacto", label: "Contacto" },
 ];
@@ -158,11 +158,10 @@ const DesktopMenu = ({
       >
         <Link
           href={link.href}
-          className={`relative px-4 py-2 font-bold text-[#1100FF] transition-colors duration-300 ${
-            pathname === link.href
+          className={`relative px-4 py-2 font-bold text-[#1100FF] transition-colors duration-300 ${pathname === link.href
               ? "font-bold text-[#1100FF]"
               : "hover:text-sky-950"
-          }`}
+            }`}
         >
           {link.label}
           {pathname === link.href && (
@@ -320,7 +319,7 @@ const Navbar = () => {
           {/* Botones de acción en el escritorio */}
           <div className="hidden items-center space-x-4 md:flex lg:flex">
             <a
-              href="https://wa.me/51962835652?text=Hola,%20quiero%20asesoría%20técnica"
+              href="https://wa.me/51925285403?text=Hola,%20quiero%20asesoría%20técnica"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -328,12 +327,12 @@ const Navbar = () => {
                 size="lg"
                 className="bg-white border cursor-pointer border-[#1100FF] text-[#1100FF] font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-[#1100FF] hover:text-white"
               >
-                ASESORÍA TÉCNICA
+                Más información
               </Button>
             </a>
 
             <a
-              href="https://wa.me/51945513323?text=Hola,%20quiero%20una%20cotización"
+              href="https://wa.me/51929501809?text=Hola,%20quiero%20una%20cotización"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -341,7 +340,7 @@ const Navbar = () => {
                 size="lg"
                 className="bg-[#1100FF] cursor-pointer text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 border-2 ease-in-out hover:bg-white hover:text-[#1100FF] hover:border-[#1100FF] border-[#1100FF]"
               >
-                ¡COTIZAR AHORA!
+                Comprar vehículos
               </Button>
             </a>
           </div>
@@ -389,11 +388,10 @@ const Navbar = () => {
                   <motion.div key={link.href} variants={mobileMenuItemVariants}>
                     <Link
                       href={link.href}
-                      className={`block rounded-lg px-4 py-3 text-base font-bold transition-colors ${
-                        pathname === link.href
+                      className={`block rounded-lg px-4 py-3 text-base font-bold transition-colors ${pathname === link.href
                           ? "bg-gray-300 text-black"
                           : "text-[#1100FF] hover:bg-gray-100"
-                      }`}
+                        }`}
                     >
                       {link.label}
                     </Link>
@@ -408,31 +406,28 @@ const Navbar = () => {
                 >
                   {/* Botón WhatsApp Asesoría Técnica */}
                   <a
-                    href="https://wa.me/51962835652?text=Hola,%20quiero%20asesoría%20técnica"
+                    href="https://wa.me/51925285403?text=Hola,%20quiero%20asesoría%20técnica"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button
                       size="lg"
-                      className="w-full bg-white border border-[#1100FF] text-[#1100FF] font-semibold rounded-lg transition duration-300 ease-in-out cursor-pointer hover:bg-[#1100FF] hover:text-white"
-                      onClick={() => setMobileMenuOpen(false)}
+                      className="bg-white border cursor-pointer border-[#1100FF] text-[#1100FF] font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-[#1100FF] hover:text-white"
                     >
-                      ASESORÍA TÉCNICA
+                      Más información
                     </Button>
                   </a>
 
-                  {/* Botón WhatsApp Cotización */}
                   <a
-                    href="https://wa.me/51945513323?text=Hola,%20quiero%20una%20cotización"
+                    href="https://wa.me/51929501809?text=Hola,%20quiero%20una%20cotización"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button
                       size="lg"
-                      className="w-full bg-[#1100FF] cursor-pointer text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-[#373737]"
-                      onClick={() => setMobileMenuOpen(false)}
+                      className="bg-[#1100FF] cursor-pointer text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 border-2 ease-in-out hover:bg-white hover:text-[#1100FF] hover:border-[#1100FF] border-[#1100FF]"
                     >
-                      ¡COTIZAR AHORA!
+                      Comprar vehículos
                     </Button>
                   </a>
                 </motion.div>
