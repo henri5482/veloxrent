@@ -13,7 +13,7 @@ const font = Plus_Jakarta_Sans({
 
 // ✅ Datos de la empresa
 const companyInfo = {
-  name: "VeloxRent",
+  name: "Veloxrent | Alquiler de Vehículos en Ayacucho",
   description:
     "VeloxRent es una empresa de alquiler de autos y camionetas en Ayacucho, Perú. Ofrecemos vehículos modernos, seguros y al mejor precio para viajes, turismo y trabajo. Reserva fácilmente y disfruta del mejor servicio de renta de autos en Ayacucho.",
   url: "https://www.veloxrentperu.com",
@@ -133,7 +133,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: {
     default:
-      "VeloxRent | Alquiler de Autos y Camionetas  Ayacucho",
+      "Veloxrent | Alquiler de Vehículos en Ayacucho",
     template: "%s | VeloxRent",
   },
   description: companyInfo.description,
@@ -235,9 +235,9 @@ function StructuredData() {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="es-PE" suppressHydrationWarning className={font.variable}>
       <head>

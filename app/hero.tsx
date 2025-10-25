@@ -1,5 +1,6 @@
 "use client";
 
+import data from "@/app/data/cars.json"; // ✅ Asegúrate de que la ruta sea correcta
 import { motion, Transition, Variants } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -9,28 +10,17 @@ const customEase: Transition["ease"] = [0.42, 0, 0.58, 1.0];
 
 const textContainerVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
 };
 
 const textItemVariants: Variants = {
   hidden: { opacity: 0, x: -75 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.7, ease: customEase },
-  },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: customEase } },
 };
 
 const carAndFormVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay: 0.5, ease: customEase },
-  },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.5, ease: customEase } },
 };
 
 const Hero: React.FC = () => {
@@ -43,19 +33,37 @@ const Hero: React.FC = () => {
     vehiculo: "",
   });
 
+  // 🔹 Rutas únicas desde el JSON
+  const rutasUnicas = Array.from(
+    new Set(data.map((carro) => carro.especificaciones.terreno))
+  );
+
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     const params = new URLSearchParams();
 
+    // ✅ Aplica los valores solo si existen
     Object.entries(form).forEach(([key, value]) => {
       if (value.trim() !== "") params.append(key, value);
     });
 
+    // ✅ Redirige al buscador con los parámetros
     router.push(`/buscar?${params.toString()}`);
+
+    // ✅ Limpia el formulario después de la búsqueda
+    setTimeout(() => {
+      setForm({
+        precio: "",
+        transmision: "",
+        ruta: "",
+        vehiculo: "",
+      });
+    }, 200); // 🔹 Pequeña espera para que el router.push se ejecute antes de limpiar
   };
 
   return (
@@ -126,12 +134,11 @@ const Hero: React.FC = () => {
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
           <div className="text-xs sm:text-sm text-white text-center md:text-left font-medium md:w-[220px] leading-snug px-2">
-            Filtra el vehículo ideal para ti 
+            Filtra el vehículo ideal para ti
           </div>
 
           {/* Selects */}
           <div className="flex flex-col sm:flex-row flex-grow gap-3 sm:gap-4 w-full md:w-auto">
-
             {/* Precio */}
             <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
               <label className="font-medium">Precio (S/)</label>
@@ -143,7 +150,9 @@ const Hero: React.FC = () => {
               >
                 <option value="">Seleccionar</option>
                 {[120, 150, 180, 200, 250, 300].map((p) => (
-                  <option key={p} value={p}>{p}</option>
+                  <option key={p} value={p}>
+                    {p}
+                  </option>
                 ))}
               </select>
             </div>
@@ -173,8 +182,11 @@ const Hero: React.FC = () => {
                 className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
               >
                 <option value="">Seleccionar</option>
-                <option value="Asfaltado">Asfaltado</option>
-                <option value="Agreste">Agreste</option>
+                {rutasUnicas.map((r) => (
+                  <option key={r} value={r}>
+                    {r}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -188,14 +200,11 @@ const Hero: React.FC = () => {
                 className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
               >
                 <option value="">Seleccionar</option>
-                <option value="Chery Q22 / 08 asientos">Chery Q22 / 08 asientos</option>
-                <option value="Hyundai Verna / 05 asientos">Hyundai Verna / 05 asientos</option>
-                <option value="Hyundai Accent / 05 asientos">Hyundai Accent / 05 asientos</option>
-                <option value="Mahindra Pick Up / 05 asientos">Mahindra Pick Up / 05 asientos</option>
-                <option value="Daihatsu Terios / 08 asientos">Daihatsu Terios / 08 asientos</option>
-                <option value="Toyota Hilux / 05 asientos">Toyota Hilux / 05 asientos</option>
-                <option value="Hyundai Santa Fe / 08 asientos">Hyundai Santa Fe / 08 asientos</option>
-                <option value="Hyundai H1 / 12 asientos">Hyundai H1 / 12 asientos</option>
+                {data.map((v) => (
+                  <option key={v.id} value={v.slug}>
+                    {v.marca} {v.modelo} / {v.especificaciones.pasajeros} asientos
+                  </option>
+                ))}
               </select>
             </div>
           </div>
