@@ -1,9 +1,9 @@
 // components/AlquilerModal.tsx
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 interface AlquilerModalProps {
   isOpen: boolean;
@@ -37,7 +37,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    
+
     if (name === "dni") {
       if (/^\d{0,8}$/.test(value)) {
         setFormData({ ...formData, [name]: value });
@@ -49,13 +49,13 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
     } else {
       setFormData({ ...formData, [name]: value });
     }
-    
+
     if (error) setError("");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!agreed) {
       setError("Debes aceptar los términos y condiciones para continuar");
       return;
@@ -169,7 +169,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                       ¡Solicitud Enviada con Éxito!
                     </h3>
                     <p className="text-slate-300 max-w-md mx-auto">
-                      Tu solicitud de alquiler ha sido enviada correctamente. 
+                      Tu solicitud de alquiler ha sido enviada correctamente.
                       Nos pondremos en contacto contigo en las próximas 24 horas.
                     </p>
                   </motion.div>
@@ -212,20 +212,24 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                         {/* Información rápida */}
                         <div className="bg-slate-700/30 rounded-xl p-4 border border-slate-600/50 backdrop-blur-sm">
                           <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">
-                            Entrega Incluye
+                            Contrato
                           </h4>
                           <div className="space-y-2 text-slate-300 text-sm">
                             <div className="flex items-center gap-2">
                               <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                              <span>Vehículo limpio y revisado</span>
+                              <span>Vehículo limpio</span>
                             </div>
                             <div className="flex items-center gap-2">
                               <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                              <span>Tanque de combustible lleno</span>
+                              <span>Inspección vehicular </span>
                             </div>
                             <div className="flex items-center gap-2">
                               <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                              <span>Seguro básico incluido</span>
+                              <span>Tanque con combustible</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                              <span>SOAT</span>
                             </div>
                             <div className="flex items-center gap-2">
                               <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
@@ -249,24 +253,96 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                       </div>
 
                       {/* Términos y condiciones */}
-                      <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
-                        <h3 className="text-lg font-semibold text-white mb-3">
-                          Términos y Condiciones
-                        </h3>
-                        <div className="max-h-40 overflow-y-auto space-y-3 text-slate-300 text-sm leading-relaxed">
-                          <p>
-                            Al proceder con el alquiler, acepta cumplir con todas las políticas de VeloxRent. 
-                            El vehículo debe ser devuelto en las mismas condiciones.
-                          </p>
-                          <p>
-                            Depósito de garantía reembolsable se devuelve en 72 horas después de la devolución, 
-                            siempre que no existan daños, multas o cargos adicionales.
-                          </p>
-                          <p>
-                            Cliente responsable de infracciones de tránsito. Prohibido fumar y transporte de mascotas sin autorización.
-                          </p>
-                        </div>
-                      </div>
+                     <div className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50 backdrop-blur-sm">
+    <h3 className="text-lg font-semibold text-white mb-4">
+        Políticas de Velox Rent
+    </h3>
+    <div className="max-h-60 overflow-y-auto space-y-4 text-slate-300 text-sm leading-relaxed">
+        {/* 1-REQUISITOS DE ALQUILER */}
+        <div>
+            <p className="font-semibold text-white">1- REQUISITOS DE ALQUILER</p>
+            <p>El cliente debe presentar copia de su DNI, licencia de conducir válida (mínimo 02 años de antigüedad) y un recibo reciente de agua o luz para validar su domicilio. Se requiere una garantía de S/ 500.00 o S/ 800.00 dependiendo del tipo de vehículo elegido que será reembolsable al finalizar el alquiler si el vehículo se entrega en las mismas condiciones.</p>
+        </div>
+
+        {/* 2- PROCESO DE RESERVA */}
+        <div>
+            <p className="font-semibold text-white">2- PROCESO DE RESERVA</p>
+            <p>La reserva se confirma únicamente con el depósito de la garantía (de S/ 500.00 o S/ 800.00 depende el tipo de vehículo elegido). No se aceptan cancelaciones, cambios de fecha ni reembolsos una vez realizada la reserva. El cliente debe presentarse 30 minutos antes de la hora pactada para la entrega del vehículo.</p>
+        </div>
+
+        {/* 3- RESPONSABILIDAD DEL VEHÍCULO */}
+        <div>
+            <p className="font-semibold text-white">3- RESPONSABILIDAD DEL VEHÍCULO</p>
+            <p>El cliente asume total responsabilidad del vehículo al firmar el contrato. Cualquier daño (choques, rayones, fallas mecánicas, etc.) será cubierto por el cliente.</p>
+        </div>
+
+        {/* 4- NIVEL DE COMBUSTIBLE */}
+        <div>
+            <p className="font-semibold text-white">4- NIVEL DE COMBUSTIBLE</p>
+            <p>El vehículo debe devolverse con el mismo nivel de combustible con el que fue entregado. Si se devuelve con menos, se descontará el monto equivalente de la garantía. Si hay combustible extra, no se realiza reembolso.</p>
+        </div>
+
+        {/* 5- CONDICIÓN DE LIMPIEZA */}
+        <div>
+            <p className="font-semibold text-white">5- CONDICIÓN DE LIMPIEZA</p>
+            <p>El vehículo debe devolverse limpio y lavado. Si no es así, se cobrará un cargo por limpieza desde la garantía. No se verificará el estado del vehículo hasta que esté limpio, lo que podría demorar la devolución de la garantía.</p>
+        </div>
+
+        {/* 6- DEVOLUCIÓN Y SANCIONES POR RETRASO */}
+        <div>
+            <p className="font-semibold text-white">6- DEVOLUCIÓN Y SANCIONES POR RETRASO</p>
+            <p>El vehículo debe devolverse en la fecha y hora exactas. Hay 15 minutos de tolerancia.</p>
+            <ul className="ml-4 mt-1 space-y-1">
+                <li>• Retraso de 16 a 60 minutos: Se cobra el 50% del valor diario.</li>
+                <li>• Retraso mayor a 60 minutos: Se cobra el 100% del valor diario + penalidad del 20% de la garantía.</li>
+                <li>• Si pasan más de 12 horas sin devolución: Se retiene el 100% de la garantía y se podrían iniciar acciones legales.</li>
+            </ul>
+        </div>
+
+        {/* 7- HORA Y FECHA DE DEVOLUCIÓN */}
+        <div>
+            <p className="font-semibold text-white">7- HORA Y FECHA DE DEVOLUCIÓN</p>
+            <p>Horario de atención: 7:00 a.m. a 6:00 p.m. de lunes a domingo. Devolución fuera de horario (18:00 a 22:00 horas) tiene costo adicional de S/ 30.00. Se debe notificar con 3 horas de anticipación.</p>
+        </div>
+
+        {/* 8- IMPUESTO GENERAL A LAS VENTAS (IGV) */}
+        <div>
+            <p className="font-semibold text-white">8- IMPUESTO GENERAL A LAS VENTAS (IGV)</p>
+            <p>Todos los precios indicados son netos, no incluyen el IGV. El IGV será agregado al momento de la facturación. Esto también aplica a todos los cargos adicionales: penalidades, daños, combustible, limpieza, etc.</p>
+        </div>
+
+        {/* 9- AMPLIACIÓN DEL ALQUILER */}
+        <div>
+            <p className="font-semibold text-white">9- AMPLIACIÓN DEL ALQUILER</p>
+            <p>Para ampliar el alquiler, comunicar con 12 horas de anticipación vía correo o WhatsApp. La solicitud será válida sólo si VELORENT la confirma. Se enviará documento de ampliación que el cliente deberá completar y remitir junto con el comprobante de pago.</p>
+        </div>
+
+        {/* 10- COBRO POR USO O DAÑO DE LLANTAS */}
+        <div>
+            <p className="font-semibold text-white">10- COBRO POR USO O DAÑO DE LLANTAS</p>
+            <p>Si se detecta llanta baja, desinflada, dañada o uso de llanta de repuesto, la garantía será retenida hasta evaluación técnica. El cliente puede reponer la llanta en 24 horas. De no hacerlo, se procederá al descuento correspondiente.</p>
+        </div>
+
+        {/* 11- USO DEL VEHÍCULO */}
+        <div>
+            <p className="font-semibold text-white">11- USO DEL VEHÍCULO</p>
+            <p>Límite de kilometraje: 150 km por día, S/ 0.90 por cada km adicional. Zona de uso: Solo dentro del departamento de Ayacucho. Salir de la zona sin permiso implica pérdida total de la garantía y recuperación inmediata del vehículo.</p>
+        </div>
+
+        {/* 12- CONDUCCIÓN RESPONSABLE */}
+        <div>
+            <p className="font-semibold text-white">12- CONDUCCIÓN RESPONSABLE</p>
+            <p>El conductor debe tener mínimo 2 años de antigüedad en su brevete. Solo puede conducir quien está registrado en el contrato. Se debe conducir con prudencia, respetando normas de tránsito. Incumplimientos pueden causar pérdida de cobertura, sanciones o cancelación del contrato.</p>
+        </div>
+
+        {/* DECLARACIÓN FINAL */}
+        <div className="bg-slate-600/30 p-4 rounded-lg mt-4">
+            <p className="font-semibold text-white text-center mb-2">DECLARACIÓN DE ACEPTACIÓN</p>
+            <p>El Arrendatario declara haber leído y/o ha escuchado y también por ello está aceptando en su totalidad las políticas de la Empresa, y reconoce que el incumplimiento de las políticas podrá generar la aplicación de sanciones, cobros adicionales, resolución anticipada del contrato o acciones legales correspondientes.</p>
+            <p className="mt-2 text-center font-semibold">Con la firma del presente contrato, el Arrendatario acepta expresamente.</p>
+        </div>
+    </div>
+</div>
 
                       {/* Requisitos */}
                       <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
@@ -276,43 +352,32 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                         <ul className="space-y-2 text-slate-300 text-sm">
                           <li className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
-                            <span>Mayor de 21 años</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
                             <span>DNI vigente o pasaporte</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
-                            <span>Licencia con 2+ años de antigüedad</span>
+                            <span>Licencia con  2+ años (deseable)</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
-                            <span>Tarjeta de crédito a nombre del conductor</span>
+                            <span>Copia de recibo de agua o luz</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
-                            <span>Depósito de garantía requerido</span>
+                            <span>En caso de ser foráneo o extranjero adicionar:</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
+                            <span>Nombre, dirección, celular del hospedaje y 01 garante</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
+                            <span>Dirección del domicilio temporal y 01 garante</span>
                           </li>
                         </ul>
                       </div>
 
                       {/* Checkbox de aceptación */}
-                      <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
-                        <div className="flex items-start gap-3">
-                          <input
-                            type="checkbox"
-                            id="agree"
-                            checked={agreed}
-                            onChange={(e) => setAgreed(e.target.checked)}
-                            className="w-4 h-4 mt-0.5 text-blue-500 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 focus:ring-2"
-                          />
-                          <label htmlFor="agree" className="text-sm text-slate-300 leading-relaxed cursor-pointer">
-                            <span className="font-semibold">He leído y acepto</span> los términos, 
-                            políticas de alquiler y tratamiento de datos personales.
-                          </label>
-                        </div>
-                      </div>
                     </div>
 
                     {/* Sección derecha - Formulario */}
@@ -320,7 +385,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                       {/* Encabezado del formulario */}
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">
-                          Información Personal
+                          Información para la Reserva
                         </h3>
                         <p className="text-slate-400 text-sm">
                           Complete todos los campos obligatorios
@@ -438,8 +503,23 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                               onChange={handleChange}
                               disabled={isSubmitting}
                               className="w-full px-3 py-2.5 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 disabled:bg-slate-700/30 disabled:cursor-not-allowed text-white placeholder-slate-400 text-sm resize-none backdrop-blur-sm"
-                              placeholder="Fechas preferidas, información adicional..."
+                              placeholder="Fechas de salida y retorno, información adicional necesaria..."
                             />
+                          </div>
+                          <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
+                            <div className="flex items-start gap-3">
+                              <input
+                                type="checkbox"
+                                id="agree"
+                                checked={agreed}
+                                onChange={(e) => setAgreed(e.target.checked)}
+                                className="w-4 h-4 mt-0.5 text-blue-500 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 focus:ring-2"
+                              />
+                              <label htmlFor="agree" className="text-sm text-slate-300 leading-relaxed cursor-pointer">
+                                <span className="font-semibold">He leído y acepto</span> los términos,
+                                políticas de alquiler y tratamiento de datos personales.
+                              </label>
+                            </div>
                           </div>
                         </div>
 
@@ -449,11 +529,10 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                           disabled={isSubmitting || !agreed}
                           whileHover={agreed && !isSubmitting ? { scale: 1.02 } : {}}
                           whileTap={agreed && !isSubmitting ? { scale: 0.98 } : {}}
-                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${
-                            agreed && !isSubmitting
-                              ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-blue-500/25 cursor-pointer border border-blue-500/20"
-                              : "bg-slate-700 text-slate-500 cursor-not-allowed border border-slate-600"
-                          }`}
+                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${agreed && !isSubmitting
+                            ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-blue-500/25 cursor-pointer border border-blue-500/20"
+                            : "bg-slate-700 text-slate-500 cursor-not-allowed border border-slate-600"
+                            }`}
                         >
                           {isSubmitting ? (
                             <div className="flex items-center justify-center gap-2">
@@ -461,7 +540,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                               <span>Procesando...</span>
                             </div>
                           ) : (
-                            "Confirmar Solicitud"
+                            "Confirmar solicitud de reserva"
                           )}
                         </motion.button>
                       </form>

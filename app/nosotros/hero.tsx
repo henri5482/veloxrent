@@ -85,7 +85,7 @@ const HeroNosotros = () => {
             
             {/* Sección Misión */}
             <div>
-              <h1 className="text-4xl font-extrabold text-indigo-700 mb-3">Misión</h1>
+              <h1 className="text-4xl font-extrabold text-blue-900 mb-3">Misión</h1>
               <p className="text-gray-700 leading-relaxed">
                 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
               </p>
@@ -93,7 +93,7 @@ const HeroNosotros = () => {
             
             {/* Sección Visión */}
             <div>
-              <h2 className="text-3xl font-bold text-indigo-600 mb-2">Visión</h2>
+              <h2 className="text-3xl font-bold text-blue-900 mb-2">Visión</h2>
               <p className="text-gray-700 leading-relaxed">
                 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
               </p>

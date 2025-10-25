@@ -139,9 +139,12 @@ const Footer = () => {
             <h2 className="text-sm  font-semibold mb-6 text-white text-center">
               Aviso legal
             </h2>
-            <h2 className="text-sm  font-semibold mb-6 text-white text-center">
+            <a href="/libro" >
+
+            <h2 className="text-sm hover:text-red-600  font-semibold mb-6 text-white text-center">
               Libro de reclamaciones
             </h2>
+            </a>
             <h2 className="text-sm  font-semibold mb-6 text-white text-center">
               Veloxrent RUC:1073092393939
             </h2>
