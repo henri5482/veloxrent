@@ -1,8 +1,12 @@
 "use client";
+import { Bebas_Neue } from "next/font/google";
 
 import { animate, motion, useInView, Variants } from "framer-motion";
 import React, { useEffect, useRef } from "react";
-
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 // Componente para animar el conteo de un número
 const CountingNumber: React.FC<{
   value: number;
@@ -69,13 +73,14 @@ const Numeros = () => {
     <section className="py-20 sm:py-28 px-6 relative overflow-hidden  text-white flex flex-col items-center justify-center text-center">
       {/* Título centrado */}
       <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 text-center leading-tight text-[#1100FF]"
+        className={`${bebas.className} text-3xl sm:text-4xl md:text-7xl font-extrabold mb-16 text-center leading-tight text-[#1100FF]`}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         Las cifras <span className="text-[#1100FF]">nos respaldan</span>
       </motion.h2>
+
 
       {/* Contenedor de estadísticas */}
       <motion.div

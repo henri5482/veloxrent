@@ -1,4 +1,5 @@
 "use client";
+import { Bebas_Neue } from "next/font/google";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -20,7 +21,10 @@ import { motion, Variants } from "framer-motion";
 import { StarIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Numeros from "./numeros";
-
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 interface TestimonialItem {
   id: number;
   name: string;
@@ -161,16 +165,12 @@ export default function SuccessStoriesCarousel() {
         {/* Encabezado */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <motion.h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-[#1100FF] leading-tight drop-shadow-lg"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={sectionHeaderVariants}
+            className={`${bebas.className} text-3xl sm:text-4xl md:text-7xl font-extrabold mb-16 text-center leading-tight text-[#1100FF]`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Nuestros {" "}
-            <span className="inline-block text-[#1100FF] font-extrabold drop-shadow-md">
-              clientes hablan por nosotros
-            </span>
+            Nuestros clientes hablan por nosotros
           </motion.h2>
           <motion.p
             className="text-[#1100FF] text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
@@ -232,11 +232,10 @@ export default function SuccessStoriesCarousel() {
                             {[...Array(5)].map((_, i) => (
                               <StarIcon
                                 key={`star-${testimonial.id}-${i}`}
-                                className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                                  i < testimonial.rating
-                                    ? "fill-yellow-500 text-yellow-500"
-                                    : "fill-gray-300 text-gray-300"
-                                }`}
+                                className={`w-4 h-4 sm:w-5 sm:h-5 ${i < testimonial.rating
+                                  ? "fill-yellow-500 text-yellow-500"
+                                  : "fill-gray-300 text-gray-300"
+                                  }`}
                               />
                             ))}
                           </div>

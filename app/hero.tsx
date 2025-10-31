@@ -1,31 +1,31 @@
 "use client";
 
-import data from "@/app/data/cars.json"; // ✅ Asegúrate de que la ruta sea correcta
-import { motion, Transition, Variants } from "framer-motion";
-import Image from "next/image";
+import data from "@/app/data/cars.json";
+import { Button } from "@/components/ui/button";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const customEase: Transition["ease"] = [0.42, 0, 0.58, 1.0];
+const images = [
+  {
+    id: 1,
+    src: "/banner01.png",
+    alt: "Vehículo 1",
+    link: "/vehiculos",
+  },
+  {
+    id: 2,
+    src: "/banner02.png",
+    alt: "Vehículo 2",
+    link: "/nosotros",
+  },
+];
 
-const textContainerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-};
-
-const textItemVariants: Variants = {
-  hidden: { opacity: 0, x: -75 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: customEase } },
-};
-
-const carAndFormVariants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.5, ease: customEase } },
-};
-
-const Hero: React.FC = () => {
+const HeroCarousel = () => {
   const router = useRouter();
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [form, setForm] = useState({
     precio: "",
     transmision: "",
@@ -33,29 +33,39 @@ const Hero: React.FC = () => {
     vehiculo: "",
   });
 
-  // 🔹 Rutas únicas desde el JSON
   const rutasUnicas = Array.from(
     new Set(data.map((carro) => carro.especificaciones.terreno))
   );
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     const params = new URLSearchParams();
 
-    // ✅ Aplica los valores solo si existen
     Object.entries(form).forEach(([key, value]) => {
       if (value.trim() !== "") params.append(key, value);
     });
 
-    // ✅ Redirige al buscador con los parámetros
     router.push(`/buscar?${params.toString()}`);
 
-    // ✅ Limpia el formulario después de la búsqueda
     setTimeout(() => {
       setForm({
         precio: "",
@@ -63,163 +73,187 @@ const Hero: React.FC = () => {
         ruta: "",
         vehiculo: "",
       });
-    }, 200); // 🔹 Pequeña espera para que el router.push se ejecute antes de limpiar
+    }, 200);
+  };
+
+  // 🔹 Auto-play del carrusel
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, currentIndex]);
+
+  // 🔹 Redirección al hacer clic en la imagen
+  const handleImageClick = () => {
+    const currentImage = images[currentIndex];
+    if (currentImage.link) router.push(currentImage.link);
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[90vh] flex flex-col py-20 sm:py-28">
-      {/* Fondo */}
-      <div
-        className="absolute inset-0 bg-center z-0"
-        style={{
-          backgroundImage: `url(/herofondo.png)`,
-          backgroundBlendMode: "multiply",
-          opacity: 0.85,
-        }}
-      />
-
-      {/* Contenido principal */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full flex-grow flex flex-col lg:flex-row items-center pt-8 sm:pt-12 md:pt-16 px-4 sm:px-6 md:px-10">
-        {/* Texto */}
-        <motion.div
-          className="w-full lg:w-1/2 pt-4 lg:pt-24 px-2 sm:px-4 text-center lg:text-left"
-          variants={textContainerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1100FF] leading-tight"
-            variants={textItemVariants}
+    <div
+      className="relative w-full h-screen md:h-[90vh] 2xl:h-[90vh] overflow-hidden"
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
+    >
+      {/* Contenedor principal para la imagen */}
+      <div className="relative w-full h-full">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full cursor-pointer"
+            onClick={handleImageClick}
           >
-            Conduce fácil y seguro
-          </motion.h1>
-
-          <div className="flex justify-center lg:justify-start">
-            <Image
-              src="/letrahome.png"
-              alt="VELOXRENT Logo"
-              className="w-[75%] lg:w-[85%] pt-6 md:pt-8 h-auto"
-              width={500}
-              height={120}
-              priority
-            />
-          </div>
-        </motion.div>
-
-        {/* Imagen del coche */}
-        <motion.div
-          className="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-10 lg:mt-0"
-          variants={carAndFormVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Image
-            src="/hero.png"
-            alt="Vehículo de alquiler"
-            width={700}
-            height={500}
-            className="w-full h-auto object-contain"
-            priority
-          />
-        </motion.div>
+            {/* Imagen responsive: arriba en desktop, centrada en mobile */}
+            <div className="w-full h-full flex items-start justify-start lg:items-center lg:justify-center">
+              <img
+                src={images[currentIndex].src}
+                alt={images[currentIndex].alt}
+                className="w-full h-auto object-top lg:object-contain max-h-full pt-28 "
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Formulario */}
-      <motion.form
-        onSubmit={handleSubmit}
-        className="max-w-7xl mx-auto z-30 bg-[#1100FF] shadow-2xl py-6 px-4 sm:px-6 md:px-8 mt-10 rounded-xl"
-        variants={carAndFormVariants}
-        initial="hidden"
-        animate="visible"
+      {/* Navigation Arrows */}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 block bg-white/80 hover:bg-white text-gray-900 rounded-full cursor-pointer w-10 h-10 lg:w-12 lg:h-12 shadow-lg"
       >
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
-          <div className="text-xs sm:text-sm text-white text-center md:text-left font-medium md:w-[220px] leading-snug px-2">
-            Filtra el vehículo ideal para ti
+        <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6" />
+      </Button>
+
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-900 rounded-full cursor-pointer w-10 h-10 lg:w-12 lg:h-12 shadow-lg"
+      >
+        <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6" />
+      </Button>
+
+      {/* Search Form - Fijo en su posición */}
+      <div className="absolute max-md:bottom-36 md:bottom-[-20px] left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-4 pb-4 lg:pb-5">
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="bg-[#1100FF] shadow-2xl py-4 lg:py-6 px-4 lg:px-6 rounded-xl w-full"
+        >
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6">
+            {/* Texto descriptivo */}
+            <div className="text-sm text-white text-center lg:text-left font-medium lg:w-[220px] leading-snug">
+              Filtra el vehículo ideal para ti
+            </div>
+
+            {/* Contenedor de selects - Responsive */}
+            <div className="flex flex-col sm:flex-row flex-grow gap-3 w-full lg:w-auto">
+              {/* Precio */}
+              <div className="flex flex-col text-white text-xs lg:text-sm w-full sm:w-1/4">
+                <label className="font-medium">Precio (S/)</label>
+                <select
+                  name="precio"
+                  value={form.precio}
+                  onChange={handleChange}
+                  className="mt-1 p-2 lg:p-3 rounded-md border border-white/50 text-black bg-white text-xs lg:text-sm"
+                >
+                  <option value="">Seleccionar</option>
+                  {[120, 150, 180, 200, 250, 300].map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Transmisión */}
+              <div className="flex flex-col text-white text-xs lg:text-sm w-full sm:w-1/4">
+                <label className="font-medium">Transmisión</label>
+                <select
+                  name="transmision"
+                  value={form.transmision}
+                  onChange={handleChange}
+                  className="mt-1 p-2 lg:p-3 rounded-md border border-white/50 text-black bg-white text-xs lg:text-sm"
+                >
+                  <option value="">Seleccionar</option>
+                  <option value="Mecánico">Mecánico</option>
+                  <option value="Automático">Automático</option>
+                </select>
+              </div>
+
+              {/* Ruta */}
+              <div className="flex flex-col text-white text-xs lg:text-sm w-full sm:w-1/4">
+                <label className="font-medium">Ruta</label>
+                <select
+                  name="ruta"
+                  value={form.ruta}
+                  onChange={handleChange}
+                  className="mt-1 p-2 lg:p-3 rounded-md border border-white/50 text-black bg-white text-xs lg:text-sm"
+                >
+                  <option value="">Seleccionar</option>
+                  {rutasUnicas.map((r) => (
+                    <option key={r} value={r}>
+                      {r}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Vehículo */}
+              <div className="flex flex-col text-white text-xs lg:text-sm w-full sm:w-1/4">
+                <label className="font-medium">Vehículo</label>
+                <select
+                  name="vehiculo"
+                  value={form.vehiculo}
+                  onChange={handleChange}
+                  className="mt-1 p-2 lg:p-3 rounded-md border border-white/50 text-black bg-white text-xs lg:text-sm"
+                >
+                  <option value="">Seleccionar</option>
+                  {data.map((v) => (
+                    <option key={v.id} value={v.slug}>
+                      {v.marca} {v.modelo} / {v.especificaciones.pasajeros} asientos
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Botón Buscar */}
+            <Button
+              type="submit"
+              className="w-full lg:w-auto px-6 lg:px-8 py-2 bg-blue-900 hover:bg-red-600 text-white font-semibold rounded-md transition-all duration-300 text-sm lg:text-base"
+            >
+              Buscar
+            </Button>
           </div>
+        </motion.form>
+      </div>
 
-          {/* Selects */}
-          <div className="flex flex-col sm:flex-row flex-grow gap-3 sm:gap-4 w-full md:w-auto">
-            {/* Precio */}
-            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Precio (S/)</label>
-              <select
-                name="precio"
-                value={form.precio}
-                onChange={handleChange}
-                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              >
-                <option value="">Seleccionar</option>
-                {[120, 150, 180, 200, 250, 300].map((p) => (
-                  <option key={p} value={p}>
-                    {p}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Transmisión */}
-            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Transmisión</label>
-              <select
-                name="transmision"
-                value={form.transmision}
-                onChange={handleChange}
-                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              >
-                <option value="">Seleccionar</option>
-                <option value="Mecánico">Mecánico</option>
-                <option value="Automático">Automático</option>
-              </select>
-            </div>
-
-            {/* Ruta */}
-            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Ruta</label>
-              <select
-                name="ruta"
-                value={form.ruta}
-                onChange={handleChange}
-                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              >
-                <option value="">Seleccionar</option>
-                {rutasUnicas.map((r) => (
-                  <option key={r} value={r}>
-                    {r}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Vehículo */}
-            <div className="flex flex-col text-white text-xs sm:text-sm w-full sm:w-1/4">
-              <label className="font-medium">Vehículo</label>
-              <select
-                name="vehiculo"
-                value={form.vehiculo}
-                onChange={handleChange}
-                className="mt-1 p-3 rounded-md border border-white/50 text-black bg-white"
-              >
-                <option value="">Seleccionar</option>
-                {data.map((v) => (
-                  <option key={v.id} value={v.slug}>
-                    {v.marca} {v.modelo} / {v.especificaciones.pasajeros} asientos
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Botón */}
+      {/* Indicators - Posición fija */}
+      <div className="absolute bottom-28 lg:bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {images.map((_, index) => (
           <button
-            type="submit"
-            className="w-full md:w-auto px-10 py-3 bg-blue-900 hover:bg-red-600 cursor-pointer text-white font-semibold rounded-md shadow-lg transition-all duration-300"
-          >
-            Buscar
-          </button>
-        </div>
-      </motion.form>
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? "bg-white scale-125"
+                : "bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Hero;
+export default HeroCarousel;

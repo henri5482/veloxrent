@@ -1,4 +1,5 @@
 "use client";
+import { Bebas_Neue } from "next/font/google";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -10,6 +11,10 @@ import {
 } from "react-icons/fa";
 import carrosData from "../data/cars.json";
 
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 const Carros = () => {
   const getBrandColor = (marca: string) => {
     const colors: { [key: string]: string } = {
@@ -92,10 +97,11 @@ const Carros = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
+            className={`${bebas.className} text-4xl md:text-7xl font-bold text-slate-800 mb-6`}
           >
             Nuestra Flota de Vehículos
           </motion.h1>
+
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}

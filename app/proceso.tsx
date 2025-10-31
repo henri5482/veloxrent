@@ -1,5 +1,10 @@
 "use client";
+import { Bebas_Neue } from "next/font/google";
 
+const bebas = Bebas_Neue({
+    subsets: ["latin"],
+    weight: ["400"],
+});
 // --- Rutas de Iconos (Ajustar si es necesario) ---
 const ICON_PATHS = {
     education: '/cita.png',
@@ -130,9 +135,12 @@ const PlanesPrecios = () => {
         <section className="py-20 relative z-10 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* El título se mantiene oscuro para que contraste si el fondo de imagen es claro */}
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1100FF] text-center mb-16">
+                <h2
+                    className={`${bebas.className} text-3xl sm:text-7xl font-extrabold text-[#1100FF] text-center mb-16`}
+                >
                     Conoce nuestros planes
                 </h2>
+
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                     {planesData.map((plan) => {
@@ -233,9 +241,11 @@ const PlanesPrecios = () => {
 // --- COMPONENTE DEL PROCESO DE ALQUILER ---
 const ProcesoAlquiler = () => (
     // Se elimina el div de fondo y se ajusta la sección para que el fondo de la imagen se vea
-    <section className="py-10 relative z-10 bg-transparent"> 
+    <section className="py-10 relative z-10 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-5xl font-black text-[#1100FF] text-center mb-16">
+            <h2
+                className={`${bebas.className} text-3xl sm:text-7xl font-black text-[#1100FF] text-center mb-16`}
+            >
                 ¿Cómo funciona el procedimiento?
             </h2>
 
