@@ -88,21 +88,25 @@ const HeroNosotros = () => {
 
             {/* Sección Misión */}
             <div>
-              <h1 className={`${bebas.className} text-5xl font-extrabold text-blue-900 mb-3`}>
+              <h1 className={`${bebas.className} text-7xl font-extrabold text-blue-900 mb-3`}>
                 ¿Quiénes somos?
               </h1>
-              <p className="text-gray-700 leading-relaxed">
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+              <p className="text-gray-700 leading-relaxed text-lg ">
+                Somos una empresa Ayacuchana, pionera en el mercado del alquiler de vehículos sin chofer en Huamanga, damos suma importancia a la libertad y experiencia del cliente, estamos en el rubro desde enero del 2025.
               </p>
             </div>
 
             {/* Sección Visión */}
             <div>
-              <h2 className={`${bebas.className} text-5xl font-bold text-blue-900 mb-2`}>
+              <h2 className={`${bebas.className} text-7xl font-bold text-blue-900 mb-2`}>
                 ¿Por qué elegirnos?
               </h2>
-              <p className="text-gray-700 leading-relaxed">
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+              <p className="text-gray-700 leading-relaxed text-lg">
+                Cuando dimos el primer paso para iniciar establecimos premisas concisas que nos ayudarían a establecernos como una empresa y marca sólida, pero también nos servirían para diferenciarnos de otras empresas.
+
+                En Huamanga - Ayacucho nos destacamos por brindarte un servicio privado y libre, donde el conductor es el cliente, ganando así autonomía y libertad. Una experiencia que antes no se encontraba en la ciudad.
+
+                También nos diferenciamos por brindarte una propuesta que equilibra precio y experiencia, con opciones para que tu viaje sea mas sencillo y sin preocupaciones.
               </p>
             </div>
 

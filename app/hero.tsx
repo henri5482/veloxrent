@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import data from "@/app/data/cars.json";
@@ -13,6 +14,36 @@ const images = [
   { id: 1, src: "/banner01.png", alt: "Vehículo 1", link: "/vehiculos" },
   { id: 2, src: "/banner02.png", alt: "Vehículo 2", link: "/nosotros" },
 ];
+
+/** Icono circular con flecha hacia abajo (similar a la foto) */
+function ArrowCircleDown({
+  className = "w-9 h-9",
+  stroke = "#ffffff",
+}: {
+  className?: string;
+  stroke?: string;
+}) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 48 48"
+      fill="none"
+      aria-hidden="true"
+      role="img"
+    >
+      {/* Círculo */}
+      <circle cx="24" cy="24" r="20" stroke={stroke} strokeWidth="3" />
+      {/* Flecha hacia abajo */}
+      <path
+        d="M24 14v16m0 0l-7-7m7 7l7-7"
+        stroke={stroke}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function HeroCarousel() {
   const router = useRouter();
@@ -78,7 +109,7 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="relative w-full h-screen md:h-[90vh] 2xl:h-[90vh] overflow-hidden"
+      className="relative w-full max-sm:h-[80vh] md:h-[85vh] 2xl:h-[90vh] overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -87,7 +118,9 @@ export default function HeroCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full cursor-pointer"
             onClick={handleImageClick}
@@ -106,31 +139,42 @@ export default function HeroCarousel() {
       {/* Flechas */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-900 rounded-full w-10 h-10 lg:w-12 lg:h-12 shadow-lg grid place-items-center"
+        className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-900 rounded-full w-10 h-10 lg:w-12 lg:h-12 shadow-lg grid place-items-center"
         aria-label="Anterior"
       >
         <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-900 rounded-full w-10 h-10 lg:w-12 lg:h-12 shadow-lg grid place-items-center"
+        className="absolute right-4 cursor-pointer top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-900 rounded-full w-10 h-10 lg:w-12 lg:h-12 shadow-lg grid place-items-center"
         aria-label="Siguiente"
       >
         <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6" />
       </button>
 
       {/* 🔵 BUSCADOR (SOLO 2 SELECTS) */}
-      <div className="absolute max-md:bottom-36 md:bottom-[-20px] left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-4 pb-4 lg:pb-5">
+      <div className="absolute max-md:bottom-10 md:bottom-[-20px] left-1/2 -translate-x-1/2 z-20 w-full max-w-6xl px-4 pb-4 lg:pb-5">
         <motion.form
           onSubmit={onSubmit}
-          initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
           className="bg-[#1100FF] shadow-2xl py-5 px-4 lg:px-6 rounded-xl w-full"
         >
-          <div className="text-center text-white font-semibold text-base mb-3">
-            Buscar por Vehículo y Plan
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+            {/* Título + Icono apuntando al buscador */}
+            <div className="text-white pb-1 font-black text-base mb-3">
+              <div className="flex items-center text-center gap-3">
+                <span className="">ELIGE TU VEHICULO AQUÍ</span>
+                <motion.span
+                  className=" rotate-270" 
+                >
+                  <ArrowCircleDown className="w-8 h-8" stroke="#ffffff" />
+                </motion.span>
+              </div>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-end">
+
             {/* Vehículo */}
             <div className="flex flex-col text-white text-sm">
               <label className="font-medium mb-1">Vehículo</label>
@@ -141,7 +185,9 @@ export default function HeroCarousel() {
               >
                 <option value="">Seleccionar</option>
                 {vehiculos.map((v) => (
-                  <option key={v.id} value={v.value}>{v.label}</option>
+                  <option key={v.id} value={v.value}>
+                    {v.label}
+                  </option>
                 ))}
               </select>
             </div>
@@ -151,7 +197,6 @@ export default function HeroCarousel() {
               <label className="font-medium mb-1">Plan</label>
               <select
                 value={plan}
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 onChange={(e) => setPlan(e.target.value as any)}
                 className="p-2 lg:p-3 rounded-md border border-white/40 text-black bg-white"
               >
@@ -163,10 +208,10 @@ export default function HeroCarousel() {
             </div>
 
             {/* Botón */}
-            <div className="flex">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 bg-blue-900 hover:bg-red-600 text-white font-semibold rounded-md"
+                className="w-full sm:w-auto px-12 py-3 bg-blue-900 hover:bg-red-600 text-white font-semibold rounded-md"
               >
                 Buscar
               </button>
@@ -176,14 +221,13 @@ export default function HeroCarousel() {
       </div>
 
       {/* Indicadores */}
-      <div className="absolute bottom-28 lg:bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute cursor-pointer bottom-28 lg:bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
-              i === currentIndex ? "bg-white scale-125" : "bg-white/50 hover:bg-white/80"
-            }`}
+            className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${i === currentIndex ? "bg-white scale-125" : "bg-white/50 hover:bg-white/80"
+              }`}
           />
         ))}
       </div>

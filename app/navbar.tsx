@@ -46,10 +46,12 @@ interface ContactInfoItemProps {
 const navLinks: NavLink[] = [
   { href: "/", label: "INICIO" },
   { href: "/vehiculos", label: "VEHICULOS" },
-  { href: "/nosotros", label: "NOSOTROS " },
-  // { href: "/servicios", label: "PLANES Y MAS " },
-  // { href: "/blog", label: "Blog" },
-  // { href: "/contacto", label: "Contacto" },
+  { href: "/ofertas", label: "OFERTA Y PLANES " },
+  { href: "/nosotros", label: "EMPRESA" },
+  {
+    href: "https://wa.me/51999999999", // 🔗 Enlace directo a tu WhatsApp
+    label: "TRABAJA CON NOSOTROS",
+  },
 ];
 
 const socialLinks: SocialLink[] = [
@@ -88,7 +90,7 @@ const contactInfo: ContactInfoItemProps[] = [
   },
   {
     text: "925 285 403 ",
-    href: "https://wa.me/51925285403 ?text=Quiero%20mayor%20información",
+    href: "https://wa.me/51925285403?text=Quiero%20mayor%20información",
     Icon: FaWhatsapp,
   },
   {
@@ -159,8 +161,8 @@ const DesktopMenu = ({
         <Link
           href={link.href}
           className={`relative px-4 py-2 font-bold text-[#1100FF] transition-colors duration-300 ${pathname === link.href
-              ? "font-bold text-[#1100FF]"
-              : "hover:text-sky-950"
+            ? "font-bold text-[#1100FF]"
+            : "hover:text-sky-950"
             }`}
         >
           {link.label}
@@ -319,7 +321,7 @@ const Navbar = () => {
           {/* Botones de acción en el escritorio */}
           <div className="hidden items-center space-x-4 md:flex lg:flex">
             <a
-              href="https://wa.me/51925285403?text=Hola,%20quiero%20asesoría%20técnica"
+              href="https://wa.me/51997187495?text=Hola,%20quiero%20asesoría%20técnica"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -389,8 +391,8 @@ const Navbar = () => {
                     <Link
                       href={link.href}
                       className={`block rounded-lg px-4 py-3 text-base font-bold transition-colors ${pathname === link.href
-                          ? "bg-gray-300 text-black"
-                          : "text-[#1100FF] hover:bg-gray-100"
+                        ? "bg-gray-300 text-black"
+                        : "text-[#1100FF] hover:bg-gray-100"
                         }`}
                     >
                       {link.label}

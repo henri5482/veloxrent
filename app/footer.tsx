@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
@@ -8,36 +9,58 @@ import {
   PiFacebookLogo,
   PiInstagramLogo,
   PiTiktokLogo,
-  PiYoutubeLogo
+  PiYoutubeLogo,
 } from "react-icons/pi";
 
+/** Construye el enlace de WhatsApp para el número dado (auto-agrega +51 si falta) */
+const waLink = (num: string, msg?: string) => {
+  const digits = num.replace(/\D/g, "");
+  const withCc = digits.startsWith("51") ? digits : `51${digits}`;
+  const text = encodeURIComponent(
+    msg ??
+      "Hola, me gustaría hacer una consulta. ¿Podrían brindarme más información?"
+  );
+  return `https://wa.me/${withCc}?text=${text}`;
+};
+
 const Footer = () => {
-  // Data for "Acerca de" section links
-
-
-  // Data for "Conecta con EDteam" sections
+  // Secciones con números → irán a WhatsApp
   const connectLinks = [
     {
-      title: "Soporte al cliente",
+      title: "Atención al cliente",
       links: [
-        { name: "925 285 403 | 997 187 495 ", href: "tel:+51925285403" },
-        {
-          name: "veloxrent.gestioncliente@gmail.com",
-          href: "https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com",
-        },
-       
+        { name: "925285403", phone: "925285403" },
+        { name: "949134075", phone: "949134075" },
+        { name: "997187495", phone: "997187495" },
+        { name: "901643094", phone: "901643094" },
+        // correo agregado
+        { name: "veloxrent.gestioncliente@gmail.com", email: "veloxrent.gestioncliente@gmail.com" },
       ],
+      message:
+        "Hola, necesito soporte como cliente de Veloxrent. ¿Me pueden ayudar?",
+    },
+    // (Venta de vehículos pasó a 'Secciones' como pediste)
+  ];
+
+  // Secciones del sitio + extras pedidos
+  const productLinks = [
+    { name: "Nosotros", href: "/nosotros" },
+    {
+      name: "mapa",
+      href:
+        "/https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+    },
+    { name: "Carros", href: "/vehiculos" },
+
+    // ➕ Agregados:
+    { name: "Trabaja con nosotros", href: "/trabaja" },
+    {
+      name: "Venta de vehículos",
+      href: waLink("925285403", "Hola, estoy interesado en la venta de vehículos de Veloxrent. ¿Me pueden brindar información?"),
+      external: true,
     },
   ];
 
-  // Data for "Nuestros productos" section links
-  const productLinks = [
-    { name: "Nosotros", href: "/nosotros" },
-    { name: "mapa", href: "/https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" },
-    { name: "Carros", href: "/vehiculos" },
-  ];
-
-  // Data for social media links
   const socialLinks = [
     {
       icon: PiFacebookLogo,
@@ -49,32 +72,18 @@ const Footer = () => {
       name: "Instagram",
       href: "https://www.instagram.com/velox__rent/",
     },
-    {
-      icon: PiTiktokLogo,
-      name: "TikTok",
-      href: "https://www.tiktok.com/@veloxrent",
-    },
-    // {
-    //   icon: PiLinkedinLogo,
-    //   name: "LinkedIn",
-    //   href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
-    // },
-    {
-      icon: PiYoutubeLogo,
-      name: "YouTube",
-      href: "https://www.youtube.com/@Veloxrent",
-    },
+    { icon: PiTiktokLogo, name: "TikTok", href: "https://www.tiktok.com/@veloxrent" },
+    { icon: PiYoutubeLogo, name: "YouTube", href: "https://www.youtube.com/@Veloxrent" },
   ];
 
-  // Function to scroll to top
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="bg-[#1100FF] border-t max-md:pb-20 border-white text-white ">
-      <div className="max-w-7xl container mx-auto px-4 py-8  ">
-        {/* Top section: Logo and back to top */}
+      <div className="max-w-7xl container mx-auto px-4 py-8">
+        {/* Top */}
         <div className="hidden md:flex justify-between items-center">
           <Link
             href="/"
@@ -90,7 +99,6 @@ const Footer = () => {
                 src="/logofooter.png"
                 alt="Logo de casagrande geotecnia"
                 fill
-
                 sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                 className="object-contain object-left transition-transform group-hover:scale-105"
                 priority
@@ -133,34 +141,24 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Main Grid Layout for Navigation Links */}
+        {/* Main grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-y-10 lg:gap-x-12 mb-8 sm:mb-12">
           <div className="py-8 flex flex-col md:items-start items-center">
-            <h2 className="text-sm  font-semibold mb-6 text-white text-center">
+            <h2 className="text-sm font-semibold mb-6 text-white text-center">
               Aviso legal
             </h2>
-            <a href="/libro" >
-
-            <h2 className="text-sm hover:text-red-600  font-semibold mb-6 text-white text-center">
-              Libro de reclamaciones
-            </h2>
+            <a href="/libro">
+              <h2 className="text-sm hover:text-red-600 font-semibold mb-6 text-white text-center">
+                Libro de reclamaciones
+              </h2>
             </a>
-            <h2 className="text-sm  font-semibold mb-6 text-white text-center">
+            <h2 className="text-sm font-semibold mb-6 text-white text-center">
               Veloxrent RUC:1073092393939
             </h2>
-            {/* <div className=" w-60">
-              <Image
-                src="/certicados.png" // ruta de tu imagen
-                alt="Certificaciones"
-                width={800} // ancho grande
-                height={600} // alto proporcional
-                className="w-full h-auto object-contain"
-              />
-            </div> */}
           </div>
 
+          {/* Contacto (WhatsApp + correo) */}
           <div className="py-2">
-
             <nav className="space-y-4 sm:space-y-6">
               {connectLinks.map((section) => (
                 <div key={section.title}>
@@ -169,22 +167,28 @@ const Footer = () => {
                   </h3>
                   <ul className="space-y-2 sm:space-y-3">
                     {section.links.map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          className="text-white hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
-                          target={
-                            link.href.startsWith("http") ? "_blank" : undefined
-                          }
-                          rel={
-                            link.href.startsWith("http")
-                              ? "noopener noreferrer"
-                              : undefined
-                          }
-                        >
-                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
-                          {link.name}
-                        </Link>
+                      <li key={`${section.title}-${link.name}`}>
+                        {"phone" in link ? (
+                          <a
+                            href={waLink(link.phone as string, section.message)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
+                          >
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
+                            {link.name}
+                           
+                          </a>
+                        ) : (
+                          <a
+                            href={`mailto:${(link as any).email}`}
+                            className="text-white hover:text-red-200 hover:underline transition-colors flex items-center text-sm group"
+                          >
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-200 transition-colors"></span>
+                            {(link as any).name}
+                            
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -193,34 +197,34 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Section: Nuestros productos */}
+          {/* Secciones */}
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-white">
-              Secciones
-            </h2>
+            <h2 className="text-lg font-bold mb-4 text-white">Secciones</h2>
             <nav>
               <ul className="space-y-2 sm:space-y-3">
                 {productLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-white hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={link.external || link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.external || link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     >
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></span>
                       {link.name}
-                    </Link>
+                      
+                    </a>
                   </li>
                 ))}
               </ul>
             </nav>
           </div>
 
-          {/* About description and Social Media (Desktop Only) */}
+          {/* About + Social (desktop) */}
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-white mb-4 sm:mb-6 text-sm leading-relaxed">
-              Pioneros alquilando vehiculos sin conductor en Ayacucho            </p>
+              Pioneros alquilando vehiculos sin conductor en Ayacucho
+            </p>
             <div className="flex gap-3 mt-auto">
               {socialLinks.map((social) => (
                 <Link
@@ -238,7 +242,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social media for mobile */}
+        {/* Social mobile */}
         <div className="md:hidden flex justify-center gap-4 mb-6 sm:mb-8">
           {socialLinks.map((social) => (
             <Link
@@ -246,6 +250,8 @@ const Footer = () => {
               href={social.href}
               className="text-white hover:text-[#0d70af] transition-colors p-2 sm:p-3 rounded-full hover:scale-110 transform "
               aria-label={social.name}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <social.icon size={24} className="w-6 h-6" />
             </Link>
@@ -254,11 +260,11 @@ const Footer = () => {
 
         <Separator className="my-4 sm:my-6 bg-white" />
 
-        {/* Copyright and Legal Links */}
+        {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 sm:pt-4">
           <div className="text-white text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left leading-relaxed">
-            © {new Date().getFullYear()} Grupo Veloxrent. Todos los
-            derechos reservados.
+            © {new Date().getFullYear()} Grupo Veloxrent. Todos los derechos
+            reservados.
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">
             <Link
