@@ -7,7 +7,7 @@
     "año": 2018,
     "precio": 150,
     "tipo": "Automóvil",
-    "descripcion": "Sedán posicionado como uno de los más requeridos por su potencia, agilidad y bajo consumo. Interior espacioso y versátil.",
+    "descripcion": "Sedán posicionado como uno de los más requeridos por su potencia, agilidad y bajo consumo. Su interior es espacioso y su versatilidad equilibra todo lo que se busca en un automóvil.",
     "especificaciones": {
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
@@ -18,20 +18,6 @@
       "licencia": "A1",
       "garantia": "S/ 800.00",
       "pasajeros": 5
-    },
-    "planes": {
-      "basico": {
-        "precio": 150,
-        "beneficios": ["Seguro a terceros", "1 conductor", "80 km/día", "Asistencia 24/7"]
-      },
-      "plus": {
-        "precio": 175,
-        "beneficios": ["Seguro ampliado", "2 conductores", "150 km/día", "Asistencia en ruta"]
-      },
-      "libre": {
-        "precio": 195,
-        "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Mantenimiento preventivo"]
-      }
     },
     "imagenes": ["/carros.png", "/cars/accent02.webp"]
   },
@@ -43,7 +29,7 @@
     "año": 2022,
     "precio": 180,
     "tipo": "Automóvil",
-    "descripcion": "Sedán moderno y confiable con suspensión suave y excelente acabado.",
+    "descripcion": "Sedán ideal para quienes buscan confiabilidad, modernidad y elegancia. Potente, con suspensión suave que brinda confort total e interior ergonómico de excelente acabado.",
     "especificaciones": {
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
@@ -55,11 +41,6 @@
       "garantia": "S/ 800.00",
       "pasajeros": 5
     },
-    "planes": {
-      "basico": { "precio": 180, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 210, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Asistencia en ruta"] },
-      "libre":  { "precio": 235, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado"] }
-    },
     "imagenes": ["/carros.png", "/cars/verna02.webp"]
   },
   {
@@ -70,7 +51,7 @@
     "año": 2021,
     "precio": 120,
     "tipo": "Minivan",
-    "descripcion": "Minivan con gran capacidad y eficiencia; interior cómodo.",
+    "descripcion": "Si buscas capacidad, rendimiento y eficiencia, esta es la minivan indicada. Su utilidad multipropósito y la distribución interior priorizan la comodidad.",
     "especificaciones": {
       "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
@@ -82,11 +63,6 @@
       "garantia": "S/ 500.00",
       "pasajeros": 8
     },
-    "planes": {
-      "basico": { "precio": 120, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 138, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Sillas para niños (1)"] },
-      "libre":  { "precio": 156, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Sillas para niños (2)"] }
-    },
     "imagenes": ["/carros.png", "/cars/q22-2.webp"]
   },
   {
@@ -97,7 +73,7 @@
     "año": 2011,
     "precio": 180,
     "tipo": "Camioneta 4x4",
-    "descripcion": "Fuerza y eficiencia; interior resistente para trabajo y ruta.",
+    "descripcion": "Aventura, ciudad y trabajo en una camioneta. Su fuerza y eficiencia la definen; interior resistente y funcional para largos trayectos.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta 4x4",
       "tipoCombustible": "Petróleo",
@@ -109,11 +85,6 @@
       "garantia": "S/ 500.00",
       "pasajeros": 5
     },
-    "planes": {
-      "basico": { "precio": 180, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 207, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Barra antivuelco"] },
-      "libre":  { "precio": 234, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Accesorios off-road"] }
-    },
     "imagenes": ["/carros.png", "/cars/mahindra02.webp"]
   },
   {
@@ -124,7 +95,7 @@
     "año": 2014,
     "precio": 200,
     "tipo": "Camioneta SUV",
-    "descripcion": "SUV compacta y versátil; buena altura y suspensión para terrenos irregulares.",
+    "descripcion": "Camioneta SUV reconocida por ser compacta, versátil y todo terreno. Con estética deportiva y moderna, buena altura al suelo e interior amplio con suspensión adaptada a terrenos irregulares.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
@@ -135,11 +106,6 @@
       "licencia": "A1",
       "garantia": "S/ 800.00",
       "pasajeros": 7
-    },
-    "planes": {
-      "basico": { "precio": 200, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 230, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Portaequipaje"] },
-      "libre":  { "precio": 260, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "GPS incluido"] }
     },
     "imagenes": ["/carros.png", "/cars/terios02.webp"]
   },
@@ -151,7 +117,7 @@
     "año": 2013,
     "precio": 250,
     "tipo": "Camioneta 4x2",
-    "descripcion": "Reconocida por su resistencia y durabilidad; ideal para condiciones exigentes.",
+    "descripcion": "Una de las camionetas más reconocidas y confiables. Resistencia, potencia y durabilidad la definen. Ideal para condiciones extremas con seguridad y agarre excepcionales.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta 4x2",
       "tipoCombustible": "Petróleo",
@@ -163,11 +129,6 @@
       "garantia": "S/ 800.00",
       "pasajeros": 5
     },
-    "planes": {
-      "basico": { "precio": 250, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 290, "beneficios": ["Seguro ampliado", "2 conductores", "300 km/día", "Winche manual"] },
-      "libre":  { "precio": 330, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Kit de trabajo (conos/reflectivos)"] }
-    },
     "imagenes": ["/carros.png", "/cars/hilux02.webp"]
   },
   {
@@ -178,7 +139,7 @@
     "año": 2012,
     "precio": 250,
     "tipo": "Camioneta SUV",
-    "descripcion": "Potente y sofisticada; interior amplio y seguro.",
+    "descripcion": "Carácter sofisticado, moderno y potente. Seguridad en cada trayecto, interior espacioso y elegante, ideal para ciudad o terrenos desafiantes.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
@@ -190,11 +151,6 @@
       "garantia": "S/ 800.00",
       "pasajeros": 7
     },
-    "planes": {
-      "basico": { "precio": 250, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 285, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Bluetooth/CarPlay"] },
-      "libre":  { "precio": 320, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Butacas abatibles"] }
-    },
     "imagenes": ["/carros.png", "/cars/santafe02.webp"]
   },
   {
@@ -205,7 +161,7 @@
     "año": 2012,
     "precio": 300,
     "tipo": "Van",
-    "descripcion": "Van sólida y amplia; ideal para grupos familiares, empresariales o turísticos.",
+    "descripcion": "Elegancia y versatilidad en una van sólida y amplia. Ideal para grupos familiares, empresariales o turísticos. Gran capacidad y suspensión confiable.",
     "especificaciones": {
       "tipoVehiculo": "Van",
       "tipoCombustible": "Petróleo",
@@ -216,11 +172,6 @@
       "licencia": "A1",
       "garantia": "S/ 800.00",
       "pasajeros": 12
-    },
-    "planes": {
-      "basico": { "precio": 300, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 345, "beneficios": ["Seguro ampliado", "2 conductores", "300 km/día", "Asientos configurables"] },
-      "libre":  { "precio": 390, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Traslados aeropuerto incluidos"] }
     },
     "imagenes": ["/carros.png", "/cars/h1-2.webp"]
   }

@@ -1,82 +1,37 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import carrosData from '@/app/data/cars.json';
-import Footer from '@/app/footer';
-import Navbar from '@/app/navbar';
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound, useParams } from 'next/navigation';
-import { useState } from 'react';
-import {
-  FaArrowLeft,
-  FaCar,
-  FaCogs,
-  FaGasPump,
-  FaIdCard,
-  FaShieldAlt
-} from 'react-icons/fa';
-import { IoIosColorFilter } from 'react-icons/io';
-import AlquilerModal from '../AlquilarModal';
+import carrosData from "@/app/data/cars.json";
+import Footer from "@/app/footer";
+import Navbar from "@/app/navbar";
+import { getPrecioYBeneficios, normalizePlan, PLANES_DEFAULT, PlanKey } from "@/app/utils/planes";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound, useParams, useSearchParams } from "next/navigation";
+import { useMemo, useState } from "react";
+import { FaArrowLeft, FaCar, FaCogs, FaGasPump, FaIdCard, FaShieldAlt } from "react-icons/fa";
+import { IoIosColorFilter } from "react-icons/io";
+import AlquilerModal from "../AlquilarModal";
 
-// ✅ Interfaz alineada con tu JSON
-interface Vehiculo {
-  id: number;
-  slug: string;
-  marca: string;
-  modelo: string;
-  año: number;
-  tipo: string;
-  precio: number;
-  imagen: string;
-  imagenes: string[];
-  descripcion: string;
-  caracteristicas?: string[];
-  especificaciones: {
-    tipoVehiculo: string;
-    tipoCombustible: string;
-    transmision: string;
-    recorrido: string;
-    filas: number;
-    licencia: string;
-    garantia: string;
-  };
-}
-
-// Componente auxiliar para mostrar especificaciones
-const FeatureItem = ({
-  icon: Icon,
-  title,
-  value,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  value: string | number;
-}) => {
-  return (
-    <div className="flex items-start space-x-3 p-4 bg-white/80 rounded-xl shadow-sm border border-gray-100">
-      <Icon className="text-xl text-blue-500 mt-1" />
-      <div>
-        <p className="text-xs font-medium uppercase text-gray-500">{title}</p>
-        <p className="text-base font-semibold text-gray-800">{value}</p>
-      </div>
-    </div>
-  );
-};
+type Vehiculo = (typeof carrosData)[number];
 
 export default function ClientVehicleDetails() {
   const params = useParams();
+  const search = useSearchParams();
   const slug = params.slug as string;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const plan = (normalizePlan(search.get("plan")) ?? "basico") as PlanKey;
 
-  const vehiculoData = carrosData.find((v) => v.slug === slug);
+  const vehiculoData = (carrosData as Vehiculo[]).find((v) => v.slug === slug);
   if (!vehiculoData) notFound();
 
-  const vehiculo: Vehiculo = {
-    ...vehiculoData,
-    imagen: vehiculoData.imagenes[0],
-  };
+  const [mainImage, setMainImage] = useState(vehiculoData.imagenes[0]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [mainImage, setMainImage] = useState(vehiculo.imagenes[0]);
+  const { precio, beneficios, label } = useMemo(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    () => getPrecioYBeneficios(vehiculoData as any, plan),
+    [vehiculoData, plan]
+  );
 
   return (
     <>
@@ -85,166 +40,94 @@ export default function ClientVehicleDetails() {
         <div className="min-h-screen p-6 md:p-10 max-w-7xl mx-auto">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <Link
-              href="/vehiculos"
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
-            >
+            <Link href="/vehiculos" className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
               <FaArrowLeft className="text-sm" />
               Volver a la flota de vehículos
             </Link>
           </nav>
 
-          {/* Galería e información principal */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Galería */}
             <div className="lg:col-span-3 space-y-4">
               <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src={mainImage}
-                  alt={`${vehiculo.marca} ${vehiculo.modelo} - Vista principal`}
-                  className="w-full h-full object-cover transition-opacity duration-300"
-                  width={800}
-                  height={450}
-                  priority
-                />
+                <Image src={mainImage} alt={`${vehiculoData.marca} ${vehiculoData.modelo}`} width={800} height={450} className="w-full h-full object-cover" />
               </div>
-
-              {/* Miniaturas */}
               <div className="flex gap-3 justify-center">
-                {vehiculo.imagenes.slice(0, 3).map((img: string, idx: number) => (
+                {vehiculoData.imagenes.slice(0, 4).map((img) => (
                   <button
-                    key={`thumbnail-${img}`}
+                    key={img}
                     onClick={() => setMainImage(img)}
                     className={`w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      img === mainImage
-                        ? "border-blue-500 ring-2 ring-blue-500/30 shadow-md"
-                        : "border-gray-200 hover:border-gray-400"
+                      img === mainImage ? "border-blue-500 ring-2 ring-blue-500/30 shadow-md" : "border-gray-200 hover:border-gray-400"
                     }`}
                   >
-                    <Image
-                      src={img}
-                      alt={`Miniatura ${idx + 1}`}
-                      className="w-full h-full object-cover"
-                      width={96}
-                      height={64}
-                    />
+                    <Image src={img} alt="miniatura" width={96} height={64} className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Información del vehículo */}
+            {/* Info */}
             <div className="lg:col-span-2 space-y-6">
-              <span className="inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-600">
-                {vehiculo.tipo}
-              </span>
+              <span className="inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-600">{vehiculoData.tipo}</span>
               <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
-                {vehiculo.marca} {vehiculo.modelo}
+                {vehiculoData.marca} {vehiculoData.modelo}
               </h1>
-              <div className="text-lg font-medium text-gray-500 mb-4">
-                {vehiculo.año}
+              <div className="text-lg font-medium text-gray-500 mb-4">{vehiculoData.año}</div>
+
+              {/* Chips de plan */}
+              <div className="flex gap-2 flex-wrap">
+                {(["basico","plus","libre"] as PlanKey[]).map((p) => (
+                  <Link
+                    key={p}
+                    href={`/vehiculos/${vehiculoData.slug}?plan=${p}`}
+                    className={`px-3 py-1 rounded-full text-sm border ${
+                      plan === p ? "bg-blue-600 text-white border-blue-600" : "bg-white text-gray-700 border-gray-200"
+                    }`}
+                  >
+                    {PLANES_DEFAULT[p].label}
+                  </Link>
+                ))}
               </div>
 
-              <div className="mb-6 p-4 bg-blue-50 rounded-xl border border-blue-100 text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-1">
-                  S/{vehiculo.precio.toFixed(2)}
-                </div>
-                <div className="text-blue-500 text-base font-medium">
-                  Precio por día
-                </div>
+              {/* Precio y beneficios del plan elegido */}
+              <div className="mb-2 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <div className="text-sm text-blue-700 font-semibold">{label}</div>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-1">S/{precio.toFixed(2)}</div>
+                <div className="text-blue-500 text-base font-medium">Precio por día</div>
               </div>
 
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="w-full cursor-pointer  bg-blue-600 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-xl text-lg transition-colors duration-200 shadow-lg flex items-center justify-center gap-3"
-              >
+              <div className="p-4 bg-white rounded-xl border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">Beneficios incluidos</h3>
+                <ul className="list-disc ml-5 text-gray-700 space-y-1">
+                  {beneficios.map((b) => <li key={b}>{b}</li>)}
+                </ul>
+              </div>
+
+              <button onClick={() => setIsModalOpen(true)} className="w-full bg-blue-600 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-xl text-lg transition-colors shadow-lg flex items-center justify-center gap-3">
                 <FaCar className="text-xl" />
-                Reserva ahora
+                Reservar ahora
               </button>
             </div>
           </div>
 
-          {/* Descripción y especificaciones */}
+          {/* Especificaciones (igual) */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
-            {/* Descripción y extras */}
-            <div className="lg:col-span-2 space-y-10">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Descripción General
-                </h2>
-                <p className="text-gray-700 leading-relaxed text-base">
-                  {vehiculo.descripcion}
-                </p>
-              </div>
-
-              {/* <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Comodidades y Extras
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {(vehiculo.caracteristicas ?? []).slice(0, 3).map(
-                    (car: string, idx: number) => (
-                      <div
-                        key={`feature-${car}-${idx}`}
-                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
-                      >
-                        <FaShieldAlt className="text-base text-blue-500" />
-                        <span className="text-gray-700 text-sm font-medium">
-                          {car}
-                        </span>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div> */}
+            <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Descripción General</h2>
+              <p className="text-gray-700 leading-relaxed text-base">{vehiculoData.descripcion}</p>
             </div>
-
-            {/* Especificaciones clave */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Especificaciones Clave
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Especificaciones Clave</h2>
               <div className="grid grid-cols-2 gap-4">
-                <FeatureItem
-                  icon={FaCar}
-                  title="Tipo de vehículo"
-                  value={vehiculo.especificaciones.tipoVehiculo}
-                />
-                <FeatureItem
-                  icon={FaGasPump}
-                  title="Tipo de combustible"
-                  value={vehiculo.especificaciones.tipoCombustible}
-                />
-                <FeatureItem
-                  icon={FaCogs}
-                  title="Año"
-                  value={vehiculo.año}
-                />
-                <FeatureItem
-                  icon={FaCogs}
-                  title="Transmisión"
-                  value={vehiculo.especificaciones.transmision}
-                />
-                <FeatureItem
-                  icon={FaCogs}
-                  title="Recorrido"
-                  value={vehiculo.especificaciones.recorrido}
-                />
-                <FeatureItem
-                  icon={IoIosColorFilter}
-                  title="Filas"
-                  value={vehiculo.especificaciones.filas}
-                />
-                <FeatureItem
-                  icon={FaIdCard}
-                  title="Licencia"
-                  value={vehiculo.especificaciones.licencia}
-                />
-                <FeatureItem
-                  icon={FaShieldAlt}
-                  title="Garantía"
-                  value={vehiculo.especificaciones.garantia}
-                />
+                <Spec icon={FaCar} title="Tipo de vehículo" value={vehiculoData.especificaciones.tipoVehiculo} />
+                <Spec icon={FaGasPump} title="Combustible" value={vehiculoData.especificaciones.tipoCombustible} />
+                <Spec icon={FaCogs} title="Año" value={vehiculoData.año} />
+                <Spec icon={FaCogs} title="Transmisión" value={vehiculoData.especificaciones.transmision} />
+                <Spec icon={FaCogs} title="Recorrido" value={vehiculoData.especificaciones.recorrido} />
+                <Spec icon={IoIosColorFilter} title="Filas" value={vehiculoData.especificaciones.filas} />
+                <Spec icon={FaIdCard} title="Licencia" value={vehiculoData.especificaciones.licencia} />
+                <Spec icon={FaShieldAlt} title="Garantía" value={vehiculoData.especificaciones.garantia} />
               </div>
             </div>
           </div>
@@ -252,12 +135,19 @@ export default function ClientVehicleDetails() {
         <Footer />
       </div>
 
-      {/* Modal de alquiler */}
-      <AlquilerModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        vehiculo={vehiculo}
-      />
+      <AlquilerModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} vehiculo={vehiculoData as any} />
     </>
+  );
+}
+
+function Spec({ icon: Icon, title, value }:{ icon: React.ComponentType<{className?: string}>; title: string; value: string | number; }) {
+  return (
+    <div className="flex items-start space-x-3 p-4 bg-white/80 rounded-xl shadow-sm border border-gray-100">
+      <Icon className="text-xl text-blue-500 mt-1" />
+      <div>
+        <p className="text-xs font-medium uppercase text-gray-500">{title}</p>
+        <p className="text-base font-semibold text-gray-800">{value}</p>
+      </div>
+    </div>
   );
 }
