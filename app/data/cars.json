@@ -33,7 +33,7 @@
         "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Mantenimiento preventivo"]
       }
     },
-    "imagenes": ["/carros.png", "/cars/accent02.webp"]
+    "imagenes": ["/acent01.webp", "/acent02.webp","/acent03.webp","/acent04.webp"]
   },
   {
     "id": 2,
@@ -60,7 +60,7 @@
       "plus":   { "precio": 210, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Asistencia en ruta"] },
       "libre":  { "precio": 235, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado"] }
     },
-    "imagenes": ["/carros.png", "/cars/verna02.webp"]
+    "imagenes": ["/verna01.webp", "/verna02.webp","/verna03.webp","/verna04.webp"]
   },
   {
     "id": 3,
@@ -141,7 +141,7 @@
       "plus":   { "precio": 230, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Portaequipaje"] },
       "libre":  { "precio": 260, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "GPS incluido"] }
     },
-    "imagenes": ["/carros.png", "/cars/terios02.webp"]
+    "imagenes": ["/terios01.webp", "/terios02.webp","/terios03.webp","/terios04.webp"]
   },
   {
     "id": 6,
@@ -168,7 +168,7 @@
       "plus":   { "precio": 290, "beneficios": ["Seguro ampliado", "2 conductores", "300 km/día", "Winche manual"] },
       "libre":  { "precio": 330, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Kit de trabajo (conos/reflectivos)"] }
     },
-    "imagenes": ["/carros.png", "/cars/hilux02.webp"]
+    "imagenes": ["/hilux01.webp", "/hilux02.webp","/hilux03.webp","/hilux04.webp"]
   },
   {
     "id": 7,
@@ -195,7 +195,7 @@
       "plus":   { "precio": 285, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Bluetooth/CarPlay"] },
       "libre":  { "precio": 320, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Butacas abatibles"] }
     },
-    "imagenes": ["/carros.png", "/cars/santafe02.webp"]
+    "imagenes": ["/santafe01.webp", "/santafe02.webp","/santafe03.webp","/santafe04.webp"]
   },
   {
     "id": 8,

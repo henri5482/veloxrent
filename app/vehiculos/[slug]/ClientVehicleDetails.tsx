@@ -68,7 +68,7 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Galería */}
             <div className="lg:col-span-3 space-y-4">
-              <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-[20/14] bg-gray-200 rounded-xl overflow-hidden shadow-lg">
                 {mainImage ? (
                   <Image
                     src={mainImage}
