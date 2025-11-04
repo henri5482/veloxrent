@@ -184,7 +184,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                         <div className="bg-slate-700/50 rounded-xl overflow-hidden border border-slate-600 backdrop-blur-sm">
                           <div className="aspect-[4/3] relative">
                             <Image
-                              src={vehiculo.imagenes?.[0] ?? "/placeholder_car.webp"} 
+                              src={vehiculo.imagenes?.[0] ?? "/placeholder_car.webp"}
                               alt={`${vehiculo.marca} ${vehiculo.modelo}`}
                               fill
                               className="object-cover"
@@ -254,14 +254,123 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
 
                       {/* Términos y condiciones */}
                       <div className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50 backdrop-blur-sm">
-                        <h3 className="text-lg font-semibold text-white mb-4">
-                          Políticas de Velox Rent
-                        </h3>
-                        <div className="max-h-60 overflow-y-auto space-y-4 text-slate-300 text-sm leading-relaxed">
-                          {/* … (tu contenido original de políticas se mantiene igual) … */}
-                          {/* 1- REQUISITOS, 2- PROCESO, 3- RESPONSABILIDAD, etc. */}
+                        <h3 className="text-lg font-semibold text-white mb-4">Políticas de Velox Rent</h3>
+
+                        <div className="max-h-60 overflow-y-auto space-y-5 text-slate-300 text-sm leading-relaxed pr-2">
+                          <div>
+                            <h4 className="font-semibold text-white">1. REQUISITOS DE ALQUILER</h4>
+                            <p>
+                              El cliente debe presentar copia de su DNI, licencia de conducir válida (mínimo, 02 años de antigüedad) y un recibo reciente de agua o luz
+                              para validar su domicilio. Se requiere una garantía de S/ 500.00 o S/ 800.00 (según el tipo de vehículo elegido) que será reembolsable al
+                              finalizar el alquiler si el vehículo se entrega en las mismas condiciones en que fue entregado.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">2. PROCESO DE RESERVA</h4>
+                            <p>
+                              La reserva se confirma únicamente con el depósito de la garantía (de S/ 500.00 o S/ 800.00 según el vehículo). No se aceptan cancelaciones,
+                              cambios de fecha ni reembolsos una vez realizada la reserva. El cliente debe presentarse 30 minutos antes de la hora pactada para la entrega
+                              del vehículo, ya que se hará una inspección previa.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">3. RESPONSABILIDAD DEL VEHÍCULO</h4>
+                            <p>
+                              El cliente asume total responsabilidad del vehículo al firmar el contrato. Cualquier daño (choques, rayones, fallas mecánicas, etc.) será
+                              cubierto por el cliente.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">4. NIVEL DE COMBUSTIBLE</h4>
+                            <p>
+                              El vehículo debe devolverse con el mismo nivel de combustible con el que fue entregado. Si se devuelve con menos, se descontará el monto
+                              equivalente de la garantía. Si hay combustible extra, no se realiza reembolso.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">5. CONDICIÓN DE LIMPIEZA</h4>
+                            <p>
+                              El vehículo debe devolverse limpio y lavado. Si no es así, se cobrará un cargo por limpieza desde la garantía. Además, no se verificará el
+                              estado del vehículo hasta que esté limpio, lo que podría demorar la devolución de la garantía. Se recomienda entregar el vehículo tal como fue
+                              recibido para evitar retrasos.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">6. DEVOLUCIÓN Y SANCIONES POR RETRASO</h4>
+                            <ul className="list-disc ml-5 space-y-1">
+                              <li>El vehículo debe devolverse en la fecha y hora exactas. Hay 15 minutos de tolerancia.</li>
+                              <li>Límite de kilometraje: 150 km por día; S/ 0.90 por cada km adicional.</li>
+                              <li>Retraso de 16 a 60 minutos: se cobra el 50% del valor diario.</li>
+                              <li>Retraso mayor a 60 minutos: se cobra el 100% del valor diario + penalidad del 20% de la garantía.</li>
+                              <li>Si pasan más de 12 horas sin devolución, se retiene el 100% de la garantía y se podrían iniciar acciones legales.</li>
+                              <li>
+                                Zona de uso: solo dentro del departamento de Ayacucho. Turistas y locales deben respetar esta restricción. Salir de la zona sin permiso
+                                implica pérdida total de la garantía y recuperación inmediata del vehículo.
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">7. HORA Y FECHA DE DEVOLUCIÓN</h4>
+                            <p>
+                              En caso de devolución anticipada del vehículo, es imprescindible hacerlo dentro de nuestro horario de atención general (7:00 a.m. a 6:00 p.m.
+                              de lunes a domingo) y notificar con un mínimo de 3 horas de anticipación. Si el cliente desea devolver el vehículo fuera del horario regular,
+                              podrá hacerlo de lunes a domingo entre las 18:00 y 22:00, sujeto a un pago adicional de S/ 30.00.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">8. IMPUESTO GENERAL A LAS VENTAS (IGV)</h4>
+                            <p>
+                              Todos los precios indicados son netos, no incluyen el IGV. El IGV será agregado al momento de la facturación. Aplica también a cargos
+                              adicionales: penalidades, daños, combustible, limpieza, etc. El cliente está obligado a pagarlos con IGV incluido.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">9. AMPLIACIÓN DEL ALQUILER</h4>
+                            <p>
+                              Para ampliar el alquiler, el cliente debe comunicarlo con al menos 12 horas de anticipación vía correo o WhatsApp; la solicitud será válida
+                              sólo si VELORENT la confirma. En caso de aceptación, se enviará un documento de ampliación que el cliente deberá completar con sus datos, firma
+                              y huella, y remitir junto con el comprobante de pago (voucher) por los canales indicados.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">10. COBRO POR USO O DAÑO DE LLANTAS</h4>
+                            <p>
+                              Si al momento de la devolución se detecta una llanta baja, desinflada, dañada o el uso de la llanta de repuesto, la garantía será retenida
+                              hasta que un técnico autorizado emita un informe. El cliente puede reponer la llanta por otra del mismo tipo, marca y en condiciones
+                              funcionales dentro de las 24 horas siguientes a la devolución; de no hacerlo, se procederá al descuento automático del valor. En caso de daño
+                              en más de una llanta, se cobrará proporcionalmente. Si el daño se debe a una falla mecánica del vehículo, la empresa asumirá el costo, previa
+                              revisión y documentación técnica.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">11. USO DEL VEHÍCULO</h4>
+                            <p>
+                              El vehículo debe usarse de forma lícita y responsable. Está prohibido usarlo para competencias, enseñanza de manejo, remolque o actividades
+                              ilegales.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-white">12. CONDUCCIÓN RESPONSABLE</h4>
+                            <p>
+                              El conductor debe tener mínimo 2 años de antigüedad en su brevete. Solo puede conducir quien está registrado en el contrato; los cambios deben
+                              ser aprobados por Velox Rent. Se debe conducir con prudencia, respetando normas de tránsito. Incumplimientos pueden causar pérdida de
+                              cobertura, sanciones o cancelación del contrato.
+                            </p>
+                          </div>
                         </div>
                       </div>
+
 
                       {/* Requisitos */}
                       <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
@@ -446,11 +555,10 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                           disabled={isSubmitting || !agreed}
                           whileHover={agreed && !isSubmitting ? { scale: 1.02 } : {}}
                           whileTap={agreed && !isSubmitting ? { scale: 0.98 } : {}}
-                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${
-                            agreed && !isSubmitting
+                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${agreed && !isSubmitting
                               ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-blue-500/25 cursor-pointer border border-blue-500/20"
                               : "bg-slate-700 text-slate-500 cursor-not-allowed border border-slate-600"
-                          }`}
+                            }`}
                         >
                           {isSubmitting ? (
                             <div className="flex items-center justify-center gap-2">

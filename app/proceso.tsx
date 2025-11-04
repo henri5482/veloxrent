@@ -151,9 +151,9 @@ const PlanesPrecios = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {planesData.map((plan) => {
             const isRecommended = plan.isRecommended;
-            const cardBg = isRecommended ? "bg-[#2539C4]/50" : "bg-[#2539C4]/50";
+            const cardBg = isRecommended ? "bg-[#2539C4]" : "bg-[#2539C4]";
             const borderColorClass = isRecommended ? "border-blue-400" : "border-blue-800";
-            const shadowClass = isRecommended ? "shadow-xl shadow-blue-500/20" : "shadow-lg shadow-blue-900/10";
+            const shadowClass = isRecommended ? "shadow-xl shadow-blue-500/40" : "shadow-lg shadow-blue-900/10";
 
             const kmText = kmBadge(plan.name, plan.installments);
             const extraText = extraFromFeatures(plan.features);
@@ -164,21 +164,21 @@ const PlanesPrecios = () => {
                 className={`flex flex-col rounded-xl p-6 lg:p-8 transition duration-300 relative ${cardBg} ${borderColorClass} ${shadowClass} border hover:scale-[1.02]`}
               >
                 {/* Barra superior: PLAN ... (similar a la foto) */}
-                <div className="w-full rounded-lg bg-[#2140cf] text-center py-3 mb-5">
-                  <h3 className={`${bebas.className} text-2xl lg:text-3xl font-extrabold uppercase`}>
+                <div className=" rounded-lg text-center mb-5">
+                  <h3 className={`${bebas.className} text-2xl lg:text-6xl font-extrabold `}>
                     {plan.name}
                   </h3>
                 </div>
 
                 {/* Cintas: roja (KM) y azul (KM extra) */}
-                <div className="flex flex-col gap-2 mb-6">
+                <div className="flex flex-col gap-8 mb-6">
                   {kmText && (
-                    <span className="inline-block self-center bg-red-600 text-white font-extrabold uppercase tracking-wide rounded-md px-3 py-1 text-xs sm:text-2xl text-center shadow-md">
+                    <span className="inline-block self-center bg-red-600 text-white font-extrabold uppercase tracking-wide rounded-md px-3 py-1 text-xs sm:text-3xl text-center shadow-md">
                       {kmText}
                     </span>
                   )}
                   {extraText && !/No aplica/i.test(extraText) && (
-                    <span className="inline-block self-center bg-[#2140cf] text-white font-extrabold uppercase rounded-md px-3 py-1 text-xs sm:text-2xl shadow-inner">
+                    <span className="inline-block self-center w-2/3 bg-[#1732b9] text-white font-bold uppercase rounded-md px-3 py-1 text-xs sm:text-3xl text-center shadow-inner">
                       {`S/ ${extraText.replace(/^S\/?\s*/i, "")} POR KM EXTRA`}
                     </span>
                   )}
@@ -186,7 +186,7 @@ const PlanesPrecios = () => {
 
                 {/* Bloque central: Atención personalizada y asistencia en ruta */}
                 <div className="bg-[#1732b9] rounded-lg px-4 py-4 shadow-inner mb-6">
-                  <p className={`${bebas.className} text-white text-2xl text-center leading-6`}>
+                  <p className={`${bebas.className} text-white md:text-4xl text-center `}>
                     ATENCIÓN PERSONALIZADA
                     <br />
                     Y ASISTENCIA EN RUTA
@@ -201,7 +201,7 @@ const PlanesPrecios = () => {
                       return (
                         <li
                           key={idx}
-                          className="grid grid-cols-[1fr_auto] gap-3 text-sm font-semibold text-blue-100 border-b border-blue-800 pb-1"
+                          className="grid grid-cols-[1fr_auto] gap-3 text-sm font-semibold text-blue-100 border-b border-white pb-1"
                         >
                           <span className="uppercase">{izq}</span>
                           <span className="text-right">{der}</span>

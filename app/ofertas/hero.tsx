@@ -62,9 +62,9 @@ export default function HeroPlanes() {
 
           {/* Imagen a la derecha en tarjeta */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)]">
+            <div className="relative rounded-3xl overflow-hidden ">
               <Image
-                src="/heroofertas.png" // cámbiala si tienes otra
+                src="/heroofertas.webp" // cámbiala si tienes otra
                 alt="Familia viajando en automóvil"
                 width={1400}
                 height={800}

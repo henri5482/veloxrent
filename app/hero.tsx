@@ -163,13 +163,13 @@ export default function HeroCarousel() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             {/* Título + Icono apuntando al buscador */}
-            <div className="text-white pb-1 font-black text-base mb-3">
-              <div className="flex items-center text-center gap-3">
-                <span className="">ELIGE TU VEHICULO AQUÍ</span>
+            <div className="text-white  font-black text-md mb-3">
+              <div className="flex items-center text-center gap-12">
+                <span className="">ELIGE TU  <br /> VEHICULO AQUÍ</span>
                 <motion.span
-                  className=" rotate-270" 
+                  className=" rotate-270 " 
                 >
-                  <ArrowCircleDown className="w-8 h-8" stroke="#ffffff" />
+                  <ArrowCircleDown className="w-10 h-10" stroke="#ffffff" />
                 </motion.span>
               </div>
             </div>

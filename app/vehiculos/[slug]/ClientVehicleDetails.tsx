@@ -15,13 +15,15 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   FaArrowLeft,
+  FaCalendarAlt,
   FaCar,
   FaCogs,
   FaGasPump,
   FaIdCard,
+  FaPeopleArrows,
   FaShieldAlt,
 } from "react-icons/fa";
-import { IoIosColorFilter } from "react-icons/io";
+import { TbArmchair } from "react-icons/tb";
 import AlquilerModal from "../AlquilarModal";
 
 type Vehiculo = (typeof carrosData)[number];
@@ -31,6 +33,36 @@ type Props = Readonly<{
   initialPlan?: string | null;
 }>;
 
+/** Convierte un watch URL de YouTube a formato embed (por si en el JSON ponen watch?v=...) */
+function toEmbed(url: string) {
+  try {
+    // ya viene embed
+    if (url.includes("/embed/")) return url;
+
+    // watch?v=ID
+    const u = new URL(url);
+    if (
+      (u.hostname === "www.youtube.com" || u.hostname === "youtube.com") &&
+      u.pathname === "/watch" &&
+      u.searchParams.get("v")
+    ) {
+      const v = u.searchParams.get("v");
+      return `https://www.youtube.com/embed/${v}`;
+    }
+
+    // youtu.be/ID
+    if (u.hostname === "youtu.be") {
+      const id = u.pathname.replace("/", "");
+      return `https://www.youtube.com/embed/${id}`;
+    }
+
+    // fallback: devolver tal cual
+    return url;
+  } catch {
+    return url;
+  }
+}
+
 export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
   const plan = (normalizePlan(initialPlan ?? undefined) ?? "basico") as PlanKey;
 
@@ -39,9 +71,7 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
   );
   if (!vehiculoData) return null; // evitar notFound() en cliente
 
-  const [mainImage, setMainImage] = useState(
-    vehiculoData.imagenes?.[0] ?? ""
-  );
+  const [mainImage, setMainImage] = useState(vehiculoData.imagenes?.[0] ?? "");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { precio, beneficios, label } = useMemo(
@@ -71,7 +101,7 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
               <div className="aspect-[20/14] bg-gray-200 rounded-xl overflow-hidden shadow-lg">
                 {mainImage ? (
                   <Image
-                    src={mainImage}
+                    src={mainImage.startsWith("/") ? mainImage : `/${mainImage}`}
                     alt={`${vehiculoData.marca} ${vehiculoData.modelo}`}
                     width={800}
                     height={450}
@@ -85,15 +115,15 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
                 {vehiculoData.imagenes.slice(0, 4).map((img) => (
                   <button
                     key={img}
-                    onClick={() => setMainImage(img)}
+                    onClick={() => setMainImage(img.startsWith("/") ? img : `/${img}`)}
                     className={`w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      img === mainImage
+                      (img.startsWith("/") ? img : `/${img}`) === mainImage
                         ? "border-blue-500 ring-2 ring-blue-500/30 shadow-md"
                         : "border-gray-200 hover:border-gray-400"
                     }`}
                   >
                     <Image
-                      src={img}
+                      src={img.startsWith("/") ? img : `/${img}`}
                       alt="miniatura"
                       width={96}
                       height={64}
@@ -165,7 +195,7 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
             </div>
           </div>
 
-          {/* Especificaciones */}
+          {/* Descripción + Video */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
             <div className="lg:col-span-2 space-y-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -174,10 +204,26 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
               <p className="text-gray-700 leading-relaxed text-base">
                 {vehiculoData.descripcion}
               </p>
+
+              {/* 🎥 Video 16:9 SOLO YouTube */}
+              {vehiculoData.video && (
+                <div className="mt-6 aspect-video rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src={toEmbed(vehiculoData.video)}
+                    title={`Video ${vehiculoData.marca} ${vehiculoData.modelo}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
             </div>
+
+            {/* Especificaciones */}
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Especificaciones Clave
+                Características
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 <Spec
@@ -190,19 +236,19 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
                   title="Combustible"
                   value={vehiculoData.especificaciones.tipoCombustible}
                 />
-                <Spec icon={FaCogs} title="Año" value={vehiculoData.año} />
+                <Spec icon={FaCalendarAlt} title="Año" value={vehiculoData.año} />
                 <Spec
                   icon={FaCogs}
                   title="Transmisión"
                   value={vehiculoData.especificaciones.transmision}
                 />
                 <Spec
-                  icon={FaCogs}
-                  title="Recorrido"
-                  value={vehiculoData.especificaciones.recorrido}
+                  icon={TbArmchair}
+                  title="Asientos"
+                  value={vehiculoData.especificaciones.asientos}
                 />
                 <Spec
-                  icon={IoIosColorFilter}
+                  icon={FaPeopleArrows}
                   title="Filas"
                   value={vehiculoData.especificaciones.filas}
                 />

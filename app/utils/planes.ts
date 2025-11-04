@@ -1,57 +1,48 @@
 export type PlanKey = "basico" | "plus" | "libre";
 
 export const PLANES_DEFAULT: Record<PlanKey, { label: string }> = {
-  basico: { label: "Plan Básico" },
-  plus: { label: "Plan Plus" },
-  libre: { label: "Plan Libre" },
+  basico: { label: "Plan Normal" }, // tu plan básico real
+  plus: { label: "Plan Plus" },     // tu plan medio
+  libre: { label: "Plan Libre" },   // kilometraje ilimitado
 };
 
-// Si tenías algo como 1.0, cámbialo a 1
-export const MULTIPLICADORES: Record<PlanKey, number> = {
-  basico: 1,      // ← antes: 1.0  (S7748)
-  plus: 1.2,
-  libre: 1.35,
-};
-
+/**
+ * Normaliza el parámetro de plan desde la URL
+ */
 export function normalizePlan(p?: string | null): PlanKey | null {
   if (!p) return null;
   const v = p.toLowerCase();
-  if (v === "normal") return "plus";
+  if (v === "normal") return "basico";
   if (v === "plus" || v === "basico" || v === "libre") return v as PlanKey;
   return null;
 }
 
-// Ejemplo de implementación: combina precio base del auto con multiplicador del plan
+/**
+ * 🔧 Esta función ahora LEE directamente del JSON
+ * Ya no usa multiplicadores ni cálculos.
+ * 
+ * Cada vehículo tiene sus propios precios y beneficios por plan.
+ */
 export function getPrecioYBeneficios(
-  vehiculo: { precio: number },
+  vehiculo: {
+    planes?: Record<PlanKey, { precio: number; beneficios: string[] }>;
+  },
   plan: PlanKey
 ) {
-  const base = vehiculo.precio;
-  const precio = Math.round(base * MULTIPLICADORES[plan] * 100) / 100;
-
-  const beneficiosPorPlan: Record<PlanKey, string[]> = {
-    basico: [
-      "Kilometraje limitado",
-      "Cobertura básica",
-      "1 conductor autorizado",
-    ],
-    plus: [
-      "Kilometraje moderado",
-      "Cobertura ampliada",
-      "2 conductores",
-      "Asistencia en carretera",
-    ],
-    libre: [
-      "Kilometraje ilimitado",
-      "Cobertura full riesgo",
-      "2 conductores",
-      "Entrega y recojo en ciudad",
-    ],
+  const fallback = {
+    precio: 0,
+    beneficios: [] as string[],
+    label: PLANES_DEFAULT[plan].label,
   };
 
+  if (!vehiculo?.planes) return fallback;
+
+  const data = vehiculo.planes[plan];
+  if (!data) return fallback;
+
   return {
+    precio: Number(data.precio) || 0,
+    beneficios: Array.isArray(data.beneficios) ? data.beneficios : [],
     label: PLANES_DEFAULT[plan].label,
-    precio,
-    beneficios: beneficiosPorPlan[plan],
   };
 }

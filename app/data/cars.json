@@ -12,7 +12,7 @@
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "5",
       "terreno": "Asfaltado",
       "filas": 2,
       "licencia": "A1",
@@ -22,18 +22,19 @@
     "planes": {
       "basico": {
         "precio": 150,
-        "beneficios": ["Seguro a terceros", "1 conductor", "80 km/día", "Asistencia 24/7"]
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
       },
       "plus": {
-        "precio": 175,
-        "beneficios": ["Seguro ampliado", "2 conductores", "150 km/día", "Asistencia en ruta"]
+        "precio": 180,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
       },
       "libre": {
-        "precio": 195,
-        "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Mantenimiento preventivo"]
+        "precio": 300,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
       }
     },
-    "imagenes": ["/acent01.webp", "/acent02.webp","/acent03.webp","/acent04.webp"]
+    "imagenes": ["/acent01.webp", "/acent02.webp", "/acent03.webp", "/acent04.webp"],
+    "video": "https://www.youtube.com/embed/2Vv-BfVoq4g"
   },
   {
     "id": 2,
@@ -48,7 +49,7 @@
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "5",
       "terreno": "Asfaltado",
       "filas": 2,
       "licencia": "A1",
@@ -56,11 +57,21 @@
       "pasajeros": 5
     },
     "planes": {
-      "basico": { "precio": 180, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 210, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Asistencia en ruta"] },
-      "libre":  { "precio": 235, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado"] }
+      "basico": {
+        "precio": 180,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 210,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 330,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/verna01.webp", "/verna02.webp","/verna03.webp","/verna04.webp"]
+    "imagenes": ["/verna01.webp", "/verna02.webp", "/verna03.webp", "/verna04.webp"],
+    "video": "https://www.youtube.com/embed/3AtDnEC4zak"
   },
   {
     "id": 3,
@@ -75,7 +86,7 @@
       "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "8",
       "terreno": "Asfaltado",
       "filas": 3,
       "licencia": "A1",
@@ -83,11 +94,21 @@
       "pasajeros": 8
     },
     "planes": {
-      "basico": { "precio": 120, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 138, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Sillas para niños (1)"] },
-      "libre":  { "precio": 156, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Sillas para niños (2)"] }
+      "basico": {
+        "precio": 120,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 150,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 270,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/carros.png", "/cars/q22-2.webp"]
+    "imagenes": ["/cheryq01.webp", "/cheryq02.webp", "/cheryq03.webp", "/cheryq04.webp"],
+    "video": "https://www.youtube.com/embed/JGwWNGJdvx8"
   },
   {
     "id": 4,
@@ -102,7 +123,7 @@
       "tipoVehiculo": "Camioneta 4x4",
       "tipoCombustible": "Petróleo",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "5",
       "terreno": "Asfaltado y agreste",
       "filas": 2,
       "licencia": "A1",
@@ -110,11 +131,21 @@
       "pasajeros": 5
     },
     "planes": {
-      "basico": { "precio": 180, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 207, "beneficios": ["Seguro ampliado", "2 conductores", "200 km/día", "Barra antivuelco"] },
-      "libre":  { "precio": 234, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Accesorios off-road"] }
+      "basico": {
+        "precio": 180,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 210,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 330,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/carros.png", "/cars/mahindra02.webp"]
+    "imagenes": ["/mahindra01.webp", "/mahindra02.webp", "/mahindra03.webp", "/mahindra04.webp"],
+    "video": "https://www.youtube.com/embed/fRh_vgS2dFE"
   },
   {
     "id": 5,
@@ -129,7 +160,7 @@
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "8",
       "terreno": "Asfaltado y agreste",
       "filas": 3,
       "licencia": "A1",
@@ -137,11 +168,21 @@
       "pasajeros": 7
     },
     "planes": {
-      "basico": { "precio": 200, "beneficios": ["Seguro a terceros", "1 conductor", "100 km/día"] },
-      "plus":   { "precio": 230, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Portaequipaje"] },
-      "libre":  { "precio": 260, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "GPS incluido"] }
+      "basico": {
+        "precio": 200,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 230,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 350,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/terios01.webp", "/terios02.webp","/terios03.webp","/terios04.webp"]
+    "imagenes": ["/terios01.webp", "/terios02.webp", "/terios03.webp", "/terios04.webp"],
+    "video": "https://www.youtube.com/embed/OPf0YbXqDm0"
   },
   {
     "id": 6,
@@ -156,7 +197,7 @@
       "tipoVehiculo": "Camioneta 4x2",
       "tipoCombustible": "Petróleo",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "5",
       "terreno": "Asfaltado y agreste",
       "filas": 2,
       "licencia": "A1",
@@ -164,11 +205,21 @@
       "pasajeros": 5
     },
     "planes": {
-      "basico": { "precio": 250, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 290, "beneficios": ["Seguro ampliado", "2 conductores", "300 km/día", "Winche manual"] },
-      "libre":  { "precio": 330, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Kit de trabajo (conos/reflectivos)"] }
+      "basico": {
+        "precio": 250,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 280,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 400,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/hilux01.webp", "/hilux02.webp","/hilux03.webp","/hilux04.webp"]
+    "imagenes": ["/hilux01.webp", "/hilux02.webp", "/hilux03.webp", "/hilux04.webp"],
+    "video": "https://www.youtube.com/embed/09R8_2nJtjg"
   },
   {
     "id": 7,
@@ -183,7 +234,7 @@
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
       "transmision": "Automático",
-      "recorrido": "0 km",
+      "asientos": "8",
       "terreno": "Asfaltado y agreste",
       "filas": 3,
       "licencia": "A1",
@@ -191,11 +242,21 @@
       "pasajeros": 7
     },
     "planes": {
-      "basico": { "precio": 250, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 285, "beneficios": ["Seguro ampliado", "2 conductores", "250 km/día", "Bluetooth/CarPlay"] },
-      "libre":  { "precio": 320, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Butacas abatibles"] }
+      "basico": {
+        "precio": 250,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 280,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 400,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/santafe01.webp", "/santafe02.webp","/santafe03.webp","/santafe04.webp"]
+    "imagenes": ["/santafe01.webp", "/santafe02.webp", "/santafe03.webp", "/santafe04.webp"],
+    "video": "https://www.youtube.com/embed/kJQP7kiw5Fk"
   },
   {
     "id": 8,
@@ -210,7 +271,7 @@
       "tipoVehiculo": "Van",
       "tipoCombustible": "Petróleo",
       "transmision": "Mecánico",
-      "recorrido": "0 km",
+      "asientos": "12",
       "terreno": "Asfaltado y agreste",
       "filas": 4,
       "licencia": "A1",
@@ -218,10 +279,20 @@
       "pasajeros": 12
     },
     "planes": {
-      "basico": { "precio": 300, "beneficios": ["Seguro a terceros", "1 conductor", "150 km/día"] },
-      "plus":   { "precio": 345, "beneficios": ["Seguro ampliado", "2 conductores", "300 km/día", "Asientos configurables"] },
-      "libre":  { "precio": 390, "beneficios": ["Cobertura total", "Conductores ilimitados", "Km ilimitado", "Traslados aeropuerto incluidos"] }
+      "basico": {
+        "precio": 300,
+        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "plus": {
+        "precio": 330,
+        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+      },
+      "libre": {
+        "precio": 450,
+        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+      }
     },
-    "imagenes": ["/carros.png", "/cars/h1-2.webp"]
+    "imagenes": ["/h1-01.webp", "/h1-02.webp", "/h1-03.webp", "/h1-04.webp"],
+    "video": "https://www.youtube.com/embed/pRpeEdMmmQ0"
   }
 ]

@@ -271,9 +271,9 @@ export default function Meses() {
                     </div>
 
                     <div className="md:col-span-7 flex justify-center">
-                        <div className="relative rounded-2xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)]">
+                        <div className="relative rounded-2xl overflow-hidden xl:pb-52">
                             <Image
-                                src="/heromeses.png"
+                                src="/heromeses.webp"
                                 alt="Las mil caras de Ayacucho"
                                 width={1000}
                                 height={700}
