@@ -240,6 +240,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-PE" suppressHydrationWarning className={font.variable}>
+      
       <head>
         <StructuredData />
         <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -249,7 +250,10 @@ export default function RootLayout({
         {children}
         <FloatingButtons />
         <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+        
       </body>
+      
     </html>
+    
   );
 }

@@ -45,7 +45,7 @@ const plansData: PlanInfo[] = [
   {
     key: "normal",
     title: "PLAN NORMAL",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "_rUHPZXoHDc",
     kmBadge: "150KM POR DÍA",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 120.00" },
@@ -64,7 +64,7 @@ const plansData: PlanInfo[] = [
   {
     key: "plus",
     title: "PLAN PLUS",
-    videoId: "kXYiU_JCYtU",
+    videoId: "itYCEYPdKO8",
     kmBadge: "200KM POR DÍA",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 150.00" },
@@ -83,7 +83,7 @@ const plansData: PlanInfo[] = [
   {
     key: "libre",
     title: "PLAN LIBRE",
-    videoId: "3JZ_D3ELwOQ",
+    videoId: "WtzDWWSHwUo",
     kmBadge: "KM LIBRE POR DÍA",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 270.00" },

@@ -46,10 +46,10 @@ interface ContactInfoItemProps {
 const navLinks: NavLink[] = [
   { href: "/", label: "INICIO" },
   { href: "/vehiculos", label: "VEHICULOS" },
-  { href: "/ofertas", label: "OFERTA Y PLANES " },
+  { href: "/ofertas", label: "PLANES Y TURISMO " },
   { href: "/nosotros", label: "EMPRESA" },
   {
-    href: "https://wa.me/51999999999", // 🔗 Enlace directo a tu WhatsApp
+      href: "/#trabaja", // 🔗 Enlace directo a tu WhatsApp
     label: "TRABAJA CON NOSOTROS",
   },
 ];

@@ -14,7 +14,7 @@ const Trabajo = () => {
     );
 
     return (
-        <section className="relative">
+        <section id="trabaja" className="relative">
             {/* Fondo (mantienes tu imagen) */}
             <div
                 className="absolute inset-0 -z-10"

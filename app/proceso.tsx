@@ -142,7 +142,7 @@ const PlanesPrecios = () => {
     <section className="py-20 relative z-10 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className={`${bebas.className} text-3xl sm:text-7xl font-extrabold text-[#1100FF] text-center mb-16`}
+          className="text-3xl sm:text-7xl font-extrabold text-[#1100FF] text-center mb-16"
         >
           Conoce nuestros planes
         </h2>
@@ -165,7 +165,7 @@ const PlanesPrecios = () => {
               >
                 {/* Barra superior: PLAN ... (similar a la foto) */}
                 <div className=" rounded-lg text-center mb-5">
-                  <h3 className={`${bebas.className} text-2xl lg:text-6xl font-extrabold `}>
+                  <h3 className=" text-2xl lg:text-4xl font-black italic">
                     {plan.name}
                   </h3>
                 </div>
@@ -186,7 +186,7 @@ const PlanesPrecios = () => {
 
                 {/* Bloque central: Atención personalizada y asistencia en ruta */}
                 <div className="bg-[#1732b9] rounded-lg px-4 py-4 shadow-inner mb-6">
-                  <p className={`${bebas.className} text-white md:text-4xl text-center `}>
+                  <p className=" text-white md:text-4xl text-center font-black italic animate-glow ">
                     ATENCIÓN PERSONALIZADA
                     <br />
                     Y ASISTENCIA EN RUTA
@@ -290,7 +290,9 @@ const AlquilerYPlanes = () => {
       <ProcesoAlquiler />
       <PlanesPrecios />
     </div>
+    
   );
+  
 };
 
 export default AlquilerYPlanes;

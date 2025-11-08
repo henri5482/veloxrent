@@ -80,18 +80,7 @@ const Carros = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="inline-flex items-center gap-4 mb-6"
-          >
-            <div className="w-12 h-0.5 bg-blue-400 rounded-full"></div>
-            <span className="text-blue-600 font-semibold tracking-widest text-sm uppercase">
-              Flota Premium
-            </span>
-            <div className="w-12 h-0.5 bg-blue-400 rounded-full"></div>
-          </motion.div>
+       
 
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

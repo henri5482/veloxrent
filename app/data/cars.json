@@ -7,7 +7,7 @@
     "año": 2018,
     "precio": 150,
     "tipo": "Automóvil",
-    "descripcion": "Sedán posicionado como uno de los más requeridos por su potencia, agilidad y bajo consumo. Interior espacioso y versátil.",
+    "descripcion": "Sedán posicionado como uno de los más requeridos por su potencia, agilidad y bajo consumo, su interior es espacioso y su versatilidad equilibra todo lo que se busca en un automóvil.",
     "especificaciones": {
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
@@ -22,19 +22,39 @@
     "planes": {
       "basico": {
         "precio": 150,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 180,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 300,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/acent01.webp", "/acent02.webp", "/acent03.webp", "/acent04.webp"],
-    "video": "https://www.youtube.com/embed/2Vv-BfVoq4g"
+    "imagenes": [
+      "/acent01.webp",
+      "/acent02.webp",
+      "/acent03.webp",
+      "/acent04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/-lumQhbNqrA"
   },
   {
     "id": 2,
@@ -44,7 +64,7 @@
     "año": 2022,
     "precio": 180,
     "tipo": "Automóvil",
-    "descripcion": "Sedán moderno y confiable con suspensión suave y excelente acabado.",
+    "descripcion": "Sedán ideal para quienes buscan confiabilidad, modernidad y elegancia, potente con suspensión suave dándote confort total, interior ergonómico y bien acabado.",
     "especificaciones": {
       "tipoVehiculo": "Automóvil",
       "tipoCombustible": "Gasolina",
@@ -59,19 +79,39 @@
     "planes": {
       "basico": {
         "precio": 180,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 210,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 330,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/verna01.webp", "/verna02.webp", "/verna03.webp", "/verna04.webp"],
-    "video": "https://www.youtube.com/embed/3AtDnEC4zak"
+    "imagenes": [
+      "/verna01.webp",
+      "/verna02.webp",
+      "/verna03.webp",
+      "/verna04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/xE6ByMBroqM"
   },
   {
     "id": 3,
@@ -81,7 +121,7 @@
     "año": 2021,
     "precio": 120,
     "tipo": "Minivan",
-    "descripcion": "Minivan con gran capacidad y eficiencia; interior cómodo.",
+    "descripcion": "si buscas capacidad, rendimiento y eficiencia esta es la minivan indicada, utilidad multipropósito y en su interior la distribución prioriza la comodidad.",
     "especificaciones": {
       "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
@@ -96,19 +136,39 @@
     "planes": {
       "basico": {
         "precio": 120,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 150,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 270,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/cheryq01.webp", "/cheryq02.webp", "/cheryq03.webp", "/cheryq04.webp"],
-    "video": "https://www.youtube.com/embed/JGwWNGJdvx8"
+    "imagenes": [
+      "/cheryq01.webp",
+      "/cheryq02.webp",
+      "/cheryq03.webp",
+      "/cheryq04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/Zod4U0UggCA"
   },
   {
     "id": 4,
@@ -118,7 +178,7 @@
     "año": 2011,
     "precio": 180,
     "tipo": "Camioneta 4x4",
-    "descripcion": "Fuerza y eficiencia; interior resistente para trabajo y ruta.",
+    "descripcion": "Aventura, ciudad y trabajo en una camioneta, la fuerza y eficiencia definen sus cualidades, su interior es resistente y funcional para largos trayectos.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta 4x4",
       "tipoCombustible": "Petróleo",
@@ -133,19 +193,42 @@
     "planes": {
       "basico": {
         "precio": 180,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible",
+          "Útil para carga"
+        ]
       },
       "plus": {
         "precio": 210,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible",
+          "Útil para carga"
+        ]
       },
       "libre": {
         "precio": 330,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible",
+          "Útil para carga"
+        ]
       }
     },
-    "imagenes": ["/mahindra01.webp", "/mahindra02.webp", "/mahindra03.webp", "/mahindra04.webp"],
-    "video": "https://www.youtube.com/embed/fRh_vgS2dFE"
+    "imagenes": [
+      "/PickUp03.webp",
+      "/PickUp02.webp",
+      "/PickUp01.webp",
+      "/PickUp04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/xadWnZCyRo4"
   },
   {
     "id": 5,
@@ -155,7 +238,7 @@
     "año": 2014,
     "precio": 200,
     "tipo": "Camioneta SUV",
-    "descripcion": "SUV compacta y versátil; buena altura y suspensión para terrenos irregulares.",
+    "descripcion": "Camioneta SUV reconocida por ser compacta, versátil y todo terreno, estética deportiva y moderna, buena altura al suelo, ofrece un interior amplio para los ocupantes, cuenta con suspensión adaptada para terrenos irregulares dándote una experiencia de conducción completa.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
@@ -170,19 +253,39 @@
     "planes": {
       "basico": {
         "precio": 200,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 230,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 350,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/terios01.webp", "/terios02.webp", "/terios03.webp", "/terios04.webp"],
-    "video": "https://www.youtube.com/embed/OPf0YbXqDm0"
+    "imagenes": [
+      "/terios01.webp",
+      "/terios02.webp",
+      "/terios03.webp",
+      "/terios04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/r-eWbkhpemE"
   },
   {
     "id": 6,
@@ -192,7 +295,7 @@
     "año": 2013,
     "precio": 250,
     "tipo": "Camioneta 4x2",
-    "descripcion": "Reconocida por su resistencia y durabilidad; ideal para condiciones exigentes.",
+    "descripcion": "Una de las camionetas mas reconocidas y confiables. Resistencia, potencia y durabilidad la definen, su seguridad y fuerza sumado a su presencia imponente la hacen imprescindible para los conductores, su interior es cómodo y pensado para largas jornadas de conducción. Además garantiza estabilidad, agarre y control en condiciones extremas.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta 4x2",
       "tipoCombustible": "Petróleo",
@@ -207,19 +310,39 @@
     "planes": {
       "basico": {
         "precio": 250,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 280,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 400,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/hilux01.webp", "/hilux02.webp", "/hilux03.webp", "/hilux04.webp"],
-    "video": "https://www.youtube.com/embed/09R8_2nJtjg"
+    "imagenes": [
+      "/hilux01.webp",
+      "/hilux02.webp",
+      "/hilux03.webp",
+      "/hilux04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/HYs4PNeCwEY"
   },
   {
     "id": 7,
@@ -229,7 +352,7 @@
     "año": 2012,
     "precio": 250,
     "tipo": "Camioneta SUV",
-    "descripcion": "Potente y sofisticada; interior amplio y seguro.",
+    "descripcion": "Carácter sofisticado, moderno y potente, seguridad en cada trayecto, motores potentes y suspensión afinada para usarse dentro o fuera de la ciudad, interior espacioso y elegante posicionándola como una de las SUVs más completas.",
     "especificaciones": {
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
@@ -244,19 +367,39 @@
     "planes": {
       "basico": {
         "precio": 250,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 280,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 400,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
-    "imagenes": ["/santafe01.webp", "/santafe02.webp", "/santafe03.webp", "/santafe04.webp"],
-    "video": "https://www.youtube.com/embed/kJQP7kiw5Fk"
+    "imagenes": [
+      "/santafe01.webp",
+      "/santafe02.webp",
+      "/santafe03.webp",
+      "/santafe04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/N62UqEy4obI"
   },
   {
     "id": 8,
@@ -281,15 +424,30 @@
     "planes": {
       "basico": {
         "precio": 300,
-        "beneficios": ["150 km/día", "S/ 0.90 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "plus": {
         "precio": 330,
-        "beneficios": ["200 km/día", "S/ 0.60 por km extra", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       },
       "libre": {
         "precio": 450,
-        "beneficios": ["Kilometraje ilimitado", "Atención personalizada", "Asistencia en ruta"]
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
       }
     },
     "imagenes": ["/h1-01.webp", "/h1-02.webp", "/h1-03.webp", "/h1-04.webp"],
