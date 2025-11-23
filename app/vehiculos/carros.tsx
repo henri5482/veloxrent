@@ -18,26 +18,26 @@ const bebas = Bebas_Neue({
 const Carros = () => {
   const getBrandColor = (marca: string) => {
     const colors: { [key: string]: string } = {
-      Toyota: "text-red-600",
-      Nissan: "text-slate-600",
+      Toyota: "text-blue-600",
+      Nissan: "text-blue-600",
       Hyundai: "text-blue-600",
-      Kia: "text-green-600",
-      Honda: "text-slate-700",
-      Mazda: "text-red-500",
-      default: "text-slate-600",
+      Kia: "text-blue-600",
+      Honda: "text-blue-600",
+      Mazda: "text-blue-600",
+      default: "text-blue-600",
     };
     return colors[marca] || colors.default;
   };
 
   const getBrandGradient = (marca: string) => {
     const gradients: { [key: string]: string } = {
-      Toyota: "from-red-50 to-red-100",
-      Nissan: "from-slate-50 to-slate-100",
+      Toyota: "from-blue-50 to-blue-100",
+      Nissan: "from-blue-50 to-blue-100",
       Hyundai: "from-blue-50 to-blue-100",
-      Kia: "from-green-50 to-green-100",
-      Honda: "from-slate-50 to-slate-100",
-      Mazda: "from-red-50 to-red-100",
-      default: "from-slate-50 to-slate-100",
+      Kia: "from-blue-50 to-blue-100",
+      Honda: "from-blue-50 to-blue-100",
+      Mazda: "from-blue-50 to-blue-100",
+      default: "from-blue-50 to-blue-100",
     };
     return gradients[marca] || gradients.default;
   };

@@ -180,7 +180,7 @@ export default function SuccessStoriesCarousel() {
             variants={sectionHeaderVariants}
           >
             Conoce las experiencias reales de quienes confiaron en{" "}
-            <strong>VeloxRent</strong> para sus viajes, vacaciones y necesidades
+            <strong>Veloxrent</strong> para sus viajes, vacaciones y necesidades
             de transporte.
           </motion.p>
         </div>

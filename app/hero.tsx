@@ -164,7 +164,7 @@ export default function HeroCarousel() {
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             {/* Título + Icono apuntando al buscador */}
             <div className="text-white  font-black text-md mb-3">
-              <div className="flex items-center text-center gap-12">
+              <div className="flex items-center text-center gap-12 text-lg">
                 <span className="">ELIGE TU  <br /> VEHICULO AQUÍ</span>
                 <motion.span
                   className=" rotate-270 " 
@@ -201,8 +201,8 @@ export default function HeroCarousel() {
                 className="p-2 lg:p-3 rounded-md border border-white/40 text-black bg-white"
               >
                 <option value="">Seleccionar</option>
-                <option value="basico">Básico</option>
-                <option value="plus">Plus (Normal)</option>
+                <option value="basico">Plan normal</option>
+                <option value="plus">Plus</option>
                 <option value="libre">Libre</option>
               </select>
             </div>

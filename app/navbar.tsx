@@ -310,7 +310,7 @@ const Navbar = () => {
                 alt="Logo de Casagrande Geotecnia"
                 width={100}
                 height={48}
-                className="h-11 w-auto md:h-13 max-md:px-2"
+                className="h-11 w-auto md:h-15 max-md:px-2"
               />
             </motion.div>
           </Link>

@@ -185,13 +185,14 @@ const PlanesPrecios = () => {
                 </div>
 
                 {/* Bloque central: Atención personalizada y asistencia en ruta */}
-                <div className="bg-[#1732b9] rounded-lg px-4 py-4 shadow-inner mb-6">
-                  <p className=" text-white md:text-4xl text-center font-black italic animate-glow ">
+                <div className="bg-[#1732b9] rounded-lg px-4 py-4 shadow-inner mb-6 border-white border-2 text-center mx-auto w-fit">
+                  <p className="text-white md:text-4xl font-black italic animate-glow leading-tight">
                     ATENCIÓN PERSONALIZADA
-                    <br />
+                    <br className="hidden sm:block" />
                     Y ASISTENCIA EN RUTA
                   </p>
                 </div>
+
 
                 {/* Lista de vehículos y precios en dos columnas */}
                 <div className="mb-2">
@@ -290,9 +291,9 @@ const AlquilerYPlanes = () => {
       <ProcesoAlquiler />
       <PlanesPrecios />
     </div>
-    
+
   );
-  
+
 };
 
 export default AlquilerYPlanes;

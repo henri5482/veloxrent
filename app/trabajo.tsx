@@ -8,7 +8,7 @@ const bebas = Bebas_Neue({
 
 const Trabajo = () => {
     // Cambia este número si corresponde
-    const whatsapp = "51989900609";
+    const whatsapp = "51901643094";
     const mensaje = encodeURIComponent(
         "Hola, me gustaría postular a Veloxrent. Adjunto mis datos y CV."
     );

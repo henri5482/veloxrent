@@ -32,8 +32,7 @@ const Nosotros = () => {
                             Misión
                         </h1>
                         <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from **de Finibus Bonorum et Malorum** by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                        </p>
+                            En VELOXRENT, nuestra misión es ofrecer un servicio de alquiler de vehículos confiable, seguro y accesible, priorizando la satisfacción y comodidad de cada cliente. Nos comprometemos a brindar una experiencia ágil y transparente, garantizando unidades en óptimas condiciones y atención personalizada en cada etapa del servicio. Trabajamos día a día con responsabilidad, innovación y cercanía, buscando consolidarnos como la mejor opción en movilidad dentro de la región.                        </p>
                     </div>
 
                     {/* Sección 2: ¿Por qué elegirnos? (Fondo Oscuro/Colorido) */}
@@ -44,13 +43,8 @@ const Nosotros = () => {
 
                         <div className="space-y-6">
                             <p className="text-lg leading-relaxed text-justify">
-                                <span className="font-bold text-yellow-300">Experiencia:</span> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                            </p>
-                            <p className="text-lg leading-relaxed text-justify">
-                                <span className="font-bold text-yellow-300">Soporte 24/7:</span> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                            </p>
-                            <p className="text-lg leading-relaxed text-justify">
-                                <span className="font-bold text-yellow-300">Calidad Garantizada:</span> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                              
+                            Ser reconocidos en los próximos años como la empresa líder en alquiler de vehículos en Ayacucho, destacando por la calidad del servicio, la confianza de nuestros clientes y el crecimiento sostenible de nuestra marca. Aspiramos a expandirnos a nuevas ciudades del país, fortaleciendo nuestra presencia y contribuyendo al desarrollo regional a través de soluciones de transporte modernas, seguras y orientadas al cliente.
                             </p>
                         </div>
                     </div>

@@ -18,7 +18,7 @@ const waLink = (num: string, msg?: string) => {
   const withCc = digits.startsWith("51") ? digits : `51${digits}`;
   const text = encodeURIComponent(
     msg ??
-      "Hola, me gustaría hacer una consulta. ¿Podrían brindarme más información?"
+    "Hola, me gustaría hacer una consulta. ¿Podrían brindarme más información?"
   );
   return `https://wa.me/${withCc}?text=${text}`;
 };
@@ -44,16 +44,18 @@ const Footer = () => {
 
   // Secciones del sitio + extras pedidos
   const productLinks = [
-    { name: "Nosotros", href: "/nosotros" },
     {
-      name: "mapa",
+      name: "Mapa",
       href:
         "/https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
     },
-    { name: "Carros", href: "/vehiculos" },
+    { name: "Vehiculos", href: "/vehiculos" },
+    {
+      name: "Trabaja con nosotros",
+      href: "https://api.whatsapp.com/send/?phone=51901643094&text=Hola%2C+me+gustar%C3%ADa+postular+a+Veloxrent.+Adjunto+mis+datos+y+CV.&type=phone_number&app_absent=0",
+      target: "_blank"
+    },
 
-    // ➕ Agregados:
-    { name: "Trabaja con nosotros", href: "/trabaja" },
     {
       name: "Venta de vehículos",
       href: waLink("925285403", "Hola, estoy interesado en la venta de vehículos de Veloxrent. ¿Me pueden brindar información?"),
@@ -177,7 +179,7 @@ const Footer = () => {
                           >
                             <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
                             {link.name}
-                           
+
                           </a>
                         ) : (
                           <a
@@ -186,7 +188,7 @@ const Footer = () => {
                           >
                             <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-200 transition-colors"></span>
                             {(link as any).name}
-                            
+
                           </a>
                         )}
                       </li>
@@ -212,7 +214,7 @@ const Footer = () => {
                     >
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></span>
                       {link.name}
-                      
+
                     </a>
                   </li>
                 ))}
@@ -223,8 +225,8 @@ const Footer = () => {
           {/* About + Social (desktop) */}
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-white mb-4 sm:mb-6 text-sm leading-relaxed">
-              Pioneros alquilando vehiculos sin conductor en Ayacucho
-            </p>
+              Pioneros alquilando vehículos sin conductor en Ayacucho
+              ¡Más libertad en 4 ruedas!            </p>
             <div className="flex gap-3 mt-auto">
               {socialLinks.map((social) => (
                 <Link
