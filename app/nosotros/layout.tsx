@@ -3,81 +3,83 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: "Veloxrent - Nosotros",
-    template: "%s | Casagrande Geotecnia"
+    default: "Veloxrent - empresa que alquilar autos, camionetas  en Ayacucho",
+    template: ""
   },
-  description: "Conoce nuestro equipo de ingenieros especializados, valores corporativos y certificaciones ISO. Más de 20 años de experiencia en estudios geotécnicos y consultoría en ingeniería civil.",
+  description:
+    "Veloxrent ofrece alquiler de autos, camionetas y motos en Ayacucho. Vehículos modernos, seguros y listos para turismo, trabajo y uso corporativo. Reserva rápida y atención personalizada.",
+
   keywords: [
-    "equipo Casagrande Geotecnia",
-    "ingenieros geotécnicos Perú",
-    "consultoría ingeniería civil Lima",
-    "expertos en estudios de suelos",
-    "valores corporativos construcción",
-    "certificaciones ISO ingeniería",
-    "experiencia en geotecnia",
-    "equipo técnico especializado",
-    "historia Casagrande Geotecnia",
-    "misión y visión empresa geotécnica",
-    "profesionales ingeniería civil",
-    "consultores geotécnicos calificados",
-    "trayectoria en proyectos civiles",
-    "equipo multidisciplinario geotecnia",
-    "valores éticos construcción",
-    "compromiso calidad ingeniería"
+    "alquiler de autos en Ayacucho",
+    "alquiler de camionetas Ayacucho",
+    "alquiler de motos Ayacucho",
+    "renta de vehículos Ayacucho",
+    "autos para turismo Ayacucho",
+    "alquiler de vehículos 4x4 Ayacucho",
+    "renta de autos corporativos",
+    "alquiler de autos baratos Ayacucho",
+    "Veloxrent Ayacucho"
   ].join(", "),
-  authors: [{ name: "Casagrande Geotecnia" }],
-  creator: "Casagrande Geotecnia",
-  publisher: "Casagrande Geotecnia",
+
+  authors: [{ name: "Veloxrent" }],
+  creator: "Veloxrent",
+  publisher: "Veloxrent",
+
   openGraph: {
-    title: "Nosotros | Casagrande Geotecnia - Equipo y Valores",
-    description: "Conoce a nuestro equipo de ingenieros especializados, nuestra trayectoria y compromiso con la excelencia en estudios geotécnicos.",
+    title: "Veloxrent | Alquiler de Vehículos en Ayacucho",
+    description:
+      "Alquiler de autos, camionetas y motos en Ayacucho. Servicio confiable, vehículos modernos y atención inmediata. Reserva tu vehículo con Veloxrent.",
     type: "website",
-    url: "https://www.casagrandegeotecnia.com.pe/nosotros",
+    url: "https://www.veloxrent.com.pe",
     images: [
       {
-        url: "https://www.casagrandegeotecnia.com.pe/fondo.webp",
+        url: "https://www.veloxrent.com.pe/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Equipo de Ingenieros - Casagrande Geotecnia",
-      },
+        alt: "Veloxrent - Alquiler de autos en Ayacucho"
+      }
     ],
-    siteName: "Casagrande Geotecnia",
+    siteName: "Veloxrent",
     locale: "es_PE",
-    emails: ["info@casagrandegeotecnia.com.pe"],
-    phoneNumbers: ["+51 123 456 789"],
+    emails: ["contacto@veloxrent.com.pe"],
+    phoneNumbers: ["+51 901 643 094"],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Nosotros | Casagrande Geotecnia - Equipo Especializado",
-    description: "Equipo de ingenieros geotécnicos con amplia experiencia en proyectos de construcción e infraestructura.",
-    images: ["https://www.casagrandegeotecnia.com.pe/equipo-twitter.jpg"],
-    site: "@CasagrandeGeo",
-    creator: "@CasagrandeGeo",
+    title: "Veloxrent - Alquiler de Vehículos en Ayacucho",
+    description:
+      "Autos, camionetas y motos para turismo, trabajo y uso diario. Alquiler rápido, seguro y accesible.",
+    images: ["https://www.veloxrent.com.pe/og-image.jpg"],
+    site: "@Veloxrent",
+    creator: "@Veloxrent",
   },
+
   alternates: {
-    canonical: "https://www.casagrandegeotecnia.com.pe/nosotros",
+    canonical: "https://www.veloxrent.com.pe",
     languages: {
-      'es-PE': 'https://www.casagrandegeotecnia.com.pe/nosotros',
+      'es-PE': 'https://www.veloxrent.com.pe',
     },
   },
+
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
       noimageindex: false,
-      'max-video-preview': -1,
       'max-image-preview': 'large',
+      'max-video-preview': -1,
       'max-snippet': -1,
     },
   },
-  category: 'engineering',
-  classification: 'Consultoría en Ingeniería Geotécnica - Sobre Nosotros'
+
+  category: 'vehicle-rental',
+  classification: 'Empresa de alquiler de autos, camionetas y motos en Ayacucho'
 };
 
-export default function NosotrosLayout({
+export default function VeloxrentLayout({
   children,
 }: {
   children: React.ReactNode
@@ -86,101 +88,77 @@ export default function NosotrosLayout({
     <>
       {children}
       <GoogleAnalytics gaId="G-HSYFNDRHDW" />
-      
-      {/* Schema Markup para Página Nosotros */}
+
+      {/* Schema principal para Veloxrent */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "Nosotros - Casagrande Geotecnia",
-            "description": "Información sobre nuestro equipo, valores y trayectoria en ingeniería geotécnica",
-            "url": "https://www.casagrandegeotecnia.com.pe/nosotros",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Casagrande Geotecnia",
-              "description": "Consultora especializada en estudios geotécnicos, geología, laboratorio de suelos y control de calidad para construcción",
-              "foundingDate": "2013", // Reemplaza con año real
-              "founder": {
-                "@type": "Person",
-                "name": "Ing. Carlos Casagrande" // Reemplaza con nombre real
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Av. Tu Dirección 123",
-                "addressLocality": "Lima",
-                "addressRegion": "Lima",
-                "addressCountry": "Perú"
-              },
-              "telephone": "+51 123 456 789",
-              "email": "info@casagrandegeotecnia.com.pe",
-              "numberOfEmployees": {
-                "@type": "QuantitativeValue",
-                "value": "25" // Reemplaza con número real
-              },
-              "knowsAbout": [
-                "Geotecnia",
-                "Ingeniería Civil",
-                "Estudios de Suelos",
-                "Geología Aplicada",
-                "Mecánica de Rocas",
-                "Hidrogeología",
-                "Control de Calidad en Construcción",
-                "Estudios Geofísicos"
-              ],
-              "memberOf": [
-                {
-                  "@type": "Organization",
-                  "name": "Colegio de Ingenieros del Perú"
-                }
-              ],
-              "award": [
-                "Certificación ISO 9001:2015",
-                "Certificación ISO 14001:2015", 
-                "Certificación ISO 37001:2016"
-              ],
-              "mission": "Proveer servicios de consultoría geotécnica de excelencia, garantizando la seguridad y calidad en proyectos de construcción mediante estudios técnicos confiables y soluciones innovadoras.",
-              "slogan": "Expertos en cimentar tu confianza"
-            }
+            "@type": "RentalCarBusiness",
+            "name": "Veloxrent",
+            "description":
+              "Empresa dedicada al alquiler de autos, camionetas y motos en Ayacucho. Vehículos modernos, seguros y disponibles para turismo, trabajo y uso corporativo.",
+            "url": "https://www.veloxrent.com.pe",
+            "logo": "https://www.veloxrent.com.pe/logo.png",
+            "image": "https://www.veloxrent.com.pe/og-image.jpg",
+            "telephone": "+51 901 643 094",
+            "email": "contacto@veloxrent.com.pe",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Ejemplo 123", // reemplazar
+              "addressLocality": "Ayacucho",
+              "addressRegion": "Ayacucho",
+              "addressCountry": "PE"
+            },
+            "priceRange": "$$",
+            "areaServed": "Ayacucho, Perú",
+            "knowsAbout": [
+              "alquiler de autos",
+              "alquiler de camionetas",
+              "alquiler de motos",
+              "vehículos 4x4",
+              "transporte turístico",
+              "renta corporativa de vehículos"
+            ]
           })
         }}
       />
 
-      {/* Schema para valores corporativos */}
+      {/* Schema de servicios Veloxrent */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ItemList", 
-            "name": "Valores Corporativos - Casagrande Geotecnia",
-            "description": "Principios que guían nuestro trabajo en consultoría geotécnica",
+            "@type": "ItemList",
+            "name": "Servicios de Veloxrent",
+            "description": "Lista de servicios de alquiler de vehículos ofrecidos por Veloxrent en Ayacucho.",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Excelencia Técnica"
+                "name": "Alquiler de autos"
               },
               {
                 "@type": "ListItem",
-                "position": 2, 
-                "name": "Compromiso con la Seguridad"
+                "position": 2,
+                "name": "Alquiler de camionetas 4x4"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Innovación en Soluciones"
+                "name": "Alquiler de motos"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "Responsabilidad Ambiental"
+                "name": "Renta corporativa mensual"
               },
               {
                 "@type": "ListItem",
                 "position": 5,
-                "name": "Transparencia y Ética"
+                "name": "Vehículos para turismo y viajes"
               }
             ]
           })
