@@ -87,7 +87,7 @@ export default function NosotrosLayout({
   return (
     <>
       {children}
-      <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+      <GoogleAnalytics gaId="G-YC6ZT9DXY6" />
 
       {/* Schema Markup para Empresa de Alquiler de Vehículos */}
       <script

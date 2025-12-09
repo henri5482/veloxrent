@@ -88,7 +88,7 @@ export default function VeloxrentLayout({
   return (
     <>
       {children}
-      <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+      <GoogleAnalytics gaId="G-YC6ZT9DXY6" />
 
       {/* Schema principal para Veloxrent en página de planes/ofertas */}
       <script

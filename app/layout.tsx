@@ -156,7 +156,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "G-HSYFNDRHDW",
+    google: "G-YC6ZT9DXY6",
   },
 
   icons: {
@@ -249,7 +249,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased`}>
         {children}
         <FloatingButtons />
-        <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+        <GoogleAnalytics gaId="G-YC6ZT9DXY6" />
         
       </body>
       
