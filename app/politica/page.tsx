@@ -1,7 +1,7 @@
 // src/app/politica/page.tsx
 import React from "react";
-import Navbar from "../navbar";
 import Footer from "../footer";
+import Navbar from "../navbar";
 
 const Politica: React.FC = () => {
   return (
@@ -14,13 +14,13 @@ const Politica: React.FC = () => {
               Política de Privacidad
             </h1>
             <p className="mt-2 text-sm text-[#1100FF]/80">
-              VeloxRent — Empresa de alquiler de autos y camionetas en Ayacucho
+              Veloxrent — Empresa de alquiler de autos y camionetas en Ayacucho
             </p>
           </header>
 
           <section className="space-y-6">
             <p>
-              En <strong>VeloxRent</strong> valoramos la privacidad y seguridad
+              En <strong>Veloxrent</strong> valoramos la privacidad y seguridad
               de nuestros clientes y visitantes. Esta política describe cómo
               recopilamos, usamos y protegemos tu información personal al
               utilizar nuestros servicios de alquiler de vehículos en Ayacucho,
@@ -29,13 +29,13 @@ const Politica: React.FC = () => {
 
             <h2 className="text-2xl font-semibold">1. Responsable del tratamiento</h2>
             <p>
-              Responsable: <strong>VeloxRent</strong>. Para consultas sobre tus
+              Responsable: <strong>Veloxrent</strong>. Para consultas sobre tus
               datos personales o el ejercicio de tus derechos, puedes escribir a{" "}
               <a
-                href="mailto:veloxrent.gestioncliente@gmail.com"
+                href="mailto:Veloxrent.gestioncliente@gmail.com"
                 className="underline hover:text-[#16385c]"
               >
-                veloxrent.gestioncliente@gmail.com
+                Veloxrent.gestioncliente@gmail.com
               </a>.
             </p>
 
@@ -75,17 +75,17 @@ const Politica: React.FC = () => {
               Tienes derecho a acceder, rectificar, actualizar o eliminar tus
               datos personales. Para ejercer estos derechos, comunícate a{" "}
               <a
-                href="mailto:veloxrent.gestioncliente@gmail.com"
+                href="mailto:Veloxrent.gestioncliente@gmail.com"
                 className="underline hover:text-[#16385c]"
               >
-                veloxrent.gestioncliente@gmail.com
+                Veloxrent.gestioncliente@gmail.com
               </a>{" "}
               o a través de nuestros canales de atención al cliente.
             </p>
 
             <h2 className="text-2xl font-semibold">6. Seguridad de la información</h2>
             <p>
-              En <strong>VeloxRent</strong> aplicamos medidas técnicas y
+              En <strong>Veloxrent</strong> aplicamos medidas técnicas y
               organizativas para proteger tu información frente a accesos no
               autorizados, pérdida o alteración. Todos los datos son tratados de
               forma confidencial y segura.
@@ -100,7 +100,7 @@ const Politica: React.FC = () => {
 
             <footer className="pt-8 text-sm text-[#1100FF]/60">
               Última actualización: {new Date().toLocaleDateString("es-PE")} ·
-              VeloxRent.
+              Veloxrent.
             </footer>
           </section>
         </div>

@@ -42,7 +42,7 @@ const testimonials: TestimonialItem[] = [
     role: "Cliente — Lima, Perú",
     avatar: "/comentario01.jpg",
     comment:
-      "Alquilé una camioneta en VeloxRent para un viaje familiar y el servicio fue impecable. Vehículo nuevo, limpio y la atención muy amable. 100% recomendado.",
+      "Alquilé una camioneta en Veloxrent para un viaje familiar y el servicio fue impecable. Vehículo nuevo, limpio y la atención muy amable. 100% recomendado.",
     rating: 5,
   },
   {
@@ -87,7 +87,7 @@ const testimonials: TestimonialItem[] = [
     role: "Cliente — Trujillo, Perú",
     avatar: "/comentario06.jpg",
     comment:
-      "Alquilé un auto para mi boda y todo salió increíble. El vehículo estaba decorado y listo a tiempo. Agradezco el trato personalizado de VeloxRent.",
+      "Alquilé un auto para mi boda y todo salió increíble. El vehículo estaba decorado y listo a tiempo. Agradezco el trato personalizado de Veloxrent.",
     rating: 5,
   },
   {
@@ -96,7 +96,7 @@ const testimonials: TestimonialItem[] = [
     role: "Cliente — Piura, Perú",
     avatar: "/alumno05.webp",
     comment:
-      "He alquilado varias veces con VeloxRent y siempre cumplen. Los autos son modernos, seguros y el servicio al cliente es de primera.",
+      "He alquilado varias veces con Veloxrent y siempre cumplen. Los autos son modernos, seguros y el servicio al cliente es de primera.",
     rating: 3,
   },
 ];
