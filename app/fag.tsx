@@ -60,7 +60,7 @@ const testimonials: TestimonialItem[] = [
     role: "Cliente — Cusco, Perú",
     avatar: "/comentario03.jpg",
     comment:
-      "VeloxRent me salvó el fin de semana. Pude alquilar un carro a último momento y todo salió perfecto. Los precios son justos y los autos están en excelente estado.",
+      "Veloxrent me salvó el fin de semana. Pude alquilar un carro a último momento y todo salió perfecto. Los precios son justos y los autos están en excelente estado.",
     rating: 5,
   },
   {

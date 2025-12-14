@@ -165,7 +165,7 @@ export default function HeroCarousel() {
             {/* Título + Icono apuntando al buscador */}
             <div className="text-white  font-black text-md mb-3">
               <div className="flex items-center text-center gap-12 text-lg">
-                <span className="">ELIGE TU  <br /> VEHICULO AQUÍ</span>
+                <span className="">ELIGE TU  <br /> VEHÍCULO AQUÍ</span>
                 <motion.span
                   className=" rotate-270 " 
                 >

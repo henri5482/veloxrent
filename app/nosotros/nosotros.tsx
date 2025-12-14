@@ -32,11 +32,11 @@ const Nosotros = () => {
                             Misión
                         </h1>
                         <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                            En VELOXRENT, nuestra misión es ofrecer un servicio de alquiler de vehículos confiable, seguro y accesible, priorizando la satisfacción y comodidad de cada cliente. Nos comprometemos a brindar una experiencia ágil y transparente, garantizando unidades en óptimas condiciones y atención personalizada en cada etapa del servicio. Trabajamos día a día con responsabilidad, innovación y cercanía, buscando consolidarnos como la mejor opción en movilidad dentro de la región.                        </p>
+                            En Veloxrent, nuestra misión es ofrecer un servicio de alquiler de vehículos confiable, seguro y accesible, priorizando la satisfacción y comodidad de cada cliente. Nos comprometemos a brindar una experiencia ágil y transparente, garantizando unidades en óptimas condiciones y atención personalizada en cada etapa del servicio. Trabajamos día a día con responsabilidad, innovación y cercanía, buscando consolidarnos como la mejor opción en movilidad dentro de la región.                        </p>
                     </div>
 
                     {/* Sección 2: ¿Por qué elegirnos? (Fondo Oscuro/Colorido) */}
-                    <div className="bg-[#5451e7]/90 backdrop-blur-sm p-8 md:p-16 rounded-xl shadow-2xl border-t-4 border-white transition duration-300 hover:shadow-3xl hover:border-gray-300 text-white">
+                    <div className="bg-[#1100FF] backdrop-blur-sm p-8 md:p-16 rounded-xl shadow-2xl border-t-4 border-white transition duration-300 hover:shadow-3xl hover:border-gray-300 text-white">
                         <h1 className={`${bebas.className} text-4xl sm:text-6xl font-extrabold text-white mb-8 text-center`}>
                             Visión
                         </h1>

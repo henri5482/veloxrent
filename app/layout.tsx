@@ -15,7 +15,7 @@ const font = Plus_Jakarta_Sans({
 const companyInfo = {
   name: "Veloxrent | Alquiler de Vehículos en Ayacucho",
   description:
-    "VeloxRent es una empresa de alquiler de autos y camionetas en Ayacucho, Perú. Ofrecemos vehículos modernos, seguros y al mejor precio para viajes, turismo y trabajo. Reserva fácilmente y disfruta del mejor servicio de renta de autos en Ayacucho.",
+    "Veloxrent es una empresa de alquiler de autos y camionetas en Ayacucho, Perú. Ofrecemos vehículos modernos, seguros y al mejor precio para viajes, turismo y trabajo. Reserva fácilmente y disfruta del mejor servicio de renta de autos en Ayacucho.",
   url: "https://www.veloxrentperu.com",
   logo: "https://www.veloxrentperu.com/logo.png",
   phone: "+51925285403",
@@ -134,12 +134,12 @@ export const metadata: Metadata = {
   title: {
     default:
       "Veloxrent | Alquiler de Vehículos en Ayacucho",
-    template: "%s | VeloxRent",
+    template: "%s | Veloxrent",
   },
   description: companyInfo.description,
-  authors: [{ name: "VeloxRent" }],
-  creator: "VeloxRent",
-  publisher: "VeloxRent",
+  authors: [{ name: "Veloxrent" }],
+  creator: "Veloxrent",
+  publisher: "Veloxrent",
   category: "Alquiler de Vehículos",
   classification: "Renta de autos y camionetas en Ayacucho",
 
@@ -194,12 +194,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "VeloxRent | Renta de Autos y Camionetas en Ayacucho",
+    title: "Veloxrent | Renta de Autos y Camionetas en Ayacucho",
     description:
-      "Encuentra el vehículo ideal con VeloxRent. Autos y camionetas modernas, seguras y con precios accesibles en Ayacucho, Perú.",
+      "Encuentra el vehículo ideal con Veloxrent. Autos y camionetas modernas, seguras y con precios accesibles en Ayacucho, Perú.",
     images: [`${companyInfo.url}/og-image.jpg`],
-    creator: "@VeloxRent",
-    site: "@VeloxRent",
+    creator: "@Veloxrent",
+    site: "@Veloxrent",
   },
 
   alternates: {

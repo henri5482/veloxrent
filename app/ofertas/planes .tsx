@@ -95,6 +95,7 @@ const plansData: PlanInfo[] = [
       { label: "Camioneta Santa Fe", price: "S/ 400.00" },
       { label: "Camioneta Hilux", price: "S/ 400.00" },
       { label: "Minivan H1", price: "S/ 450.00" },
+      { label: "Camioneta Pick Up", price: "S/ 330.00" },
     ],
   },
 ];

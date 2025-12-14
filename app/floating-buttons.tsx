@@ -79,7 +79,7 @@ const FloatingButtons: React.FC = () => {
     { text: "Inicio", href: "/", icon: <FaArrowRight /> },
     { text: "Nosotros", href: "/nosotros", icon: <FaArrowRight /> },
     // { text: "Ofertas", href: "/servicios", icon: <FaArrowRight /> },
-    { text: "Vehiculos", href: "/vehiculos", icon: <FaArrowRight /> },
+    { text: "Vehículos", href: "/vehiculos", icon: <FaArrowRight /> },
     // { text: "Blog", href: "/blog", icon: <FaArrowRight /> },
     // { text: "Contacto", href: "/contacto", icon: <FaArrowRight /> },
     // { text: "Trabaja con nosotros", href: "/profesor", icon: <FaArrowRight /> },

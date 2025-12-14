@@ -107,7 +107,7 @@ const mesesData: MesItem[] = [
                 title: "La Pampa de la Quinua",
                 subtitle:
                     "Ocurrió la Batalla de Ayacucho el 9 de diciembre de 1824, hito de la independencia nacional. Área natural protegida que alberga un valioso ecosistema de flora y fauna.",
-                img: "/junio.png",
+                img: "/junio.webp",
             },
         ],
     },
@@ -216,11 +216,11 @@ const MesCard = ({
                     }`}
             >
                 <h3
-                    className={`${bebas.className} text-[#1500ff] text-3xl sm:text-6xl leading-tight`}
+                    className={`${bebas.className} text-[#1500ff] text-3xl sm:text-7xl leading-tight`}
                 >
                     {title}
                 </h3>
-                <p className="mt-2 text-sm text-[#0f1a40] leading-relaxed">
+                <p className="mt-2 text-[17px] text-[#0f1a40]  font-semibold leading-relaxed">
                     {subtitle}
                 </p>
                 <div className="mt-20">
@@ -248,7 +248,7 @@ export default function Meses() {
                 {/* Cabecera */}
                 <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-8 mb-12">
                     <div className="md:col-span-5 space-y-4">
-                        <p className="text-[#1100FF] text-sm font-semibold border-b-2 border-[#1100FF] inline-block pb-1 mb-3">
+                        <p className="text-[#1100FF] text-[17px] font-semibold border-b-2 border-[#1100FF] inline-block pb-1 mb-3">
                             Una ruta de destinos que no encontrarás en Google
                         </p>
                         <h1
@@ -260,7 +260,7 @@ export default function Meses() {
                             <br />
                             AYACUCHO
                         </h1>
-                        <p className="text-[#0f1a40] text-[14px] leading-relaxed max-w-md font-medium">
+                        <p className="text-[#0f1a40] text-[17px] leading-relaxed max-w-md font-medium">
                             Destinos dentro y fuera de la ciudad, arquitectura, historia,
                             costumbres, tradición, maravillas naturales y actividades
                             culturales organizadas en todos los meses del año.
@@ -300,6 +300,7 @@ export default function Meses() {
                                     subtitle={it.subtitle}
                                     img={it.img}
                                     align={idx % 2 === 0 ? "left" : "right"}
+                                    
                                 />
                             ))}
                         </div>

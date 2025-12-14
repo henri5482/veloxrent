@@ -189,7 +189,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">¡Solicitud Enviada con Éxito!</h3>
                     <p className="text-slate-300 max-w-md mx-auto">
-                      Tu solicitud de alquiler ha sido enviada correctamente. Nos pondremos en contacto contigo en las próximas 24 horas.
+                      Tu Solicitud de alquiler ha sido enviada correctamente. Nos pondremos en contacto contigo en las próximas 24 horas.
                     </p>
                   </motion.div>
                 )}
@@ -443,7 +443,7 @@ export default function AlquilerModal({ isOpen, onClose, vehiculo }: AlquilerMod
                               <span>Procesando...</span>
                             </div>
                           ) : (
-                            "Confirmar solicitud de reserva"
+                            "Confirmar Solicitud de reserva"
                           )}
                         </motion.button>
                       </form>

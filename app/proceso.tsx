@@ -37,7 +37,7 @@ const beneficiosData = [
   },
   {
     title: "DISFRUTA",
-    description: "Evaluamos y aprobamos tu solicitud",
+    description: "Evaluamos y aprobamos tu Solicitud",
     imagePath: ICON_PATHS.support,
     alt: "Icono de Cara Feliz (Disfrutar)",
   },
