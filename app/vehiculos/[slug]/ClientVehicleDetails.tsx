@@ -79,6 +79,31 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
     [vehiculoData, plan]
   );
 
+  // ✅ NUEVO: texto exacto por plan (reemplaza "Precio por día")
+  const planInfo = useMemo(() => {
+    switch (plan) {
+      case "basico":
+        return {
+          titulo: "Plan Normal",
+          porTiempo: "200 km por 24 horas",
+          extra: "S/ 0.90 por km extra",
+        };
+      case "plus":
+        return {
+          titulo: "Plan Plus",
+          porTiempo: "300 km por 24 horas",
+          extra: "S/ 0.60 por cada km extra",
+        };
+      case "libre":
+      default:
+        return {
+          titulo: "Plan Libre",
+          porTiempo: "Kilometraje ilimitado",
+          extra: "Precio por 24 horas",
+        };
+    }
+  }, [plan]);
+
   return (
     <>
       <div className="bg-gray-50 min-h-screen">
@@ -111,16 +136,18 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
                   <div className="w-full h-full" />
                 )}
               </div>
+
               <div className="flex gap-3 justify-center">
                 {vehiculoData.imagenes.slice(0, 4).map((img) => (
                   <button
                     key={img}
-                    onClick={() => setMainImage(img.startsWith("/") ? img : `/${img}`)}
-                    className={`w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      (img.startsWith("/") ? img : `/${img}`) === mainImage
-                        ? "border-blue-500 ring-2 ring-blue-500/30 shadow-md"
-                        : "border-gray-200 hover:border-gray-400"
-                    }`}
+                    onClick={() =>
+                      setMainImage(img.startsWith("/") ? img : `/${img}`)
+                    }
+                    className={`w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${(img.startsWith("/") ? img : `/${img}`) === mainImage
+                      ? "border-blue-500 ring-2 ring-blue-500/30 shadow-md"
+                      : "border-gray-200 hover:border-gray-400"
+                      }`}
                   >
                     <Image
                       src={img.startsWith("/") ? img : `/${img}`}
@@ -139,9 +166,11 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
               <span className="inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-600">
                 {vehiculoData.tipo}
               </span>
+
               <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
                 {vehiculoData.marca} {vehiculoData.modelo}
               </h1>
+
               <div className="text-lg font-medium text-gray-500 mb-4">
                 {vehiculoData.año}
               </div>
@@ -152,26 +181,34 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
                   <Link
                     key={p}
                     href={`/vehiculos/${vehiculoData.slug}?plan=${p}`}
-                    className={`px-3 py-1 rounded-full text-sm border ${
-                      plan === p
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-white text-gray-700 border-gray-200"
-                    }`}
+                    className={`px-3 py-1 rounded-full text-sm border ${plan === p
+                      ? "bg-blue-600 text-white border-blue-600"
+                      : "bg-white text-gray-700 border-gray-200"
+                      }`}
                   >
                     {PLANES_DEFAULT[p].label}
                   </Link>
                 ))}
               </div>
 
-              {/* Precio y beneficios del plan elegido */}
+              {/* ✅ Precio (igual) + debajo: "24 horas • X km" + "S/ ... km extra" */}
               <div className="mb-2 p-4 bg-blue-50 rounded-xl border border-blue-100">
-                <div className="text-sm text-blue-700 font-semibold">{label}</div>
+                {/* <div className="text-sm text-blue-700 font-semibold">{label}</div> */}
+
+                {planInfo.extra && (
+                  <div className="mt-1 text-blue-500 text-sm font-medium">
+                    {planInfo.extra}
+                  </div>
+                )}
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-1">
                   S/{precio.toFixed(2)}
                 </div>
+
                 <div className="text-blue-500 text-base font-medium">
-                  Precio por día
+                  {planInfo.porTiempo}
                 </div>
+
+                {/* km extra */}
               </div>
 
               <div className="p-4 bg-white rounded-xl border border-gray-100">
@@ -273,7 +310,9 @@ export default function ClientVehicleDetails({ slug, initialPlan }: Props) {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         vehiculo={vehiculoData}
+        plan={plan}
       />
+
     </>
   );
 }

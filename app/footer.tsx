@@ -224,7 +224,7 @@ const Footer = () => {
 
           {/* About + Social (desktop) */}
           <div className="hidden md:flex flex-col items-start py-2">
-            <p className="text-white mb-4 sm:mb-6 text-[15px] leading-relaxed pr-12">
+            <p className="text-white mb-4 sm:mb-6 text-[15px] leading-relaxed pr-16">
               Pioneros alquilando vehículos sin conductor en Ayacucho
               ¡Más libertad en 4 ruedas!            </p>
             <div className="flex gap-3 mt-auto">

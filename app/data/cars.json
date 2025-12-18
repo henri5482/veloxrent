@@ -26,7 +26,9 @@
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Tanque con combustible",
+          "200km por cada 24 horas,",
+          "0.90 centimos por km"
         ]
       },
       "plus": {
@@ -35,7 +37,9 @@
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Tanque con combustible",
+          "300km por cada 24 horas",
+          "0.60  centimos por km"
         ]
       },
       "libre": {
@@ -400,57 +404,6 @@
       "/santafe04.webp"
     ],
     "video": "https://www.youtube.com/embed/N62UqEy4obI"
-  },
-  {
-    "id": 8,
-    "slug": "hyundai-h1-2012",
-    "marca": "Hyundai",
-    "modelo": "H1",
-    "año": 2012,
-    "precio": 300,
-    "tipo": "Van",
-    "descripcion": "Van sólida y amplia; ideal para grupos familiares, empresariales o turísticos.",
-    "especificaciones": {
-      "tipoVehiculo": "Van",
-      "tipoCombustible": "Petróleo",
-      "transmision": "Mecánico",
-      "asientos": "12",
-      "terreno": "Asfaltado y agreste",
-      "filas": 4,
-      "licencia": "A1",
-      "garantia": "S/ 800.00",
-      "pasajeros": 12
-    },
-    "planes": {
-      "basico": {
-        "precio": 300,
-        "beneficios": [
-          "Kit de emergencia",
-          "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
-        ]
-      },
-      "plus": {
-        "precio": 330,
-        "beneficios": [
-          "Kit de emergencia",
-          "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
-        ]
-      },
-      "libre": {
-        "precio": 450,
-        "beneficios": [
-          "Kit de emergencia",
-          "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
-        ]
-      }
-    },
-    "imagenes": ["/h1-04.webp", "/h1-02.webp", "/h1-03.webp", "/h1-01.webp"],
-    "video": "https://www.youtube.com/embed/Zd6xXTWkx5k"
   }
+  
 ]
