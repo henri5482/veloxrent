@@ -284,7 +284,7 @@ export default function AlquilerModal({
                                 <div className="text-xs text-slate-400">
                                   {planInfo.kmPor24h
                                     ? `${planInfo.kmPor24h}km por c/ 24 horas`
-                                    : "Km ilimitado"}
+                                    : ""}
                                 </div>
                                 <div className="text-xs text-slate-400">
                                   {planInfo.extra}
@@ -343,11 +343,23 @@ export default function AlquilerModal({
                       </div>
 
                       {/* Botón/box de políticas (como en tu imagen) */}
-                      <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
-                        <div className="text-center py-4 rounded-xl bg-slate-800/40 border border-slate-600/40 text-white font-semibold">
-                          Políticas de Velox Rent
-                        </div>
-                      </div>
+                      <a
+  href="/Politicas.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm hover:bg-slate-700/50 transition"
+>
+  <div className="text-center py-4 rounded-xl bg-slate-800/40 border border-slate-600/40 text-white font-semibold">
+    Ver Políticas de Velox Rent
+  </div>
+
+  <p className="mt-2 text-center text-sm text-slate-300">
+    Se abrirá en una nueva pestaña (PDF descargable)
+  </p>
+</a>
+
+
+
 
                       {/* Requisitos */}
                       <div className="bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm">
@@ -584,11 +596,10 @@ export default function AlquilerModal({
                           disabled={isSubmitting || !agreed}
                           whileHover={agreed && !isSubmitting ? { scale: 1.02 } : {}}
                           whileTap={agreed && !isSubmitting ? { scale: 0.98 } : {}}
-                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${
-                            agreed && !isSubmitting
-                              ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-blue-500/25 cursor-pointer border border-blue-500/20"
-                              : "bg-slate-700 text-slate-500 cursor-not-allowed border border-slate-600"
-                          }`}
+                          className={`w-full py-3 px-4 font-semibold rounded-lg transition-all duration-200 text-sm backdrop-blur-sm ${agreed && !isSubmitting
+                            ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-blue-500/25 cursor-pointer border border-blue-500/20"
+                            : "bg-slate-700 text-slate-500 cursor-not-allowed border border-slate-600"
+                            }`}
                         >
                           {isSubmitting ? (
                             <div className="flex items-center justify-center gap-2">

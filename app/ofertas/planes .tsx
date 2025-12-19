@@ -46,7 +46,7 @@ const plansData: PlanInfo[] = [
     key: "normal",
     title: "PLAN NORMAL",
     videoId: "_rUHPZXoHDc",
-    kmBadge: "150KM POR DÍA",
+    kmBadge: "200KM POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 120.00" },
       { label: "Auto Accent", price: "S/ 150.00" },
@@ -65,7 +65,7 @@ const plansData: PlanInfo[] = [
     key: "plus",
     title: "PLAN PLUS",
     videoId: "itYCEYPdKO8",
-    kmBadge: "200KM POR DÍA",
+    kmBadge: "300KM POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 150.00" },
       { label: "Auto Accent", price: "S/ 180.00" },

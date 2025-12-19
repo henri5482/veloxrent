@@ -51,7 +51,7 @@ const planesData = [
     price: 120.0,
     recurrence: "Desde S/120.00 por día",
     savings: null,
-    installments: "INCLUYE 150 KM POR DÍA",
+    installments: "INCLUYE 200 KM POR DÍA",
     features: [
       { text: "Hyundai Verna: S/180.00", included: true },
       { text: "Hyundai Accent: S/150.00", included: true },
@@ -73,7 +73,7 @@ const planesData = [
     duration: "Diario",
     price: 150.0,
     savings: "¡MÁS KILÓMETROS INCLUIDOS!",
-    installments: "INCLUYE 200 KM POR DÍA",
+    installments: "INCLUYE 300 KM POR DÍA",
     recurrence: "Desde S/150.00 por día",
     features: [
       { text: "Hyundai Verna: S/210.00", included: true },
