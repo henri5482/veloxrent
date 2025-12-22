@@ -84,7 +84,7 @@ const plansData: PlanInfo[] = [
     key: "libre",
     title: "PLAN LIBRE",
     videoId: "WtzDWWSHwUo",
-    kmBadge: "KM LIBRE POR DÍA",
+    kmBadge: "KM LIBRE POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 270.00" },
       { label: "Auto Accent", price: "S/ 300.00" },

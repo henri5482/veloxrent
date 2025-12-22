@@ -344,19 +344,19 @@ export default function AlquilerModal({
 
                       {/* Botón/box de políticas (como en tu imagen) */}
                       <a
-  href="/Politicas.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm hover:bg-slate-700/50 transition"
->
-  <div className="text-center py-4 rounded-xl bg-slate-800/40 border border-slate-600/40 text-white font-semibold">
-    Ver Políticas de Velox Rent
-  </div>
+                        href="/Politicas.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block bg-slate-700/30 rounded-xl p-5 border border-slate-600/50 backdrop-blur-sm hover:bg-slate-700/50 transition"
+                      >
+                        <div className="text-center py-4 rounded-xl bg-slate-800/40 border border-slate-600/40 text-white font-semibold">
+                          Ver Políticas de Velox Rent
+                        </div>
 
-  <p className="mt-2 text-center text-sm text-slate-300">
-    Se abrirá en una nueva pestaña (PDF descargable)
-  </p>
-</a>
+                        <p className="mt-2 text-center text-sm text-slate-300">
+                          Se abrirá en una nueva pestaña (PDF descargable)
+                        </p>
+                      </a>
 
 
 

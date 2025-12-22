@@ -51,7 +51,7 @@ const planesData = [
     price: 120.0,
     recurrence: "Desde S/120.00 por día",
     savings: null,
-    installments: "INCLUYE 200 KM POR DÍA",
+    installments: "INCLUYE 200 KM POR 24 HORAS",
     features: [
       { text: "Hyundai Verna: S/180.00", included: true },
       { text: "Hyundai Accent: S/150.00", included: true },
@@ -73,7 +73,7 @@ const planesData = [
     duration: "Diario",
     price: 150.0,
     savings: "¡MÁS KILÓMETROS INCLUIDOS!",
-    installments: "INCLUYE 300 KM POR DÍA",
+    installments: "INCLUYE 300 KM POR 24 HORAS",
     recurrence: "Desde S/150.00 por día",
     features: [
       { text: "Hyundai Verna: S/210.00", included: true },
@@ -97,7 +97,7 @@ const planesData = [
     name: "PLAN LIBRE",
     duration: "Diario",
     price: 270.0,
-    savings: "¡KILOMETRAJE ILIMITADO!",
+    savings: "KM LIBRE POR 24 HORAS",
     installments: "INCLUYE KM LIBRE",
     recurrence: "Desde S/270.00 por día",
     features: [
@@ -124,7 +124,7 @@ const PlanesPrecios = () => {
   // Helpers para formatear como la imagen
   const kmBadge = (planName: string, installments?: string) => {
     if (!installments) return "";
-    if (/LIBRE/i.test(planName)) return "KILOMETRAJE ILIMITADO";
+    if (/LIBRE/i.test(planName)) return "KM LIBRE POR 24 HORAS";
     return installments.replace(/^INCLUYE\s*/i, "");
   };
 
