@@ -11,8 +11,9 @@ import { useEffect, useMemo, useState } from "react";
 type Car = (typeof data)[number];
 
 const images = [
-  { id: 1, src: "/banner01.png", alt: "Vehículo 1", link: "/vehiculos" },
-  { id: 2, src: "/banner02.png", alt: "Vehículo 2", link: "/nosotros" },
+  { id: 1, src: "/banner01.webp", alt: "Vehículo 1", link: "/vehiculos" },
+  { id: 2, src: "/banner02.webp", alt: "Vehículo 2", link: "/nosotros" },
+  { id: 3, src: "/banner03.webp", alt: "Vehículo 3", link: "/ofertas" },
 ];
 
 /** Icono circular con flecha hacia abajo (similar a la foto) */

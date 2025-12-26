@@ -58,7 +58,7 @@ const Footer = () => {
 
     {
       name: "Venta de vehículos",
-      href: waLink("925285403", "Hola, estoy interesado en la venta de vehículos de Veloxrent. ¿Me pueden brindar información?"),
+      href: waLink("929501809", "Hola, estoy interesado en la venta de vehículos de Veloxrent. ¿Me pueden brindar información?"),
       external: true,
     },
   ];

@@ -321,7 +321,7 @@ const Navbar = () => {
           {/* Botones de acción en el escritorio */}
           <div className="hidden items-center space-x-4 md:flex lg:flex">
             <a
-              href="https://wa.me/51997187495?text=Hola,%20quiero%20asesoría%20técnica"
+              href="https://wa.me/51949134075?text=Hola,%20quiero%20asesoría%20técnica"
               target="_blank"
               rel="noopener noreferrer"
             >
