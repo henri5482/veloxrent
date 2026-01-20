@@ -1,0 +1,57 @@
+{
+    "id": 7,
+    "slug": "hyundai-santa-fe-2012",
+    "marca": "Hyundai",
+    "modelo": "Santa Fe",
+    "año": 2012,
+    "precio": 250,
+    "tipo": "Camioneta SUV",
+    "descripcion": "Carácter sofisticado, moderno y potente, seguridad en cada trayecto, motores potentes y suspensión afinada para usarse dentro o fuera de la ciudad, interior espacioso y elegante posicionándola como una de las SUVs más completas.",
+    "especificaciones": {
+      "tipoVehiculo": "Camioneta SUV",
+      "tipoCombustible": "Gasolina",
+      "transmision": "Automático",
+      "asientos": "8",
+      "terreno": "Asfaltado y agreste",
+      "filas": 3,
+      "licencia": "A1",
+      "garantia": "S/ 800.00",
+      "pasajeros": 7
+    },
+    "planes": {
+      "basico": {
+        "precio": 250,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "plus": {
+        "precio": 280,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "libre": {
+        "precio": 400,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      }
+    },
+    "imagenes": [
+      "/santafe01.webp",
+      "/santafe02.webp",
+      "/santafe03.webp",
+      "/santafe04.webp"
+    ],
+    "video": "https://www.youtube.com/embed/N62UqEy4obI"
+  },

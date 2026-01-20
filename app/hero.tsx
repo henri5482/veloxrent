@@ -202,7 +202,7 @@ export default function HeroCarousel() {
                 className="p-2 lg:p-3 rounded-md border border-white/40 text-black bg-white"
               >
                 <option value="">Seleccionar</option>
-                <option value="basico">Plan normal</option>
+                <option value="basico">Normal</option>
                 <option value="plus">Plus</option>
                 <option value="libre">Libre</option>
               </select>

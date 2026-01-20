@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 import { IconType } from "react-icons";
-import { LuMapPin, LuMenu, LuX } from "react-icons/lu";
+import { LuClock3, LuMapPin, LuMenu, LuX } from "react-icons/lu";
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -84,8 +84,8 @@ const socialLinks: SocialLink[] = [
 
 const contactInfo: ContactInfoItemProps[] = [
   {
-    text: "veloxrent.gestioncliente@gmail.com",
-    href: "https://mail.google.com/mail/?view=cm&to=veloxrent.gestioncliente@gmail.com",
+    text: "veloxrent.marketing@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&to=veloxrent.marketing@gmail.com",
     Icon: MdOutgoingMail,
   },
   {
@@ -97,6 +97,11 @@ const contactInfo: ContactInfoItemProps[] = [
     text: "NAZARENAS, Ayacucho 05001",
     href: "https://www.google.com/maps/place/VELOXRENT/@-13.1541862,-74.2196872,3a,75y,355.3h,91.24t/data=!3m7!1e1!3m5!1sT7sBAZXx_oJBLdSqIXFekQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.2367595648810124%26panoid%3DT7sBAZXx_oJBLdSqIXFekQ%26yaw%3D355.29997133111976!7i16384!8i8192!4m14!1m7!3m6!1s0x91127d78fc83a585:0xe003010eb14ed5d5!2sVELOXRENT!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6!3m5!1s0x91127d78fc83a585:0xe003010eb14ed5d5!8m2!3d-13.154115!4d-74.2196947!16s%2Fg%2F11xsfvhzk6?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
     Icon: LuMapPin,
+  },
+   {
+    text: "Lunes - Sábados : 08:00 AM - 08:00 PM",
+    href: "#", // o puedes poner un link tipo /contacto o dejarlo así
+    Icon: LuClock3,
   },
 ];
 
