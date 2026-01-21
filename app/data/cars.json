@@ -408,7 +408,7 @@
     "marca": "Karry",
     "modelo": "Q22",
     "año": 2023,
-    "precio": 300,
+    "precio": 130,
     "tipo": "Van",
     "descripcion": "Capacidad, modernidad y eficiencia en una minivan, tecnología china de vanguardia",
     "especificaciones": {
@@ -424,7 +424,7 @@
     },
     "planes": {
       "basico": {
-        "precio": 300,
+        "precio": 130,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -433,7 +433,7 @@
         ]
       },
       "plus": {
-        "precio": 330,
+        "precio": 160,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -442,7 +442,7 @@
         ]
       },
       "libre": {
-        "precio": 450,
+        "precio": 280,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
@@ -460,7 +460,7 @@
     "marca": "Chevrolet",
     "modelo": "N400",
     "año": 2024,
-    "precio": 300,
+    "precio": 130,
     "tipo": "Van",
     "descripcion": "Minivan con la última tecnología, calidad en la experiencia y confianza para una experiencia más segura",
     "especificaciones": {
@@ -476,7 +476,7 @@
     },
     "planes": {
       "basico": {
-        "precio": 300,
+        "precio": 130,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -485,7 +485,7 @@
         ]
       },
       "plus": {
-        "precio": 330,
+        "precio": 160,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -494,7 +494,7 @@
         ]
       },
       "libre": {
-        "precio": 450,
+        "precio": 280,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",

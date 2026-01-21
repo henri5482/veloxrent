@@ -53,6 +53,8 @@ const planesData = [
     savings: null,
     installments: "INCLUYE 200 KM POR 24 HORAS",
     features: [
+      { text: "Chery q22: S/130.00", included: true },
+      { text: "Karry q22: S/130.00", included: true },
       { text: "Hyundai Verna: S/180.00", included: true },
       { text: "Hyundai Accent: S/150.00", included: true },
       { text: "Minivanes: S/120.00", included: true },
@@ -76,6 +78,8 @@ const planesData = [
     installments: "INCLUYE 300 KM POR 24 HORAS",
     recurrence: "Desde S/150.00 por día",
     features: [
+      { text: "Chery q22: S/160.00", included: true },
+      { text: "Karry q22: S/160.00", included: true },
       { text: "Hyundai Verna: S/210.00", included: true },
       { text: "Hyundai Accent: S/180.00", included: true },
       { text: "Minivanes: S/150.00", included: true },
@@ -101,6 +105,8 @@ const planesData = [
     installments: "INCLUYE KM LIBRE",
     recurrence: "Desde S/270.00 por día",
     features: [
+      { text: "Chery q22: S/280.00", included: true },
+      { text: "Karry q22:  S/280.00", included: true },
       { text: "Hyundai Verna: S/330.00", included: true },
       { text: "Hyundai Accent: S/300.00", included: true },
       { text: "Minivanes: S/270.00", included: true },
