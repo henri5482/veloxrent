@@ -401,5 +401,109 @@
     },
     "imagenes": ["/h1-01.webp", "/h1-02.webp", "/h1-03.webp", "/h1-04.webp"],
     "video": "https://www.youtube.com/embed/yV4i9co_dIU"
+  },
+  {
+    "id": 9,
+    "slug": "Karry-q22",
+    "marca": "Karry",
+    "modelo": "Q22",
+    "año": 2023,
+    "precio": 300,
+    "tipo": "Van",
+    "descripcion": "Capacidad, modernidad y eficiencia en una minivan, tecnología china de vanguardia",
+    "especificaciones": {
+      "tipoVehiculo": "minivan",
+      "tipoCombustible": "Petróleo",
+      "transmision": "Mecánico",
+      "asientos": "8",
+      "terreno": "Asfaltado y agreste",
+      "filas": 4,
+      "licencia": "A1",
+      "garantia": "S/ 800.00",
+      "pasajeros": 8
+    },
+    "planes": {
+      "basico": {
+        "precio": 300,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "plus": {
+        "precio": 330,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "libre": {
+        "precio": 450,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      }
+    },
+    "imagenes": ["/Karry03.webp", "/Karry01.webp", "/Karry02.webp", "/Karry04.webp"],
+    "video": "https://www.youtube.com/embed/tqsoI3tHeME"
+  },
+   {
+    "id": 10,
+    "slug": "Chevrolet-n400",
+    "marca": "Chevrolet",
+    "modelo": "N400",
+    "año": 2024,
+    "precio": 300,
+    "tipo": "Van",
+    "descripcion": "Minivan con la última tecnología, calidad en la experiencia y confianza para una experiencia más segura",
+    "especificaciones": {
+      "tipoVehiculo": "minivan",
+      "tipoCombustible": "Petróleo",
+      "transmision": "mecánico",
+      "asientos": "8",
+      "terreno": "Asfaltado y agreste",
+      "filas": 3,
+      "licencia": "A1",
+      "garantia": "S/ 1000.00",
+      "pasajeros": 8
+    },
+    "planes": {
+      "basico": {
+        "precio": 300,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "plus": {
+        "precio": 330,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      },
+      "libre": {
+        "precio": 450,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo ",
+          "Tanque con combustible"
+        ]
+      }
+    },
+    "imagenes": ["/Chevrolet01.webp", "/Chevrolet02.webp", "/Chevrolet03.webp", "/Chevrolet04.webp"],
+    "video": "https://www.youtube.com/embed/q430oAYDbeA"
   }
 ]
