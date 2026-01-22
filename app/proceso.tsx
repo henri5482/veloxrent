@@ -48,21 +48,20 @@ const planesData = [
   {
     name: "PLAN NORMAL",
     duration: "Diario",
-    price: 120.0,
-    recurrence: "Desde S/120.00 por día",
+    price: 130.0,
+    recurrence: "Desde S/130.00 por día",
     savings: null,
     installments: "INCLUYE 200 KM POR 24 HORAS",
     features: [
-      { text: "Chery q22 : S/120.00", included: true },
-      { text: "Karry q22 : S/130.00", included: true },
-      { text: "Chevrolet N400 : S/150.00", included: true },
-      { text: "Hyundai Verna: S/180.00", included: true },
-      { text: "Hyundai Accent: S/150.00", included: true },
-      { text: "Minivanes: S/120.00", included: true },
-      { text: "Daihatsu Terios: S/200.00", included: true },
-      { text: "Toyota Hilux: S/250.00", included: true },
-      { text: "Hyundai H1: S/300.00", included: true },
-      { text: "Mahindra Pick Up: S/180.00", included: true },
+      { text: "CHERY Q22 : S/130.00", included: true },
+      { text: "KARRY Q22 : S/130.00", included: true },
+      { text: "CHEVROLET N400 : S/150.00", included: true },
+      { text: "HYUNDAI ACCENT : S/160.00", included: true },
+      { text: "HYUNDAI VERNA : S/180.00", included: true },
+      { text: "MAHINDRA PICK UP : S/190.00", included: true },
+      { text: "DAIHATSU TERIOS : S/200.00", included: true },
+      { text: "TOYOTA HILUX : S/250.00", included: true },
+      { text: "HYUNDAI H1 : S/300.00", included: true },
       { text: "Costo KM extra: S/ 0.90", included: true },
       { text: "Atención Personalizada", included: true },
       { text: "Asistencia en Ruta", included: true },
@@ -73,26 +72,25 @@ const planesData = [
   {
     name: "PLAN PLUS",
     duration: "Diario",
-    price: 150.0,
-    savings: "¡MÁS KILÓMETROS INCLUIDOS!",
+    price: 160.0,
+    savings: "MÁS KILÓMETROS INCLUIDOS",
     installments: "INCLUYE 300 KM POR 24 HORAS",
-    recurrence: "Desde S/150.00 por día",
+    recurrence: "Desde S/160.00 por día",
     features: [
-      { text: "Chery q22: S/150.00", included: true },
-      { text: "Karry q22: S/160.00", included: true },
-      { text: "Chevrolet N400 : S/180.00", included: true },
-      { text: "Hyundai Verna: S/210.00", included: true },
-      { text: "Hyundai Accent: S/180.00", included: true },
-      { text: "Minivanes: S/150.00", included: true },
-      { text: "Daihatsu Terios: S/230.00", included: true },
-      { text: "Toyota Hilux: S/280.00", included: true },
-      { text: "Hyundai H1: S/330.00", included: true },
-      { text: "Mahindra Pick Up: S/210.00", included: true },
+      { text: "CHERY Q22 : S/160.00", included: true },
+      { text: "KARRY Q22 : S/160.00", included: true },
+      { text: "CHEVROLET N400 : S/180.00", included: true },
+      { text: "HYUNDAI ACCENT : S/190.00", included: true },
+      { text: "HYUNDAI VERNA : S/210.00", included: true },
+      { text: "MAHINDRA PICK UP : S/220.00", included: true },
+      { text: "DAIHATSU TERIOS : S/230.00", included: true },
+      { text: "TOYOTA HILUX : S/280.00", included: true },
+      { text: "HYUNDAI H1 : S/330.00", included: true },
       { text: "Costo KM extra: S/ 0.60", included: true },
       { text: "Atención Personalizada", included: true },
       { text: "Asistencia en Ruta", included: true },
     ],
-    buttonText: "¡Reservar Plan Plus ahora!",
+    buttonText: "Reservar Plan Plus",
     buttonClass: "bg-green-600 text-white hover:bg-green-700",
     isRecommended: true,
     borderColor: "border-blue-400",
@@ -100,21 +98,20 @@ const planesData = [
   {
     name: "PLAN LIBRE",
     duration: "Diario",
-    price: 270.0,
+    price: 280.0,
     savings: "KM LIBRE POR 24 HORAS",
     installments: "INCLUYE KM LIBRE",
-    recurrence: "Desde S/270.00 por día",
+    recurrence: "Desde S/280.00 por día",
     features: [
-      { text: "Chery q22: S/270.00", included: true },
-      { text: "Karry q22:  S/280.00", included: true },
-      { text: "Chevrolet N400 : S/300.00", included: true },
-      { text: "Hyundai Verna: S/330.00", included: true },
-      { text: "Hyundai Accent: S/300.00", included: true },
-      { text: "Minivanes: S/270.00", included: true },
-      { text: "Daihatsu Terios: S/350.00", included: true },
-      { text: "Toyota Hilux: S/400.00", included: true },
-      { text: "Hyundai H1: S/450.00", included: true },
-      { text: "Mahindra Pick Up: S/330.00", included: true },
+      { text: "CHERY Q22 : S/280.00", included: true },
+      { text: "KARRY Q22 : S/280.00", included: true },
+      { text: "CHEVROLET N400 : S/300.00", included: true },
+      { text: "HYUNDAI ACCENT : S/310.00", included: true },
+      { text: "HYUNDAI VERNA : S/330.00", included: true },
+      { text: "MAHINDRA PICK UP : S/340.00", included: true },
+      { text: "DAIHATSU TERIOS : S/350.00", included: true },
+      { text: "TOYOTA HILUX : S/400.00", included: true },
+      { text: "HYUNDAI H1 : S/450.00", included: true },
       { text: "Costo KM extra: No aplica", included: true },
       { text: "Atención Personalizada", included: true },
       { text: "Asistencia en Ruta", included: true },
@@ -124,6 +121,7 @@ const planesData = [
     borderColor: "border-blue-400",
   },
 ];
+
 
 // --- COMPONENTE DE PLANES DE PRECIOS (solo cambia el contenido, no el layout general) ---
 const PlanesPrecios = () => {
@@ -203,7 +201,7 @@ const PlanesPrecios = () => {
                 {/* Lista de vehículos y precios en dos columnas */}
                 <div className="mb-2">
                   <ul className="space-y-2">
-                    {plan.features.slice(0, 8).map((f, idx) => {
+                    {plan.features.slice(0, 9).map((f, idx) => {
                       const { izq, der } = splitVehiculoPrecio(f.text);
                       return (
                         <li

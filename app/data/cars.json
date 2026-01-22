@@ -5,7 +5,7 @@
     "marca": "Hyundai",
     "modelo": "Accent",
     "año": 2018,
-    "precio": 150,
+    "precio": 160,
     "tipo": "Automóvil",
     "descripcion": "Sedán posicionado como uno de los más requeridos por su potencia, agilidad y bajo consumo, su interior es espacioso y su versatilidad equilibra todo lo que se busca en un automóvil.",
     "especificaciones": {
@@ -21,34 +21,34 @@
     },
     "planes": {
       "basico": {
-        "precio": 150,
+        "precio": 160,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible",
+          
           "200km por cada 24 horas,",
           "0.90 centimos por km"
         ]
       },
       "plus": {
-        "precio": 180,
+        "precio": 190,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible",
+          
           "300km por cada 24 horas",
           "0.60  centimos por km"
         ]
       },
       "libre": {
-        "precio": 300,
+        "precio": 310,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -86,8 +86,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -95,8 +95,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
@@ -104,8 +104,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -123,9 +123,9 @@
     "marca": "Chery",
     "modelo": "Q22",
     "año": 2021,
-    "precio": 120,
+    "precio": 130,
     "tipo": "Minivan",
-    "descripcion": "si buscas capacidad, rendimiento y eficiencia esta es la minivan indicada, utilidad multipropósito y en su interior la distribución prioriza la comodidad.",
+    "descripcion": "si buscas capacidad, rendimiento y eficiencia esta es la Minivan indicada, utilidad multipropósito y en su interior la distribución prioriza la comodidad.",
     "especificaciones": {
       "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
@@ -139,30 +139,30 @@
     },
     "planes": {
       "basico": {
-        "precio": 120,
+        "precio": 130,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
-        "precio": 150,
+        "precio": 160,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
-        "precio": 270,
+        "precio": 280,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -180,7 +180,7 @@
     "marca": "Mahindra",
     "modelo": "Pick Up",
     "año": 2011,
-    "precio": 180,
+    "precio": 190,
     "tipo": "Camioneta 4x4",
     "descripcion": "Aventura, ciudad y trabajo en una camioneta, la fuerza y eficiencia definen sus cualidades, su interior es resistente y funcional para largos trayectos.",
     "especificaciones": {
@@ -196,32 +196,32 @@
     },
     "planes": {
       "basico": {
-        "precio": 180,
+        "precio": 190,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible",
+          
           "Útil para carga"
         ]
       },
       "plus": {
-        "precio": 210,
+        "precio": 220,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible",
+          
           "Útil para carga"
         ]
       },
       "libre": {
-        "precio": 330,
+        "precio": 340,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
           "Cobertura full Anti riesgo ",
-          "Tanque con combustible",
+          
           "Útil para carga"
         ]
       }
@@ -260,8 +260,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -269,8 +269,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
@@ -278,8 +278,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -317,8 +317,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -326,8 +326,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+        
         ]
       },
       "libre": {
@@ -335,8 +335,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -376,8 +376,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -385,8 +385,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
@@ -394,8 +394,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -410,9 +410,9 @@
     "año": 2023,
     "precio": 130,
     "tipo": "Van",
-    "descripcion": "Capacidad, modernidad y eficiencia en una minivan, tecnología china de vanguardia",
+    "descripcion": "Capacidad, modernidad y eficiencia en una Minivan, tecnología china de vanguardia",
     "especificaciones": {
-      "tipoVehiculo": "minivan",
+      "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
       "asientos": "8",
@@ -428,8 +428,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -437,8 +437,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
@@ -446,8 +446,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
@@ -464,7 +464,7 @@
     "tipo": "Van",
     "descripcion": "Minivan con la última tecnología, calidad en la experiencia y confianza para una experiencia más segura",
     "especificaciones": {
-      "tipoVehiculo": "minivan",
+      "tipoVehiculo": "Minivan",
       "tipoCombustible": "Gasolina",
       "transmision": "mecánico",
       "asientos": "8",
@@ -480,8 +480,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "plus": {
@@ -489,8 +489,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       },
       "libre": {
@@ -498,8 +498,8 @@
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",
-          "Cobertura full Anti riesgo ",
-          "Tanque con combustible"
+          "Cobertura full Anti riesgo "
+          
         ]
       }
     },
