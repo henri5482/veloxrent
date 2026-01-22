@@ -413,11 +413,11 @@
     "descripcion": "Capacidad, modernidad y eficiencia en una minivan, tecnología china de vanguardia",
     "especificaciones": {
       "tipoVehiculo": "minivan",
-      "tipoCombustible": "Petróleo",
+      "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
       "asientos": "8",
       "terreno": "Asfaltado y agreste",
-      "filas": 4,
+      "filas": 3,
       "licencia": "A1",
       "garantia": "S/ 800.00",
       "pasajeros": 8
@@ -460,12 +460,12 @@
     "marca": "Chevrolet",
     "modelo": "N400",
     "año": 2024,
-    "precio": 130,
+    "precio": 150,
     "tipo": "Van",
     "descripcion": "Minivan con la última tecnología, calidad en la experiencia y confianza para una experiencia más segura",
     "especificaciones": {
       "tipoVehiculo": "minivan",
-      "tipoCombustible": "Petróleo",
+      "tipoCombustible": "Gasolina",
       "transmision": "mecánico",
       "asientos": "8",
       "terreno": "Asfaltado y agreste",
@@ -476,7 +476,7 @@
     },
     "planes": {
       "basico": {
-        "precio": 130,
+        "precio": 150,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -485,7 +485,7 @@
         ]
       },
       "plus": {
-        "precio": 160,
+        "precio": 180,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla",
@@ -494,7 +494,7 @@
         ]
       },
       "libre": {
-        "precio": 280,
+        "precio": 300,
         "beneficios": [
           "Kit de emergencia",
           "Vehiculo con SOAT y documentación en regla ",

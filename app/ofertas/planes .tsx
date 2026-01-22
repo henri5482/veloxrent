@@ -49,13 +49,14 @@ const plansData: PlanInfo[] = [
     kmBadge: "200KM POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 120.00" },
+      { label: "Karry q22", price: "S/ 130.00" },
+      { label: "Chevrolet N400", price: "S/ 150.00" },
       { label: "Auto Accent", price: "S/ 150.00" },
       { label: "Auto Verna", price: "S/ 180.00" },
       { label: "Camioneta Pick Up", price: "S/ 180.00" },
     ],
     pricesRight: [
       { label: "Camioneta Terios", price: "S/ 200.00" },
-      { label: "Camioneta Santa Fe", price: "S/ 250.00" },
       { label: "Camioneta Hilux", price: "S/ 250.00" },
       { label: "Minivan H1", price: "S/ 300.00" },
     ],
@@ -68,13 +69,14 @@ const plansData: PlanInfo[] = [
     kmBadge: "300KM POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 150.00" },
+      { label: "Karry q22", price: "S/ 160.00" },
+      { label: "Chevrolet N400", price: "S/ 180.00" },
       { label: "Auto Accent", price: "S/ 180.00" },
       { label: "Auto Verna", price: "S/ 210.00" },
       { label: "Camioneta Pick Up", price: "S/ 210.00" },
     ],
     pricesRight: [
       { label: "Camioneta Terios", price: "S/ 230.00" },
-      { label: "Camioneta Santa Fe", price: "S/ 280.00" },
       { label: "Camioneta Hilux", price: "S/ 280.00" },
       { label: "Minivan H1", price: "S/ 330.00" },
     ],
@@ -87,12 +89,13 @@ const plansData: PlanInfo[] = [
     kmBadge: "KM LIBRE POR 24 HORAS",
     pricesLeft: [
       { label: "Minivan Q22", price: "S/ 270.00" },
+      { label: "Karry q22", price: "S/ 280.00" },
+      { label: "Chevrolet N400", price: "S/ 300.00" },
       { label: "Auto Accent", price: "S/ 300.00" },
       { label: "Auto Verna", price: "S/ 330.00" },
       { label: "Camioneta Terios", price: "S/ 350.00" },
     ],
     pricesRight: [
-      { label: "Camioneta Santa Fe", price: "S/ 400.00" },
       { label: "Camioneta Hilux", price: "S/ 400.00" },
       { label: "Minivan H1", price: "S/ 450.00" },
       { label: "Camioneta Pick Up", price: "S/ 330.00" },
@@ -118,9 +121,8 @@ function PriceCard({
 }) {
   return (
     <div
-      className={`w-full h-full flex flex-col justify-between rounded-2xl bg-[#0B1DBA] text-white px-5 py-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.45)] border border-[#1c2df0]/40 ${
-        align === "left" ? "ml-2 sm:ml-4" : "mr-2 sm:mr-4"
-      }`}
+      className={`w-full h-full flex flex-col justify-between rounded-2xl bg-[#0B1DBA] text-white px-5 py-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.45)] border border-[#1c2df0]/40 ${align === "left" ? "ml-2 sm:ml-4" : "mr-2 sm:mr-4"
+        }`}
     >
       <div>
         <div className="flex items-start justify-between gap-3">
@@ -188,9 +190,8 @@ const Planes = () => {
               </h2>
 
               <div
-                className={`mt-6 flex flex-col lg:flex-row items-stretch gap-6 ${
-                  videoFirst ? "" : "lg:flex-row-reverse"
-                }`}
+                className={`mt-6 flex flex-col lg:flex-row items-stretch gap-6 ${videoFirst ? "" : "lg:flex-row-reverse"
+                  }`}
               >
                 {/* Video */}
                 <div className="flex-1 flex items-stretch">

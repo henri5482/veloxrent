@@ -34,7 +34,7 @@ const Footer = () => {
         { name: "997187495", phone: "997187495" },
         { name: "901643094", phone: "901643094" },
         // correo agregado
-        { name: "veloxrent.gestioncliente@gmail.com", email: "veloxrent.gestioncliente@gmail.com" },
+        { name: "veloxrent.marketing@gmail.com", email: "veloxrent.marketing@gmail.com" },
       ],
       message:
         "Hola, necesito soporte como cliente de Veloxrent. ¿Me pueden ayudar?",
