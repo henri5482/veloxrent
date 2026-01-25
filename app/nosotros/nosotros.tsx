@@ -32,7 +32,7 @@ const Nosotros = () => {
                             Misión
                         </h1>
                         <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                            En Veloxrent, nuestra misión es ofrecer un servicio de alquiler de vehículos confiable, seguro y accesible, priorizando la satisfacción y comodidad de cada cliente. Nos comprometemos a brindar una experiencia ágil y transparente, garantizando unidades en óptimas condiciones y atención personalizada en cada etapa del servicio. Trabajamos día a día con responsabilidad, innovación y cercanía, buscando consolidarnos como la mejor opción en movilidad dentro de la región.                        </p>
+                         Somos una empresa dedicada al alquiler de vehículos, creada para satisfacer las necesidades de movilidad de nuestros clientes mediante unidades en óptimas condiciones y un servicio transparente y personalizado garantizando una experiencia cómoda y confiable. Asimismo, impulsamos el desarrollo y bienestar de nuestro equipo, conscientes de que su compromiso es esencial para mantener la calidad del servicio y generar valor en cada atención que brindamos.                        </p>
                     </div>
 
                     {/* Sección 2: ¿Por qué elegirnos? (Fondo Oscuro/Colorido) */}
@@ -44,7 +44,7 @@ const Nosotros = () => {
                         <div className="space-y-6">
                             <p className="text-lg leading-relaxed text-justify">
                               
-                            Ser reconocidos en los próximos años como la empresa líder en alquiler de vehículos en Ayacucho, destacando por la calidad del servicio, la confianza de nuestros clientes y el crecimiento sostenible de nuestra marca. Aspiramos a expandirnos a nuevas ciudades del país, fortaleciendo nuestra presencia y contribuyendo al desarrollo regional a través de soluciones de transporte modernas, seguras y orientadas al cliente.
+                            Ser la empresa líder en alquiler de vehículos para uso particular y turístico en la región, reconocidos por nuestra excelencia en atención al cliente, la calidad de nuestras unidades y el cumplimiento estricto de nuestras políticas de uso responsable.
                             </p>
                         </div>
                     </div>

@@ -247,12 +247,12 @@
       "tipoVehiculo": "Camioneta SUV",
       "tipoCombustible": "Gasolina",
       "transmision": "Mecánico",
-      "asientos": "8",
+      "asientos": "7",
       "terreno": "Asfaltado y agreste",
       "filas": 3,
       "licencia": "A1",
       "garantia": "S/ 800.00",
-      "pasajeros": 8
+      "pasajeros": 7
     },
     "planes": {
       "basico": {

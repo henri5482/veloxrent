@@ -31,7 +31,7 @@ const Footer = () => {
       links: [
         { name: "925285403", phone: "925285403" },
         { name: "949134075", phone: "949134075" },
-        { name: "997187495", phone: "997187495" },
+        { name: "929501809", phone: "929501809" },
         { name: "901643094", phone: "901643094" },
         // correo agregado
         { name: "veloxrent.marketing@gmail.com", email: "veloxrent.marketing@gmail.com" },
