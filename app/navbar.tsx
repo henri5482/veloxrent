@@ -99,12 +99,7 @@ const contactInfo: ContactInfoItemProps[] = [
     Icon: LuMapPin,
   },
    {
-    text: "Lunes - Sábados 07:00 AM - 06:00 PM",
-    href: "#", // o puedes poner un link tipo /contacto o dejarlo así
-    Icon: LuClock3,
-  },
-  {
-    text: "Domingos 08:00 AM - 06:00 PM",
+    text: "L a S -> 7:00 AM - 06:00 PM | D -> 08:00 AM - 06:00 PM | Atendemos feriados",
     href: "#", // o puedes poner un link tipo /contacto o dejarlo así
     Icon: LuClock3,
   },

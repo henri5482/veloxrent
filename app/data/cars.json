@@ -505,5 +505,58 @@
     },
     "imagenes": ["/Chevrolet01.webp", "/Chevrolet02.webp", "/Chevrolet03.webp", "/Chevrolet04.webp"],
     "video": "https://www.youtube.com/embed/q430oAYDbeA"
+  },
+   {
+    "id": 11,
+    "slug": "toyota-raize-25",
+    "marca": "Toyota",
+    "modelo": "Raize",
+    "año": 2023,
+    "precio": 250,
+    "tipo": "Automóvil",
+    "descripcion": "Lo último en tecnología japonesa, estilo, comodidad y la confianza que caracterizan a Toyota.",
+    "especificaciones": {
+      "tipoVehiculo": "Automóvil",
+      "tipoCombustible": "Gasolina",
+      "transmision": "mecánico",
+      "asientos": "5",
+      "terreno": "Asfaltado y agreste",
+      "filas": 2,
+      "licencia": "A1",
+      "garantia": "S/ 1000.00",
+      "pasajeros": 5
+    },
+    "planes": {
+      "basico": {
+        "precio": 250,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo "
+          
+        ]
+      },
+      "plus": {
+        "precio": 280,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla",
+          "Cobertura full Anti riesgo "
+          
+        ]
+      },
+      "libre": {
+        "precio": 400,
+        "beneficios": [
+          "Kit de emergencia",
+          "Vehiculo con SOAT y documentación en regla ",
+          "Cobertura full Anti riesgo "
+          
+        ]
+      }
+    },
+    "imagenes": ["/toyota-raize02.webp", "/toyota-raize01.webp", "/toyota-raize03.webp", "/toyota-raize04.webp"],
+    "video": "https://www.youtube.com/watch?v=OUs8cr7eT8g"
   }
+  
 ]
