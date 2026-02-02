@@ -57,6 +57,7 @@ const plansData: PlanInfo[] = [
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 190.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 200.00" },
+      { label: "TOYOTA RAIZE", price: "S/ 180.00" },
       { label: "TOYOTA HILUX", price: "S/ 250.00" },
       { label: "HYUNDAI H1", price: "S/ 300.00" },
     ],
@@ -77,6 +78,7 @@ const plansData: PlanInfo[] = [
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 220.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 230.00" },
+      { label: "TOYOTA RAIZE", price: "S/ 280.00" },
       { label: "TOYOTA HILUX", price: "S/ 280.00" },
       { label: "HYUNDAI H1", price: "S/ 330.00" },
     ],
@@ -97,6 +99,7 @@ const plansData: PlanInfo[] = [
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 340.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 350.00" },
+      { label: "TOYOTA RAIZE", price: "S/ 400.00" },
       { label: "TOYOTA HILUX", price: "S/ 400.00" },
       { label: "HYUNDAI H1", price: "S/ 450.00" },
     ],
