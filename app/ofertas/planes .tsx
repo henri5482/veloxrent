@@ -57,7 +57,7 @@ const plansData: PlanInfo[] = [
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 190.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 200.00" },
-      { label: "TOYOTA RAIZE", price: "S/ 180.00" },
+      { label: "TOYOTA RAIZE", price: "S/ 250.00" },
       { label: "TOYOTA HILUX", price: "S/ 250.00" },
       { label: "HYUNDAI H1", price: "S/ 300.00" },
     ],

@@ -58,7 +58,7 @@ const planesData = [
       { text: "CHEVROLET N400 : S/150.00", included: true },
       { text: "HYUNDAI ACCENT : S/160.00", included: true },
       { text: "HYUNDAI VERNA : S/180.00", included: true },
-      { text: "TOYOTA RAIZE : S/180.00", included: true },
+      { text: "TOYOTA RAIZE : S/250.00", included: true },
       { text: "MAHINDRA PICK UP : S/190.00", included: true },
       { text: "DAIHATSU TERIOS : S/200.00", included: true },
       { text: "TOYOTA HILUX : S/250.00", included: true },
@@ -204,7 +204,7 @@ const PlanesPrecios = () => {
                 {/* Lista de vehículos y precios en dos columnas */}
                 <div className="mb-2">
                   <ul className="space-y-2">
-                    {plan.features.slice(0, 9).map((f, idx) => {
+                    {plan.features.slice(0, 10).map((f, idx) => {
                       const { izq, der } = splitVehiculoPrecio(f.text);
                       return (
                         <li
