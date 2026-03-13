@@ -50,15 +50,14 @@ const plansData: PlanInfo[] = [
     pricesLeft: [
       { label: "CHERY Q22", price: "S/ 130.00" },
       { label: "KARRY Q22", price: "S/ 130.00" },
-      { label: "CHEVROLET N400", price: "S/ 150.00" },
       { label: "HYUNDAI ACCENT", price: "S/ 160.00" },
       { label: "HYUNDAI VERNA", price: "S/ 180.00" },
     ],
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 190.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 200.00" },
-      { label: "TOYOTA RAIZE", price: "S/ 250.00" },
       { label: "TOYOTA HILUX", price: "S/ 250.00" },
+      { label: "CHEVROLET SPIN", price: "S/ 270.00" },
       { label: "HYUNDAI H1", price: "S/ 300.00" },
     ],
     extra: "S/ 0.90 POR KM EXTRA",
@@ -71,15 +70,14 @@ const plansData: PlanInfo[] = [
     pricesLeft: [
       { label: "CHERY Q22", price: "S/ 160.00" },
       { label: "KARRY Q22", price: "S/ 160.00" },
-      { label: "CHEVROLET N400", price: "S/ 180.00" },
       { label: "HYUNDAI ACCENT", price: "S/ 190.00" },
       { label: "HYUNDAI VERNA", price: "S/ 210.00" },
     ],
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 220.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 230.00" },
-      { label: "TOYOTA RAIZE", price: "S/ 280.00" },
       { label: "TOYOTA HILUX", price: "S/ 280.00" },
+       { label: "CHEVROLET SPIN", price: "S/ 300.00" },
       { label: "HYUNDAI H1", price: "S/ 330.00" },
     ],
     extra: "S/ 0.60 POR KM EXTRA",
@@ -92,15 +90,14 @@ const plansData: PlanInfo[] = [
     pricesLeft: [
       { label: "CHERY Q22", price: "S/ 280.00" },
       { label: "KARRY Q22", price: "S/ 280.00" },
-      { label: "CHEVROLET N400", price: "S/ 300.00" },
       { label: "HYUNDAI ACCENT", price: "S/ 310.00" },
       { label: "HYUNDAI VERNA", price: "S/ 330.00" },
     ],
     pricesRight: [
       { label: "MAHINDRA PICK UP", price: "S/ 340.00" },
       { label: "DAIHATSU TERIOS", price: "S/ 350.00" },
-      { label: "TOYOTA RAIZE", price: "S/ 400.00" },
       { label: "TOYOTA HILUX", price: "S/ 400.00" },
+       { label: "CHEVROLET SPIN", price: "S/ 420.00" },
       { label: "HYUNDAI H1", price: "S/ 450.00" },
     ],
     // En libre no hay km extra (según imagen)
