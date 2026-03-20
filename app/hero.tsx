@@ -12,7 +12,7 @@ type Car = (typeof data)[number];
 
 const images = [
   { id: 1, src: "/banner01.webp", alt: "Vehículo 1", link: "/vehiculos" },
-  { id: 2, src: "/banner02.webp", alt: "Vehículo 2", link: "/nosotros" },
+  { id: 2, src: "/banner02.webp", alt: "Vehículo 2", link: "/ofertas" },
   { id: 3, src: "/banner03.webp", alt: "Vehículo 3", link: "/ofertas" },
 ];
 

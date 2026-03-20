@@ -6,17 +6,23 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 
 interface AlquilerModalProps {
+  especificaciones?: {
+  garantia?: string;
+};
   isOpen: boolean;
   onClose: () => void;
   vehiculo: {
-    marca: string;
-    modelo: string;
-    precio: number;
-    slug: string;
-    imagenes: string[];
-    tipo?: string;
-    año?: number;
+  marca: string;
+  modelo: string;
+  precio: number;
+  slug: string;
+  imagenes: string[];
+  tipo?: string;
+  año?: number;
+  especificaciones?: {
+    garantia?: string;
   };
+};
 
   // ✅ NUEVO: para mostrar plan correcto en el modal
   plan?: PlanKey;
@@ -31,7 +37,7 @@ export default function AlquilerModal({
   onClose,
   vehiculo,
   plan = "basico",
-  garantia = 800,
+  garantia = 1000,
   reserva = 300,
 }: AlquilerModalProps) {
   const [formData, setFormData] = useState({
@@ -45,6 +51,20 @@ export default function AlquilerModal({
     vehiculo: `${vehiculo.marca} ${vehiculo.modelo}`,
     precio: vehiculo.precio,
   });
+
+  const garantiaFinal = useMemo(() => {
+  if (vehiculo.especificaciones?.garantia) {
+    const valor = vehiculo.especificaciones.garantia
+      .replace("S/", "")
+      .replace(",", "")
+      .trim();
+
+    const parsed = Number(valor);
+    if (!isNaN(parsed)) return parsed;
+  }
+
+  return garantia; // fallback
+}, [vehiculo, garantia]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -119,7 +139,7 @@ export default function AlquilerModal({
           ...formData,
           plan,
           planTitulo: planInfo.titulo,
-          garantia,
+          garantia: garantiaFinal,
           reserva,
         }),
       });
@@ -297,7 +317,7 @@ export default function AlquilerModal({
                                 Garantía:
                               </div>
                               <div className="text-sm text-slate-200 font-bold">
-                                S/{garantia.toFixed(2)}
+                                S/{garantiaFinal.toFixed(2)}
                               </div>
                             </div>
                           </div>
